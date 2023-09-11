@@ -60,7 +60,7 @@ const Main = () => {
         </div>
         <div class="section">
           <div class="p fixed">
-            <h1>Сергей Глотов: </h1>
+            <h1>Сергей Глотов Батькович: </h1>
             <p>"Берите доллар в банках!!!"©</p>
           </div>
         </div>
