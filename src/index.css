@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  list-style: none;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+headers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  box-shadow: 0 0px 2px #000;
+  /* position: absolute; */
+  /* top: 0;
+  left: 0; */
+  z-index: 11;
+}
+
+headers .logo .logoImg {
+  width: 250px;
+  color: #000;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+headers .logo:hover {
+  transform: scale(1.2);
+  transition: 0.7s;
+}
+headers nav ul li {
+  position: relative;
+  float: left;
+}
+headers nav ul li {
+  padding: 20px;
+  color: #000;
+  font-size: 20px;
+  display: block;
+}
+headers nav ul li p:hover {
+  /* background: #000;
+  color: #fff; */
+  text-decoration: underline;
+  color: #000;
+  cursor: pointer;
+  transition: 0.6s;
+}
+div {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/*---------------------------- Карты тренеров----------------------------------------------------*/
+.wrapper {
+  /* background: linear-gradient(to bottom, #0000ff88 0%, #ffff00ab 120%); */
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.card,
+.card1,
+.card2 {
+  width: 340px;
+  height: 480px;
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card1 {
+  left: 15%;
+  height: 480px;
+}
+.card2 {
+  left: 85%;
+}
+
+.card:hover .front,
+.card1:hover .front1,
+.card2:hover .front2 {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover .back,
+.card1:hover .back1,
+.card2:hover .back2 {
+  transform: perspective(600px) rotateY(0);
+}
+
+.front,
+.back,
+.front1,
+.back1,
+.front2,
+.back2 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.5s ease;
+  border-radius: 10px;
+  background: linear-gradient(#d6d6d6, #f2f2f2);
+}
+
+.front,
+.front1,
+.front2 {
+  transform: perspective(600px) rotateY(0);
+}
+
+/* .front img,
+.front1 img,
+.front2 img {
+  width: 100%;
+  height: 100%;
+} */
+
+.back,
+.back1,
+.back2 {
+  transform: perspective(600px) rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.back h1,
+.back1 h1,
+.back2 h1 {
+  color: #444;
+  font-size: 24px;
+}
+.back .logo,
+.back1 .logo,
+.back2 .logo {
+  top: 15%;
+  position: absolute;
+  opacity: 15%;
+}
+
+.back h1 span,
+.back1 h1 span,
+.back2 h1 span {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 5px 0 10px;
+}
+
+.back .socials,
+.back1 .socials1,
+.back2 .socials2 {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back .socials a,
+.back1 .socials1 a,
+.back2 .socials2 a {
+  margin: 10px;
+  color: #444;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border-radius: 50%;
+  transition: 0.4s ease;
+}
+
+.back .socials a:hover,
+.back1 .socials1 a:hover,
+.back2 .socials2 a:hover {
+  background-color: #444;
+  color: #fff;
+}
+/*------------------------------------ Программы----------------------------------------------*/
+/* .details {
+  width: 60%;
+  left: 20%;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.details .summary,
+.details p {
+  padding: 20px;
+}
+.details .summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details .p {
+  border-top: 1px solid gray;
+  color: #000;
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: justify;
+}
+.details .p ul li {
+} */
+/*---------------------------Стиль для табов-------------------------------------------------*/
+.PanelContent,
+.PanelContent ul li {
+  list-style-type: circle;
+}
+.panelBox {
+  padding-top: 100px;
+  height: 100vh;
+  /* margin-left: auto; */
+  /* background: linear-gradient(to bottom, #0000ff88 0%, #ffff00ab 120%); */
+}
+.Tabs {
+  left: 25%;
+}
+/* @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;
+1,600&display=swap") */
+/* :root {
+  --hero-gap: 60px;
+}
+* {
+  box-sizing: border-box;
+}
+.bodys {
+  font-family: Roboto;
+}
+h11 {
+  font-size: calc(0.5rem + 8vmin);
+  font-weight: 600;
+  font-style: Roboto;
+}
+h22 {
+  font-size: calc(0.8rem + 4vmin);
+  font-weight: 600;
+  font-style: Roboto;
+  line-height: 1.2;
+  text-align: center;
+}
+p1 {
+  font-size: calc(0.8rem + 1.25vmin);
+  line-height: 1.65;
+}
+.caption {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: white;
+  z-index: 2;
+  font-size: 0.6rem;
+}
+.parallax-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 10px;
+}
+.parallax-content {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--hero-gap));
+}
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  z-index: 1;
+  transform: translateZ(1px);
+}
+.hero .hero__title {
+  color: white;
+  z-index: 2;
+  text-align: center;
+  transform: translateZ(-2px) scale(1.2);
+}
+.hero .hero__title p {
+  margin-top: 0.5rem;
+  font-size: calc(0.6rem + 0.75vmin);
+}
+.hero .hero__title a {
+  color: white;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 100%;
+  transform: translateZ(8px);
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.013) 8%,
+    rgba(0, 0, 0, 0.049) 14.8%,
+    rgba(0, 0, 0, 0.104) 20.8%,
+    rgba(0, 0, 0, 0.175) 26%,
+    rgba(0, 0, 0, 0.259) 30.8%,
+    rgba(0, 0, 0, 0.352) 35.3%,
+    rgba(0, 0, 0, 0.45) 39.8%,
+    rgba(0, 0, 0, 0.55) 44.5%,
+    rgba(0, 0, 0, 0.648) 49.5%,
+    rgba(0, 0, 0, 0.741) 55.2%,
+    rgba(0, 0, 0, 0.825) 61.7%,
+    rgba(0, 0, 0, 0.896) 69.2%,
+    rgba(0, 0, 0, 0.951) 77.9%,
+    rgba(0, 0, 0, 0.987) 88.1%,
+    #000 100%
+  );
+  z-index: 3;
+}
+.main-content {
+  position: relative;
+  margin: 0 auto;
+  padding: var(--hero-gap) 2rem;
+  max-width: 725px;
+  background-color: white;
+}
+.main-content > * + * {
+  margin-top: 2rem;
+}
+.scroll-icon-container {
+  --size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  top: calc(var(--size) * -1);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: calc(var(--size) * 2);
+  height: calc(var(--size) * 2);
+  border-radius: 0.15rem;
+  background-color: inherit;
+  box-shadow: 0 6px 12px -3px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+.scroll-icon-container .icon--down-arrow {
+  width: var(--size);
+  height: var(--size);
+} */
+@import "https://fonts.googleapis.com/css?family=Sintony";
+@import "https://fonts.googleapis.com/css2?family=Roboto";
+
+/* * {
+  box-sizing: border-box;
+} */
+.bodys {
+  background: #222;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+}
+/* header {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  /* position: relative; */
+
+.section {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  letter-spacing: 4px;
+  overflow: hidden;
+  clip: rect(0, auto, auto, 0);
+}
+.section .fixed {
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  /* background-color: #444; */
+  opacity: 50%;
+  left: 50%;
+}
+.section .white {
+  color: #fff;
+}
+.section:nth-child(1) {
+  background-color: #fff;
+
+  color: #000;
+  top: 0;
+  z-index: 1;
+}
+.section:nth-child(1) .fixed {
+  transform: translate(-50%, -50%);
+}
+.section:nth-child(2) {
+  box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
+  background-color: rgb(57, 2, 255);
+  color: rgb(255, 255, 255);
+  top: 100vh;
+  z-index: 2;
+}
+.section:nth-child(2) .fixed {
+  transform: translate(-50%, -50%);
+}
+.section:nth-child(3) {
+  box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
+  /* background-image: url(https://grappling.com/wp-content/uploads/2017/01/p9_Yamasaki.jpg); */
+  background-color: rgb(94, 0, 94);
+  color: floralwhite;
+  background-size: cover;
+  top: 200vh;
+  z-index: 3;
+}
+.section:nth-child(3) .fixed {
+  transform: translate(-50%, -50%);
+}
+.section:nth-child(4) {
+  box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
+  background-color: rgb(67, 27, 27);
+  color: #fff;
+  top: 300vh;
+  z-index: 4;
+}
+.section:nth-child(4) .fixed {
+  transform: translate(-50%, -50%);
+}
+.section:nth-child(5) {
+  box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
+  background-color: black;
+  color: #fff;
+  top: 400vh;
+  z-index: 5;
+}
+.section:nth-child(5) .fixed {
+  transform: translate(-50%, -50%);
+}
+.section:nth-child(6) {
+  box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
+  background-color: blue;
+  color: #fff;
+  top: 500vh;
+
+  z-index: 6;
+}
+.section:nth-child(6) .fixed {
+  transform: translate(-50%, -50%);
+}
+.section:nth-child(7) {
+  box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
+  background-color: #6d00db;
+  color: #fff;
+  top: 600vh;
+  z-index: 7;
+}
+.section:nth-child(7) .fixed {
+  transform: translate(-50%, -50%);
+}
+.section:nth-child(8) {
+  box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
+  background-color: rgb(101, 38, 38);
+  color: #fff;
+  top: 700vh;
+  z-index: 8;
+}
+.section:nth-child(8) .fixed {
+  transform: translate(-50%, -50%);
+}
+.section:nth-child(9) {
+  box-shadow: inset 0 1px 80px rgba(0, 0, 0, 0.14);
+  background-color: #0a0a0a;
+  color: #fff;
+  top: 800vh;
+  z-index: 9;
+}
+.section:nth-child(9) .fixed {
+  transform: translate(-50%, -50%);
+}
+.section:nth-child(10) {
+  background-color: #000;
+  color: #fff;
+  top: 900vh;
+  z-index: 10;
+}
+.section:nth-child(10) .fixed {
+  transform: translate(-50%, -50%);
+}
+/* .oop {
+  position: relative;
+  z-index: auto;
+  /* height: 10px; */
+/* background: linear-gradient(141deg, #48ded4 0%, #a026bf 51%, #e82c75 75%); */
