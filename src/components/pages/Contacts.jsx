@@ -44,15 +44,6 @@ const Contacts = () => {
     />
   );
 
-  const OverlayTwo = () => (
-    <ModalOverlay
-      bg="none"
-      backdropFilter="auto"
-      backdropInvert="80%"
-      backdropBlur="2px"
-    />
-  );
-
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [overlay, setOverlay] = React.useState(<OverlayOne />);
   return (
@@ -88,25 +79,30 @@ const Contacts = () => {
                 <ModalContent>
                   <ModalHeader></ModalHeader>
                   <ModalBody>
-                    <Flex h="80vh" justifyContent="center" alignItems="center">
-                      <Text fontSize="24px" padding="10px 10px">
-                        <Text>
-                          Микола Шерстюк-Тренер дитячої групи : +380 73 203 76
-                          64
+                    <Flex
+                      h="92vh"
+                      justifyContent="center"
+                      alignItems="center"
+                      padding="40px"
+                    >
+                      <Text fontSize="22px">
+                        <Text padding="5px">
+                          Микола Шерстюк - Тренер дитячої групи BJJ : +380 73
+                          203 76 64
                         </Text>
-                        <Text>
+                        <Text padding="5px">
                           Мирошников Владислав - Досвідчений тренер з ММА та
                           Бойового самбо : +380 95 507 33 70
                         </Text>
-                        <Text>
+                        <Text padding="5px">
                           {" "}
-                          Косенко Валентин - Тренер дорослої групи : +380 50 535
-                          09 61
+                          Косенко Валентин - Тренер дорослої групи BJJ : +380 50
+                          535 09 61
                         </Text>
                         <Flex
                           justifyContent="space-between"
                           textAlign="center"
-                          padding="10px"
+                          padding="20px"
                         >
                           <Flex
                             flexDir="column"
@@ -114,7 +110,7 @@ const Contacts = () => {
                             alignItems="center"
                           >
                             <Image w="150px" src={QrPhoneNikolay}></Image>{" "}
-                            <Text>Микола Шерстюк</Text>
+                            <Text padding="10px">Микола Шерстюк</Text>
                           </Flex>
                           <Flex
                             flexDir="column"
@@ -122,7 +118,7 @@ const Contacts = () => {
                             alignItems="center"
                           >
                             <Image w="150px" src={QrPhoneVlad}></Image>
-                            <Text> Мирошников Владислав</Text>
+                            <Text padding="10px"> Мирошников Владислав</Text>
                           </Flex>
                           <Flex
                             flexDir="column"
@@ -130,7 +126,7 @@ const Contacts = () => {
                             alignItems="center"
                           >
                             <Image w="150px" src={QrPhoneValentin}></Image>
-                            <Text>Косенко Валентин</Text>
+                            <Text padding="10px">Косенко Валентин</Text>
                           </Flex>
                         </Flex>
                       </Text>
