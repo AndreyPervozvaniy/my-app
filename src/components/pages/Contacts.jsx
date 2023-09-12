@@ -7,6 +7,7 @@ import {
   Avatar,
   Heading,
   Text,
+  Tooltip,
   IconButton,
   CardBody,
   Image,
@@ -109,7 +110,21 @@ const Contacts = () => {
                             padding="20px"
                             alignItems="center"
                           >
-                            <Image w="150px" src={QrPhoneNikolay}></Image>{" "}
+                            <Tooltip
+                              hasArrow
+                              label="Сканируй и звони!)"
+                              // bg="white"
+                              cursor="pointer"
+                              fontSize="xl"
+                              color="black"
+                              placement="top"
+                            >
+                              <Image
+                                cursor="pointer"
+                                w="150px"
+                                src={QrPhoneNikolay}
+                              ></Image>
+                            </Tooltip>
                             <Text padding="10px">Микола Шерстюк</Text>
                           </Flex>
                           <Flex
@@ -117,15 +132,45 @@ const Contacts = () => {
                             padding="20px"
                             alignItems="center"
                           >
-                            <Image w="150px" src={QrPhoneVlad}></Image>
-                            <Text padding="10px"> Мирошников Владислав</Text>
+                            {" "}
+                            <Tooltip
+                              hasArrow
+                              label="Сканируй и звони!)"
+                              // bg="white"
+                              cursor="pointer"
+                              fontSize="xl"
+                              color="black"
+                              placement="top"
+                            >
+                              <Image
+                                cursor="pointer"
+                                w="150px"
+                                src={QrPhoneVlad}
+                              ></Image>
+                            </Tooltip>
+                            <Text padding="10px"> Мирошников Владислав</Text>{" "}
                           </Flex>
                           <Flex
                             flexDir="column"
                             padding="20px"
                             alignItems="center"
                           >
-                            <Image w="150px" src={QrPhoneValentin}></Image>
+                            {" "}
+                            <Tooltip
+                              hasArrow
+                              label="Сканируй и звони!)"
+                              // bg="white"
+                              cursor="pointer"
+                              fontSize="xl"
+                              color="black"
+                              placement="top"
+                            >
+                              <Image
+                                cursor="pointer"
+                                w="150px"
+                                src={QrPhoneValentin}
+                              ></Image>
+                            </Tooltip>
                             <Text padding="10px">Косенко Валентин</Text>
                           </Flex>
                         </Flex>
