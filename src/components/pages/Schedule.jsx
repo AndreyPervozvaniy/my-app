@@ -354,7 +354,7 @@ const Schedule = () => {
                     <Td border="1px solid black">Мирошников Владислав</Td>
                   </Tr>
                   <Tr>
-                    <Td border="1px solid black">Вівторок</Td>
+                    <Td border="1px solid black">Четвер</Td>
                     <Td border="1px solid black" isNumeric>
                       17:00{" "}
                     </Td>
