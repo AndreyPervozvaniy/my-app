@@ -20,7 +20,7 @@ const Instructors = () => {
         opacity="60%"
       />
       <div className="wrapper">
-        <div className="card">
+        <div className="card" id="o">
           <div className="front">
             <Image
               w="100%"
@@ -43,40 +43,18 @@ const Instructors = () => {
                   Україні.
                 </span>
               </h1>
-              <ul className="socials">
-                <li>
-                  <a href="#">
-                    <i className="fa fa-youtube"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fa fa-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fa fa-vk"></i>
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
-        <div className="card1">
-          <div className="front1">
+        <div className="card" id="t">
+          <div className="front">
             <Image w="100%" h="100%" src={Smile} />
           </div>
-          <div className="back1">
+          <div className="back">
             <div className="logo">
               <Image src={Icon} />
             </div>
-            <div className="content1">
+            <div className="content">
               <h1>
                 Шерстюк Микола Васильович
                 <span>
@@ -84,41 +62,19 @@ const Instructors = () => {
                   джитсу.
                 </span>
               </h1>
-              <ul className="socials1">
-                <li>
-                  <a href="https://www.youtube.com/@user-dm4bx3gv8l">
-                    <i className="fa fa-youtube"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/bjj_kids_dnipro/">
-                    <i className="fa fa-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com/BrazilianJiuJitsuDnepr/">
-                    <i className="fa fa-facebook"></i>
-                  </a>
-                </li>
-                {/* <li>
-                  <a href="#">
-                    <i className="fa fa-vk"></i>
-                  </a>
-                </li> */}
-              </ul>
             </div>
           </div>
         </div>
-        <div className="card2">
-          <div className="front2">
+        <div className="card" id="f">
+          <div className="front">
             <Image w="100%" h="100%" src={vlad} />
           </div>
-          <div className="back2">
+          <div className="back">
             {" "}
             <div className="logo">
               <Image src={Icon} />
             </div>
-            <div className="content2">
+            <div className="content">
               <h1>
                 Мирошников Владислав
                 <span>
@@ -126,28 +82,6 @@ const Instructors = () => {
                   бразильське джиу-джитсу.
                 </span>
               </h1>
-              <ul className="socials2">
-                <li>
-                  <a href="#">
-                    <i className="fa fa-youtube"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fa fa-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fa fa-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fa fa-vk"></i>
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
