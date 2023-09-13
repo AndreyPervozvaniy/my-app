@@ -63,6 +63,7 @@ const Contacts = () => {
         backgroundImage={Waterlogo}
         backgroundSize="contain"
         h="100vh"
+        backgroundRepeat="no-repeat"
         position="absolute"
         opacity="60%"
       />{" "}

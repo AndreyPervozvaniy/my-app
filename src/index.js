@@ -9,11 +9,13 @@ import { extendTheme } from "@chakra-ui/react";
 
 const { Button } = chakraTheme.components;
 const { Tabs } = chakraTheme.components;
+const { Menu } = chakraTheme.components;
 
 const theme = extendBaseTheme({
   components: {
     Button,
     Tabs,
+    Menu,
   },
 });
 

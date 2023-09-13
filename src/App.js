@@ -7,6 +7,8 @@ import About from "./components/pages/About";
 import Instructors from "./components/pages/Instructors";
 import Programms from "./components/pages/Programms";
 import Schedule from "./components/pages/Schedule";
+import OurBelts from "./components/pages/OurBelts";
+import OurAcademy from "./components/pages/OurAcademy";
 
 function App() {
   const navBarItems = [
@@ -15,6 +17,7 @@ function App() {
     { name: "Instructors" },
     { name: "Shedule" },
     { name: "Contacts" },
+    { name: "ourBelts" },
   ];
   return (
     <Router>
@@ -25,6 +28,8 @@ function App() {
         <Route path="/instructors" element={<Instructors />} />
         <Route path="/programms" element={<Programms />} />
         <Route path="/shedule" element={<Schedule />} />
+        <Route path="/ourAcademy" element={<OurAcademy />} />
+        <Route path="/ourBelts" element={<OurBelts />} />
       </Routes>
     </Router>
   );
