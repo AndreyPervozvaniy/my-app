@@ -38,7 +38,7 @@ const Navbar = () => {
       background="white"
       alignItems="center"
       padding="0 10%"
-      boxShadow="0 0px 2px #000"
+      // boxShadow="0 0px 2px #000"
       zIndex="11"
     >
       <Flex onClick={() => router("/")}>
@@ -56,7 +56,8 @@ const Navbar = () => {
             padding="20px"
             justifyContent="space-between"
             pos="relative"
-            fontSize="20px"
+            fontSize="18px"
+            fontWeight="normal"
           >
             {navBarItems.map((route) => {
               if (route.isMenu) {

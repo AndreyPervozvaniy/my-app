@@ -64,7 +64,7 @@ const Programms = () => {
               <TabPanels>
                 <TabPanel>
                   <Box
-                    fontWeight="700"
+                    fontWeight="600"
                     w="900px"
                     fontSize="18px"
                     backgroundColor="white"
@@ -88,7 +88,7 @@ const Programms = () => {
                 <TabPanel>
                   <Box
                     fontSize="18px"
-                    fontWeight="700"
+                    fontWeight="600"
                     w="900px"
                     backgroundColor="white"
                     opacity="80%"
@@ -126,12 +126,12 @@ const Programms = () => {
                 <TabPanel>
                   <Box
                     fontSize="18px"
-                    fontWeight="700"
+                    fontWeight="600"
                     w="900px"
                     backgroundColor="white"
                     opacity="80%"
                   >
-                    <Box>
+                    <Box listStyleType="circle">
                       <li>
                         Визначте свої мету та цілі. Перш за все, важливо
                         визначити вашу мету та цілі. Питання, яке ви повинні
@@ -159,13 +159,13 @@ const Programms = () => {
                 <TabPanel>
                   <Box
                     fontSize="18px"
-                    fontWeight="700"
+                    fontWeight="600"
                     w="900px"
                     backgroundColor="white"
                     opacity="80%"
                   >
                     {" "}
-                    <Box>
+                    <Box listStyleType="circle">
                       {" "}
                       <li>
                         Kimono / Gi (гі) — куртка, штани, пояс кольору вашого

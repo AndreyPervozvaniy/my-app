@@ -72,39 +72,105 @@ const Contacts = () => {
       />{" "}
       <Flex
         h="100vh"
-        // justifyContent="center"
+        flexDirection="column"
         alignItems="center"
         padding="10%"
-        paddingTop="30%"
-        justifyContent="space-between"
+        justifyContent="center"
       >
-        <Button
-          className="fa fa-phone"
-          w="170px"
-          onClick={() => {
-            onOpen();
-          }}
+        {" "}
+        <Flex
+          h="92vh"
+          justifyContent="center"
+          alignItems="center"
+          padding="40px"
+          fontFamily="Roboto"
         >
-          <Text padding="5px">Контакти</Text>
-        </Button>{" "}
-        <Button
-          className="fa fa-instagram"
-          w="170px"
-          onClick={() => {
-            onSecondOpen();
-          }}
-        >
-          <Text padding="5px">Соціальні мережі</Text>
-        </Button>{" "}
-        <Button
-          className="fa fa-map-marker"
-          w="170px"
-          onClick={() => {
-            onThirdOpen();
-          }}
-        >
-          <Text padding="5px">Де нас знайти!</Text>
-        </Button>{" "}
+          <Flex fontSize="22px">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1321.7486555802132!2d35.0736516!3d48.5045306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe393edb25bcb%3A0xe91e1f026da0b37e!2sYamasaki%20Academy%20Jiu%20Jitsu!5e0!3m2!1sru!2sua!4v1694594361759!5m2!1sru!2sua"
+              width="800"
+              height="450"
+              allowfullscreen=""
+              loading="lazy"
+              // referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <Flex
+              justifyContent="space-between"
+              textAlign="center"
+              padding="20px"
+            >
+              <Flex flexDir="column" padding="20px" alignItems="center">
+                {" "}
+                <Tooltip
+                  hasArrow
+                  label="Чекаємо на тебе!)"
+                  // bg="white"
+                  cursor="pointer"
+                  fontSize="xl"
+                  color="black"
+                  placement="top"
+                >
+                  <Image cursor="pointer" w="150px" src={GoogleMap}></Image>
+                </Tooltip>
+                <Text padding="10px">Yamasaki Google Maps</Text>
+                <Text padding="5px" backgroundColor="white" opacity="80%">
+                  Зупинка: вулиця Богдана Хмельницького
+                </Text>
+                <Text
+                  padding="5px"
+                  backgroundColor="white"
+                  borderRadius="20px"
+                  opacity="80%"
+                >
+                  Маршрути автобусів: A153, 124A, A115, A149, A64Г, А31, А177,
+                  А107, А136, А88, А38, А43,А158{" "}
+                </Text>
+                <Text padding="5px" backgroundColor="white" opacity="80%">
+                  Маршрути тролейбусів: 20, 7, 17, 3, 15
+                </Text>
+              </Flex>
+            </Flex>
+          </Flex>
+        </Flex>
+        <Flex w="100%" justifyContent="space-between">
+          <Button
+            background="white"
+            border="1px solid grey"
+            borderRadius="20px"
+            className="fa fa-phone"
+            w="300px"
+            onClick={() => {
+              onOpen();
+            }}
+          >
+            <Text padding="10px">Контакти</Text>
+          </Button>{" "}
+          <Button
+            className="fa fa-instagram"
+            background="white"
+            border="1px solid grey"
+            borderRadius="20px"
+            w="300px"
+            onClick={() => {
+              onSecondOpen();
+            }}
+          >
+            <Text padding="5px">Соціальні мережі</Text>
+          </Button>{" "}
+          <Button
+            className="fa fa-map-marker"
+            background="white"
+            border="1px solid grey"
+            borderRadius="20px"
+            w="300px"
+            onClick={() => {
+              onThirdOpen();
+            }}
+          >
+            <Text padding="5px">Де нас знайти!</Text>
+          </Button>{" "}
+        </Flex>
         <Modal isCentered isOpen={isThirdOpen} onClose={onThirdClose}>
           <ModalOverlay
             bg="blackAlpha.300"

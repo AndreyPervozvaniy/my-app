@@ -80,19 +80,14 @@ const Instructors = () => {
             justifyContent="center"
             textAlign="center"
           >
-            <Box top="15%" opacity="15%" pos="absolute">
+            <Box top="15%" opacity="10%" pos="absolute">
               <Image src={Icon} />
             </Box>
             <Box>
-              <Text color="#444" fontSize="24px">
+              <Text color="#444" fontWeight="700" fontSize="24px">
                 Шерстюк Микола Васильович
               </Text>
-              <Text
-                display="block"
-                fontSize="18px"
-                fontWeight="700"
-                padding="10px"
-              >
+              <Text display="block" fontSize="18px" padding="10px">
                 Пурпурний пасок. Тренер дитячої групи з Бразильського джиу
                 джитсу.
               </Text>
@@ -156,19 +151,14 @@ const Instructors = () => {
               backfaceVisibility: "hidden",
             }}
           >
-            <Box top="15%" opacity="15%" pos="absolute">
+            <Box top="15%" opacity="10%" pos="absolute">
               <Image src={Icon} />
             </Box>
             <Box>
-              <Text color="#444" fontSize="24px">
+              <Text color="#444" fontWeight="700" fontSize="24px">
                 Косенко Валентин Михайлович
               </Text>
-              <Text
-                display="block"
-                fontSize="18px"
-                fontWeight="700"
-                padding="10px"
-              >
+              <Text display="block" fontSize="18px" padding="10px">
                 Тренер дорослої групи. Коричневий пасок з Бразильського
                 джиу-джитсу. Суддя турнірів з Бразильського джиу-джитсу в
                 Україні.
@@ -225,19 +215,14 @@ const Instructors = () => {
             justifyContent="center"
             textAlign="center"
           >
-            <Box top="15%" opacity="15%" pos="absolute">
+            <Box top="15%" opacity="10%" pos="absolute">
               <Image src={Icon} />
             </Box>
             <Box>
-              <Text color="#444" fontSize="24px">
+              <Text color="#444" fontWeight="700" fontSize="24px">
                 Мирошников Владислав
               </Text>
-              <Text
-                display="block"
-                fontSize="18px"
-                fontWeight="700"
-                padding="10px"
-              >
+              <Text display="block" fontSize="18px" padding="10px">
                 Досвідчений тренер з ММА та Бойового самбо . Практитує
                 бразильське джиу-джитсу.
               </Text>
