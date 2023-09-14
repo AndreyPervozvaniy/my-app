@@ -37,7 +37,7 @@ const Navbar = () => {
       left="0"
       background="white"
       alignItems="center"
-      padding="0 8%"
+      padding="0 10%"
       boxShadow="0 0px 2px #000"
       zIndex="11"
     >
@@ -66,7 +66,7 @@ const Navbar = () => {
                       cursor="pointer"
                       _hover={{ textDecoration: "underline" }}
                       background="white"
-                      className="fa fa-arrow-down"
+                      // className="fa fa-arrow-down"
                     >
                       <Flex
                         cursor="pointer"

@@ -43,7 +43,7 @@ import faceQR from "../../assets/img/qr face.png";
 import QRyoutube from "../../assets/img/QRtube.png";
 import QRinstaDnipro from "../../assets/img/QR insta bjj.png";
 import GoogleMap from "../../assets/img/google map.png";
-
+import QRTelega from "../../assets/img/QR telegram.png";
 const Contacts = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
@@ -60,12 +60,15 @@ const Contacts = () => {
     <>
       <Navbar />{" "}
       <Flex
-        backgroundImage={Waterlogo}
-        backgroundSize="contain"
-        h="100vh"
-        backgroundRepeat="no-repeat"
         position="absolute"
-        opacity="60%"
+        opacity="50%"
+        backgroundImage={`url(${Waterlogo})`}
+        backgroundSize="contain"
+        backgroundRepeat="no-repeat"
+        // backgroundPosition="center center"
+        h="100vh"
+        w="100vw"
+        zIndex="-1"
       />{" "}
       <Flex
         h="100vh"
@@ -222,7 +225,7 @@ const Contacts = () => {
                       {" "}
                       Yamasaki Telegram:{" "}
                       <Link
-                        href="  https://www.facebook.com/BrazilianJiuJitsuDnepr/"
+                        href="  https://t.me/YamasakiAcademyDnipro"
                         isExternal
                       >
                         {" "}
@@ -291,7 +294,26 @@ const Contacts = () => {
                             src={QRyoutube}
                           ></Image>
                         </Tooltip>
-                        <Text padding="10px">Yamsasaki Youtube</Text>
+                        <Text padding="10px">Yamasaki Youtube</Text>
+                      </Flex>
+                      <Flex flexDir="column" padding="20px" alignItems="center">
+                        {" "}
+                        <Tooltip
+                          hasArrow
+                          label="Скануй та приєднуйся!)"
+                          // bg="white"
+                          cursor="pointer"
+                          fontSize="xl"
+                          color="black"
+                          placement="top"
+                        >
+                          <Image
+                            cursor="pointer"
+                            w="150px"
+                            src={QRTelega}
+                          ></Image>
+                        </Tooltip>
+                        <Text padding="10px">Yamasaki Telegram</Text>
                       </Flex>
                       <Flex flexDir="column" padding="20px" alignItems="center">
                         {" "}
