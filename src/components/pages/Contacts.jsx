@@ -159,7 +159,7 @@ const Contacts = () => {
             <Text padding="5px">Соціальні мережі</Text>
           </Button>{" "}
           <Button
-            className="fa fa-map-marker"
+            className="fa fa-video-camera"
             background="white"
             border="1px solid grey"
             borderRadius="20px"
