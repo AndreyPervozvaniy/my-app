@@ -188,49 +188,14 @@ const Contacts = () => {
                 >
                   <Flex fontSize="22px">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1321.7486555802132!2d35.0736516!3d48.5045306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe393edb25bcb%3A0xe91e1f026da0b37e!2sYamasaki%20Academy%20Jiu%20Jitsu!5e0!3m2!1sru!2sua!4v1694594361759!5m2!1sru!2sua"
-                      width="600"
-                      height="450"
-                      allowfullscreen=""
-                      loading="lazy"
-                      // referrerpolicy="no-referrer-when-downgrade"
+                      width="700"
+                      height="415"
+                      src="https://www.youtube.com/embed/17k37jCX0NY?si=9LRHYBf6ELao3PvZ"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
                     ></iframe>
-
-                    <Flex
-                      justifyContent="space-between"
-                      textAlign="center"
-                      padding="20px"
-                    >
-                      <Flex flexDir="column" padding="20px" alignItems="center">
-                        {" "}
-                        <Tooltip
-                          hasArrow
-                          label="Чекаємо на тебе!)"
-                          // bg="white"
-                          cursor="pointer"
-                          fontSize="xl"
-                          color="black"
-                          placement="top"
-                        >
-                          <Image
-                            cursor="pointer"
-                            w="150px"
-                            src={GoogleMap}
-                          ></Image>
-                        </Tooltip>
-                        <Text padding="10px">Yamasaki Google Maps</Text>
-                        <Text padding="5px">
-                          Зупинка: вулиця Богдана Хмельницького
-                        </Text>
-                        <Text padding="5px">
-                          Маршрути автобусів: A153, 124A, A115, A149, A64Г, А31,
-                          А177, А107, А136, А88, А38, А43,А158{" "}
-                        </Text>
-                        <Text padding="5px">
-                          Маршрути тролейбусів: 20, 7, 17, 3, 15
-                        </Text>
-                      </Flex>
-                    </Flex>
                   </Flex>
                 </Flex>{" "}
               </ModalBody>
