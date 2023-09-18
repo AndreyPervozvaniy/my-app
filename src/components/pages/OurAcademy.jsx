@@ -21,14 +21,14 @@ const ourAcademy = () => {
       <Flex
         fontFamily="Roboto"
         fontWeight="500"
-        textTransform="uppercase"
+        // textTransform="uppercase"
         color="#000"
         background="#222"
         padding="0"
         margin="0"
       >
         <Flex
-          fontSize="16px"
+          fontSize="18px"
           color="#000"
           top="0"
           zIndex="1"
