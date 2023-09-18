@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const menuItem = [
     { name: "Наша академия", path: "/ourAcademy" },
-    { name: "Наши пояса", path: "/ourBelts" },
+    { name: "Наша команда", path: "/ourBelts" },
   ];
 
   const router = useNavigate();
