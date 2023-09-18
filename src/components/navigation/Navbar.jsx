@@ -18,6 +18,7 @@ const Navbar = () => {
     { name: "Програма тренувань", path: "/programms" },
     { name: "Інструктори", path: "/instructors" },
     { name: "Розклад", path: "/shedule" },
+    { name: "Новини", path: "/news" },
     { name: "Контакти", path: "/contacts" },
   ];
 
