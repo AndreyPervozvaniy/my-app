@@ -95,7 +95,7 @@ const Programms = () => {
                 </Tab>
               </TabList>
               <TabPanels>
-                <TabPanel>
+                <TabPanel minH="420px">
                   <Box
                     fontWeight="600"
                     w="900px"
@@ -118,7 +118,7 @@ const Programms = () => {
                     виді бойових мистецтв.
                   </Box>
                 </TabPanel>
-                <TabPanel>
+                <TabPanel minH="420px">
                   <Box
                     fontSize="18px"
                     fontWeight="600"
@@ -167,7 +167,7 @@ const Programms = () => {
                     </Box>
                   </Box>
                 </TabPanel>
-                <TabPanel>
+                <TabPanel minH="420px">
                   <Box
                     fontSize="18px"
                     fontWeight="600"
@@ -198,7 +198,7 @@ const Programms = () => {
                     </Box>
                   </Box>
                 </TabPanel>
-                <TabPanel>
+                <TabPanel minH="420px">
                   <Box
                     fontSize="18px"
                     fontWeight="600"
@@ -232,7 +232,7 @@ const Programms = () => {
                     </Box>
                   </Box>
                 </TabPanel>
-                <TabPanel>
+                <TabPanel minH="420px">
                   <Box
                     fontSize="18px"
                     fontWeight="600"

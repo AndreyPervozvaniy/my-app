@@ -188,7 +188,7 @@ const Contacts = () => {
                 >
                   <Flex fontSize="22px">
                     <iframe
-                      width="800"
+                      width="900"
                       height="415"
                       src="https://www.youtube.com/embed/XyQ27GXavDM?si=ixaPX6BKhdyfrQ8b"
                       title="YouTube video player"
