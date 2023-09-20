@@ -18,7 +18,6 @@ const Instructors = () => {
         backgroundImage={`url(${Waterlogo})`}
         backgroundSize="contain"
         backgroundRepeat="no-repeat"
-        // backgroundPosition="center center"
         h="100vh"
         w="100vw"
         zIndex="-1"
@@ -29,7 +28,6 @@ const Instructors = () => {
         alignItems="center"
         justifyContent="space-between"
         padding="5%  "
-        // paddingTop="7%"
       >
         <Flex
           className="card"
@@ -87,7 +85,12 @@ const Instructors = () => {
               <Text color="#444" fontWeight="700" fontSize="24px">
                 Шерстюк Микола Васильович
               </Text>
-              <Text display="block" fontSize="18px" padding="10px">
+              <Text
+                display="block"
+                fontSize="18px"
+                fontWeight="600"
+                padding="10px"
+              >
                 Пурпурний пасок. Тренер дитячої групи з Бразильського джиу
                 джитсу.
               </Text>
@@ -158,7 +161,12 @@ const Instructors = () => {
               <Text color="#444" fontWeight="700" fontSize="24px">
                 Косенко Валентин Михайлович
               </Text>
-              <Text display="block" fontSize="18px" padding="10px">
+              <Text
+                display="block"
+                fontSize="18px"
+                fontWeight="600"
+                padding="10px"
+              >
                 Тренер дорослої групи. Коричневий пасок з Бразильського
                 джиу-джитсу. Суддя турнірів з Бразильського джиу-джитсу в
                 Україні.
@@ -222,7 +230,12 @@ const Instructors = () => {
               <Text color="#444" fontWeight="700" fontSize="24px">
                 Мирошников Владислав
               </Text>
-              <Text display="block" fontSize="18px" padding="10px">
+              <Text
+                display="block"
+                fontSize="18px"
+                fontWeight="600"
+                padding="10px"
+              >
                 Досвідчений тренер з ММА та Бойового самбо . Практитує
                 бразильське джиу-джитсу.
               </Text>

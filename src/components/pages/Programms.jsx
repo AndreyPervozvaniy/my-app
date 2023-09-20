@@ -1,13 +1,7 @@
 import React from "react";
 import Navbar from "../navigation/Navbar";
 import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
   Box,
-  AccordionIcon,
-  ChakraProvider,
   SimpleGrid,
   GridItem,
   Tabs,
@@ -16,14 +10,8 @@ import {
   Tab,
   TabPanel,
   Image,
-  textDecoration,
   Flex,
 } from "@chakra-ui/react";
-import Icon from "../../assets/img/icon.png";
-import Gi from "../../assets/img/Gi-removebg-preview (1).png";
-import Rash from "../../assets/img/rash.png";
-import Back from "../../assets/img/backg.jpg";
-import { color } from "framer-motion";
 import Waterlogo from "../../assets/img/watericon.png";
 
 const Programms = () => {
@@ -48,7 +36,7 @@ const Programms = () => {
             <Tabs w="900px">
               <TabList>
                 <Tab
-                  fontSize="18px"
+                  fontSize="20px"
                   fontWeight="600"
                   color="black"
                   backgroundColor="white"
@@ -57,7 +45,7 @@ const Programms = () => {
                   Що таке бразильське джиу-джитсу?
                 </Tab>{" "}
                 <Tab
-                  fontSize="18px"
+                  fontSize="20px"
                   fontWeight="600"
                   color="black"
                   backgroundColor="white"
@@ -66,7 +54,7 @@ const Programms = () => {
                   Переваги тренувань BJJ!
                 </Tab>
                 <Tab
-                  fontSize="18px"
+                  fontSize="20px"
                   fontWeight="600"
                   color="black"
                   backgroundColor="white"
@@ -76,7 +64,7 @@ const Programms = () => {
                   Що вам буде потрібно для тренувань?
                 </Tab>
                 <Tab
-                  fontSize="18px"
+                  fontSize="20px"
                   fontWeight="600"
                   color="black"
                   backgroundColor="white"
@@ -85,7 +73,7 @@ const Programms = () => {
                   Екіпірування
                 </Tab>
                 <Tab
-                  fontSize="18px"
+                  fontSize="20px"
                   fontWeight="600"
                   color="black"
                   backgroundColor="white"
@@ -95,7 +83,7 @@ const Programms = () => {
                 </Tab>
               </TabList>
               <TabPanels>
-                <TabPanel minH="420px">
+                <TabPanel minH="410px">
                   <Box
                     fontWeight="600"
                     w="900px"
@@ -118,7 +106,7 @@ const Programms = () => {
                     виді бойових мистецтв.
                   </Box>
                 </TabPanel>
-                <TabPanel minH="420px">
+                <TabPanel minH="410px">
                   <Box
                     fontSize="18px"
                     fontWeight="600"
@@ -167,7 +155,7 @@ const Programms = () => {
                     </Box>
                   </Box>
                 </TabPanel>
-                <TabPanel minH="420px">
+                <TabPanel minH="410px">
                   <Box
                     fontSize="18px"
                     fontWeight="600"
@@ -198,7 +186,7 @@ const Programms = () => {
                     </Box>
                   </Box>
                 </TabPanel>
-                <TabPanel minH="420px">
+                <TabPanel minH="410px">
                   <Box
                     fontSize="18px"
                     fontWeight="600"
@@ -232,7 +220,7 @@ const Programms = () => {
                     </Box>
                   </Box>
                 </TabPanel>
-                <TabPanel minH="420px">
+                <TabPanel minH="410px">
                   <Box
                     fontSize="18px"
                     fontWeight="600"

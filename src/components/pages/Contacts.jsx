@@ -30,11 +30,7 @@ import {
   ModalFooter,
   Link,
 } from "@chakra-ui/react";
-import { DragControls } from "framer-motion";
 import Waterlogo from "../../assets/img/watericon.png";
-import { hover } from "@testing-library/user-event/dist/hover";
-import { getActiveElement } from "@testing-library/user-event/dist/utils";
-// import Qr from "../../assets/img/qr-code (1).png";
 import QrPhoneNikolay from "../../assets/img/Дядь коля номер.png";
 import QrPhoneValentin from "../../assets/img/номер валентина.png";
 import QrPhoneVlad from "../../assets/img/номер влада.png";
@@ -65,7 +61,6 @@ const Contacts = () => {
         backgroundImage={`url(${Waterlogo})`}
         backgroundSize="contain"
         backgroundRepeat="no-repeat"
-        // backgroundPosition="center center"
         h="100vh"
         w="100vw"
         zIndex="-1"
@@ -92,7 +87,6 @@ const Contacts = () => {
               height="450"
               allowfullscreen=""
               loading="lazy"
-              // referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
 
             <Flex

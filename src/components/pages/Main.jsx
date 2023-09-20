@@ -36,7 +36,7 @@ const Main = () => {
       </Fade>
       <Flex
         fontFamily="Roboto"
-        fontWeight="300"
+        // fontWeight="300"
         textTransform="uppercase"
         color="#000"
         background="#222"
@@ -45,7 +45,7 @@ const Main = () => {
       >
         <Flex
           backgroundColor="#fff"
-          fontSize="30px"
+          // fontSize="30px"
           color="#000"
           top="0"
           zIndex="1"
@@ -55,7 +55,6 @@ const Main = () => {
           pos="absolute"
           w="100%"
           h="100vh"
-          letterSpacing="4px"
           overflow="hidden"
           clip="rect(0, auto, auto, 0)"
         >
@@ -66,7 +65,7 @@ const Main = () => {
             pos="fixed"
             opacity="50%"
           >
-            <Text>
+            <Text fontSize="30px" fontWeight="500" letterSpacing="4px">
               YAMASAKI ACADEMY DNIPRO <br />
               Почни свій шлях у світ Джіу-Джітсу разом з нами!
             </Text>
@@ -77,12 +76,12 @@ const Main = () => {
             alignSelf="flex-end"
             color="black"
             opacity="50%"
-            padding="10px"
+            padding="15px"
           ></Flex>
         </Flex>
         <Flex
           backgroundColor="rgb(57, 2, 255)"
-          fontSize="16px"
+          // fontSize="16px"
           color="rgb(255, 255, 255)"
           top="100vh"
           zIndex="2"
@@ -92,13 +91,12 @@ const Main = () => {
           pos="absolute"
           w="100%"
           h="100vh"
-          letterSpacing="4px"
           overflow="hidden"
           clip="rect(0, auto, auto, 0)"
           boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
         >
           <Flex overflow="hidden" opacity="50%">
-            <Text>
+            <Text fontSize="20px" fontWeight="500" letterSpacing="4px">
               Yamasaki Academy Dnipro - одна з філій академії з бразильського
               джиу-джитсу.Це дуже потужне ком'юніті спортсменів, а також тих
               людей, котрі захоплені цим. Люди в очах яких горить цей вид
@@ -111,7 +109,7 @@ const Main = () => {
         </Flex>{" "}
         <Flex
           backgroundColor="rgb(94, 0, 94)"
-          fontSize="16px"
+          // fontSize="16px"
           color="rgb(255, 255, 255)"
           top="200vh"
           zIndex="4"
@@ -121,12 +119,17 @@ const Main = () => {
           pos="absolute"
           w="100%"
           h="100vh"
-          letterSpacing="4px"
           overflow="hidden"
           clip="rect(0, auto, auto, 0)"
           boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
         >
-          <Flex overflow="hidden" opacity="50%">
+          <Flex
+            overflow="hidden"
+            opacity="50%"
+            fontSize="20px"
+            fontWeight="500"
+            letterSpacing="4px"
+          >
             <Text>
               Філософія нашої школи звучить досить просто, але це фундаментальні
               речі, без яких ваше джіу-джитсу не працюватиме належним чином! А
@@ -138,7 +141,7 @@ const Main = () => {
         </Flex>
         <Flex
           backgroundColor="rgb(67, 27, 27)"
-          fontSize="16px"
+          // fontSize="16px"
           color="rgb(255, 255, 255)"
           top="300vh"
           zIndex="6"
@@ -148,12 +151,17 @@ const Main = () => {
           pos="absolute"
           w="100%"
           h="100vh"
-          letterSpacing="4px"
           overflow="hidden"
           clip="rect(0, auto, auto, 0)"
           boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
         >
-          <Flex overflow="hidden" opacity="50%">
+          <Flex
+            overflow="hidden"
+            opacity="50%"
+            fontSize="20px"
+            fontWeight="500"
+            letterSpacing="4px"
+          >
             На шляху становлення вас, як джитсера, ви обов'язково зіткнетеся з
             труднощами та питаннями, які будуть ламати Вам голову. Вирішити
             будь-яке Ваше питання, допоможуть наші інструктори! Люди, які багато
@@ -162,7 +170,7 @@ const Main = () => {
         </Flex>
         <Flex
           backgroundColor="black"
-          fontSize="16px"
+          // fontSize="16px"
           color="rgb(255, 255, 255)"
           top="400vh"
           zIndex="7"
@@ -173,12 +181,17 @@ const Main = () => {
           pos="absolute"
           w="100%"
           h="100vh"
-          letterSpacing="4px"
           overflow="hidden"
           clip="rect(0, auto, auto, 0)"
           boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
         >
-          <Flex overflow="hidden" opacity="50%">
+          <Flex
+            overflow="hidden"
+            opacity="50%"
+            fontSize="20px"
+            fontWeight="500"
+            letterSpacing="4px"
+          >
             Почни і ти свій шлях! До зустрічі на татамі, Oss!
           </Flex>
         </Flex>

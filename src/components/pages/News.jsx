@@ -1,10 +1,13 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Box, Flex, Text, Image, Button, Fade } from "@chakra-ui/react";
 import Navbar from "../navigation/Navbar";
+import { useNavigate } from "react-router-dom";
+
 import { newscontent } from "../elem/newscontent";
 import Waterlogo from "../../assets/img/watericon.png";
 import { useScrollEvent } from "../../hooks";
 function News() {
+  const router = useNavigate();
   const [page, setPage] = useState(1);
   const [isVisibleTopButton] = useScrollEvent();
   const pagination = useMemo(() => {
@@ -58,34 +61,50 @@ function News() {
       />{" "}
       <Flex justifyContent="center" alignItems="center" h="100vh" w="100%">
         <Box w="90%" h="calc(100vh - 70px)" marginTop="70px">
-          {ourNews.map((item) => (
+          {ourNews.map((item, index) => (
             <Flex
-              border="1px solid gray"
-              borderRadius="15px"
+              // border="1px solid gray"
+              borderBottom="3px double black"
+              // borderRadius="15px"
               p="10px"
               mb="10px"
+              cursor="pointer"
               flexDirection="column"
               alignItems="center"
               justifyContent="center"
+              key={index}
+              // onClick={() =>
+              //   router("/NewsSlot", {
+              //     state: { text: item.text, img: item.image },
+              //   })
+              // }
             >
               <Image w="60%" src={item.image}></Image>
               <Text
+                textAlign="center"
+                w="100%"
+                overflow="hidden"
+                // maxHeight="1rem"
+                whiteSpace="nowrap"
+                textOverflow="ellipsis"
                 backgroundColor="white"
                 opacity="80%"
-                textAlign="center"
-                justifyContent="center"
-                fontSize={{
-                  base: "12px",
-                  sm: "14px",
-                  md: "16px",
-                  lg: "18px",
-                  xl: "20px",
-                }}
+                padding="20px"
               >
                 {item.text}
               </Text>
+              <Button
+                onClick={() =>
+                  router("/NewsSlot", {
+                    state: { text: item.text, img: item.image },
+                  })
+                }
+              >
+                Дізнатися більше
+              </Button>
             </Flex>
           ))}
+
           <Flex justifyContent="center" padding="20px">
             <Flex justify="space-between" w="100%">
               {pagination.map((item, index) => (

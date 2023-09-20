@@ -18,9 +18,7 @@ import {
   Tfoot,
   Flex,
 } from "@chakra-ui/react";
-import Logo from "../../assets/img/icon.png";
 import Waterlogo from "../../assets/img/watericon.png";
-import { color } from "framer-motion";
 const Schedule = () => {
   return (
     <>
@@ -64,7 +62,7 @@ const Schedule = () => {
                 </Flex>
               </AccordionButton>
             </h2>
-            <AccordionPanel pb={4}>
+            <AccordionPanel pb={4} fontSize="20px">
               <TableContainer left="5%">
                 <Table
                   textAlign="center"
@@ -156,7 +154,7 @@ const Schedule = () => {
                 </Box>
               </AccordionButton>
             </h2>
-            <AccordionPanel pb={4}>
+            <AccordionPanel pb={4} fontSize="20px">
               <TableContainer left="5%">
                 <Table
                   textAlign="center"
@@ -237,7 +235,7 @@ const Schedule = () => {
                 </Box>
               </AccordionButton>
             </h2>
-            <AccordionPanel pb={4}>
+            <AccordionPanel pb={4} fontSize="20px">
               <TableContainer left="5%">
                 <Table
                   textAlign="center"
@@ -318,7 +316,7 @@ const Schedule = () => {
                 </Box>
               </AccordionButton>
             </h2>
-            <AccordionPanel pb={4}>
+            <AccordionPanel pb={4} fontSize="20px">
               <TableContainer left="5%">
                 <Table
                   textAlign="center"

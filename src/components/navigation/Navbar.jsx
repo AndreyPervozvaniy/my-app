@@ -66,9 +66,11 @@ const Navbar = () => {
                   <Menu>
                     <MenuButton
                       cursor="pointer"
-                      _hover={{ textDecoration: "underline" }}
+                      fontWeight="normal"
+                      _hover={{
+                        textDecoration: "underline",
+                      }}
                       background="white"
-                      // className="fa fa-arrow-down"
                     >
                       <Flex
                         cursor="pointer"
