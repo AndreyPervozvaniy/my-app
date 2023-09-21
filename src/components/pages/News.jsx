@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { newscontent } from "../elem/newscontent";
 import Waterlogo from "../../assets/img/watericon.png";
 import { useScrollEvent } from "../../hooks";
+import { PATHS } from "../../routes";
 function News() {
   const router = useNavigate();
   const [page, setPage] = useState(1);
@@ -95,7 +96,7 @@ function News() {
               </Text>
               <Button
                 onClick={() =>
-                  router("/NewsSlot", {
+                  router(PATHS.NEW_SLOT, {
                     state: { text: item.text, img: item.image },
                   })
                 }
