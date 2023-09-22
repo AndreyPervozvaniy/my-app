@@ -11,6 +11,7 @@ import OurBelts from "./components/pages/OurBelts";
 import OurAcademy from "./components/pages/OurAcademy";
 import News from "./components/pages/News";
 import NewsSlot from "./components/pages/NewsSlot";
+
 function App() {
   const navBarItems = [
     { name: "About" },
