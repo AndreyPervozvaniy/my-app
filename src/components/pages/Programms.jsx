@@ -1,24 +1,84 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Navbar from "../navigation/Navbar";
-import {
-  Box,
-  SimpleGrid,
-  GridItem,
-  Tabs,
-  TabList,
-  TabPanels,
-  Tab,
-  TabPanel,
-  Image,
-  Flex,
-} from "@chakra-ui/react";
 import Waterlogo from "../../assets/img/watericon.png";
-
+import { Box, Flex, Stack, Image, Text, HStack } from "@chakra-ui/react";
+import { slides } from "../../content/slidescontent";
 const Programms = () => {
+  const arrowStyles = {
+    cursor: "pointer",
+    pos: "absolute",
+    top: "50%",
+    w: "auto",
+    mt: "-22px",
+    p: "16px",
+    color: "white",
+    fontWeight: "bold",
+    fontSize: "18px",
+    transition: "0.6s ease",
+    borderRadius: "0 3px 3px 0",
+    userSelect: "none",
+    _hover: {
+      opacity: 0.8,
+      // bg: "black",
+    },
+  };
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slidesCount = slides.length;
+
+  const prevSlide = () => {
+    setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
+  };
+
+  const setSlide = (slide) => {
+    setCurrentSlide(slide);
+  };
+
+  const carouselStyle = {
+    transition: "all .5s",
+    ml: `-${currentSlide * 100}%`,
+  };
+  const handleKeyDown = useCallback(
+    (event) => {
+      if (event.keyCode === 37) {
+        prevSlide();
+      } else if (event.keyCode === 39) {
+        nextSlide();
+      }
+    },
+    [prevSlide, nextSlide]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
+  // const SLIDES_INTERVAL_TIME = 5000;
+  // const ANIMATION_DIRECTION = "right";
+  // useEffect(() => {
+  //   const prevSlide = () => {
+  //     setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
+  //   };
+
+  //   const nextSlide = () => {
+  //     setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
+  //   };
+
+  //   const automatedSlide = setInterval(() => {
+  //     ANIMATION_DIRECTION.toLowerCase() === "left" ? prevSlide() : nextSlide();
+  //   }, SLIDES_INTERVAL_TIME);
+  //   return () => clearInterval(automatedSlide);
+  // }, [slidesCount]);
   return (
     <>
       <Navbar />
-
       <Box
         position="absolute"
         opacity="50%"
@@ -28,246 +88,91 @@ const Programms = () => {
         h="100vh"
         w="100vw"
         zIndex="-1"
-      />
-
-      <Flex justifyContent="center" h="100vh" alignItems="center">
-        <SimpleGrid spacing={12}>
-          <GridItem>
-            <Tabs w="900px">
-              <TabList>
-                <Tab
-                  fontSize="20px"
-                  fontWeight="600"
-                  color="black"
-                  backgroundColor="white"
-                  opacity="80%"
+      />{" "}
+      <Flex
+        h="100vh"
+        // w="full"
+        // bg="#edf3f8"
+        // _dark={{
+        //   bg: "#3e3e3e",
+        // }}
+        // p={10}
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Flex w="full" pos="relative" overflow="hidden" h="100vh">
+          <Flex h="400px" w="full" {...carouselStyle}>
+            {slides.map((slide, sid) => (
+              <Box
+                key={`slide-${sid}`}
+                boxSize="full"
+                shadow="md"
+                flex="none"
+                h="100vh"
+              >
+                <Text
+                  color="white"
+                  fontSize="xs"
+                  p="8px 12px"
+                  pos="absolute"
+                  top="0"
                 >
-                  Що таке бразильське джиу-джитсу?
-                </Tab>{" "}
-                <Tab
-                  fontSize="20px"
-                  fontWeight="600"
-                  color="black"
-                  backgroundColor="white"
-                  opacity="80%"
+                  {sid + 1} / {slidesCount}
+                </Text>
+                <Image
+                  src={slide.img}
+                  alt="carousel image"
+                  boxSize="full"
+                  backgroundSize="cover"
+                />
+                <Stack
+                  p="8px 12px"
+                  pos="absolute"
+                  bottom="24px"
+                  textAlign="center"
+                  w="full"
+                  backgroundColor="rgba(0, 0, 0, 0.8)"
+                  mb="8"
+                  color="white"
                 >
-                  Переваги тренувань BJJ!
-                </Tab>
-                <Tab
-                  fontSize="20px"
-                  fontWeight="600"
-                  color="black"
-                  backgroundColor="white"
-                  opacity="80%"
-                >
-                  {" "}
-                  Що вам буде потрібно для тренувань?
-                </Tab>
-                <Tab
-                  fontSize="20px"
-                  fontWeight="600"
-                  color="black"
-                  backgroundColor="white"
-                  opacity="80%"
-                >
-                  Екіпірування
-                </Tab>
-                <Tab
-                  fontSize="20px"
-                  fontWeight="600"
-                  color="black"
-                  backgroundColor="white"
-                  opacity="80%"
-                >
-                  Формати тренувань.
-                </Tab>
-              </TabList>
-              <TabPanels>
-                <TabPanel minH="410px">
-                  <Box
-                    fontWeight="600"
-                    w="900px"
-                    fontSize="18px"
-                    backgroundColor="white"
-                    opacity="80%"
-                  >
-                    Бразильське джиу-джитсу (BJJ) - це захоплююче бойове
-                    мистецтво та спорт, який зародився в Бразилії і швидко набув
-                    популярності по всьому світу. Головною характеристикою BJJ є
-                    акцент на техніці боротьби на землі та різноманітних
-                    захватах, що дозволяє здолати супротивника, навіть якщо він
-                    фізично більший або сильніший. Це робить джиу-джитсу
-                    ефективним засобом самооборони та прекрасною фізичною
-                    активністю для всіх вікових груп. Якщо ви шукаєте місце, де
-                    можна займатися бразильським джиу-джитсу в місті Дніпро,
-                    раджу звернутися до нашої академії, де вам запропонують
-                    найкращий варіант занять з джиу-джитсу. Також, можливо, є
-                    спеціалізовані клуби або школи, які спеціалізуються на цьому
-                    виді бойових мистецтв.
-                  </Box>
-                </TabPanel>
-                <TabPanel minH="410px">
-                  <Box
-                    fontSize="18px"
-                    fontWeight="600"
-                    w="900px"
-                    backgroundColor="white"
-                    opacity="80%"
-                  >
-                    <Box listStyleType="circle">
-                      <li>
-                        Саморозвиток - бжж це потужний інструмент для
-                        саморозвитку та вдосконалення себе, як фізично, так і
-                        ментально.
-                      </li>
-                      <li>
-                        Джіу - джитсу - це про тренування всього тіла з
-                        філософією і без нудних вправ, підходів та роботи "на
-                        кількість".
-                      </li>
-                      <li>
-                        Наш спорт - є найкращим антистресом, тому що під час
-                        тренування, ви з головою йдете в процес, де немає місця
-                        для рутини!
-                      </li>
-                      <li>
-                        Вперше вставши на татамі, ви тим самим потрапляєте у
-                        найпотужніше і найдружніше ком'юніті, де вам будуть
-                        завжди раді, підтримають і підкажуть. Будь ви вдома чи
-                        "в гостях".
-                      </li>
-                      <li>
-                        {" "}
-                        БЖЖ – це сім'я. У прямому та переносному сенсі, у нас
-                        займаються сім'ї і ми займаємось у сімейній обстановці.
-                      </li>
-                      <li>
-                        Джіу-джитсу - один із найефективніших засобів
-                        самозахисту, який дозволить захистити себе та рідних,
-                        навіть від тих опонентів, які перевершують вас у
-                        габаритах.
-                      </li>
-                      <li>
-                        Наша академія ставить в основу повагу та диспліну, тому
-                        на нашому татамі ви не побачите зворотного! Будь-яку
-                        суперечку можна вирішити у сутичці на татамі!
-                      </li>
-                    </Box>
-                  </Box>
-                </TabPanel>
-                <TabPanel minH="410px">
-                  <Box
-                    fontSize="18px"
-                    fontWeight="600"
-                    w="900px"
-                    backgroundColor="white"
-                    opacity="80%"
-                  >
-                    <Box listStyleType="circle">
-                      <li>
-                        Бути старше 6 років, не мати заборон від лікарів для
-                        заняття спортом, мати бажання, настрій, амбіції та
-                        екіпірування.
-                      </li>
-                      <li>
-                        Все інше ви отримаєте в стінах нашої академії, а саме:
-                        досвід, навички, знання, вміння бороти в собі страх і
-                        мандраж перед сутичкою, зможете загартувати свій
-                        характер , вміння постояти за себе та своїх близьких,
-                        зумієте осягнути філософію нашого спорту, а також ті
-                        ідеї і концепцію, яку він містить.
-                      </li>
-                      <li>
-                        Кожному новачкові, хто хотів би спробувати себе в цьому
-                        виді спорту, наша академія пропонує - безкоштовне пробне
-                        перше заняття!!! Просто зв'яжіться з нами, будь-яким
-                        зручним для вас способом та попередьте про свій візит!
-                      </li>
-                    </Box>
-                  </Box>
-                </TabPanel>
-                <TabPanel minH="410px">
-                  <Box
-                    fontSize="18px"
-                    fontWeight="600"
-                    w="900px"
-                    backgroundColor="white"
-                    opacity="80%"
-                  >
-                    {" "}
-                    <Box listStyleType="circle">
-                      {" "}
-                      <li>
-                        Kimono / Gi (гі) — куртка, штани, пояс кольору вашого
-                        рівня (початковий рівень – білий пояс). Також можна
-                        надягнути рашгард під куртку. Для жінок рашгард
-                        обов’язковий.
-                      </li>
-                      <li>
-                        Sem Kimono / No Gi (без гі) — шорти, щільно обтягуючі
-                        штани та рашгард (“rash guard” – футболка зі
-                        спеціального матеріалу, що захищає від поту; може бути
-                        як з довгим, так і з коротким рукавом)
-                      </li>
-                      <li>
-                        Спробуйте пробний урок. Наша школа BJJ пропонує
-                        безкоштовний пробний урок. Скористайтесь цією
-                        можливістю, щоб перевірити атмосферу, познайомитися
-                        знструкторами та іншими студентами. Пробний урок
-                        допоможе вам зробити осмислене рішення про початок
-                        тренувань з джиу-джитсу.
-                      </li>
-                    </Box>
-                  </Box>
-                </TabPanel>
-                <TabPanel minH="410px">
-                  <Box
-                    fontSize="18px"
-                    fontWeight="600"
-                    w="900px"
-                    backgroundColor="white"
-                    opacity="80%"
-                    listStyleType="circle"
-                  >
-                    <li>
-                      Розклад тренування: розминка, можлива невелика
-                      дрілл-сесія, розбір технік – відпрацювання, практика –
-                      боротьба 3-6 раундів по 5 хвилин.
-                    </li>
-                    <li>
-                      Gi - один із стандартних форматів тренувань у Гі (кімоно:
-                      сорочка, штани, пояс вашого рангу), де ми проходимо
-                      вивчення технік у партері, технік у стійці, тейкдаунів
-                      (переведення опонента зі стійки у партер).
-                    </li>
-                    <li>
-                      No Gi - один із стандартних форматів тренувань у Ноу Гі -
-                      без кімоно, у спортивному комплекті (рашгард + шорти +
-                      легінси). Розглядаємо техніки боротьби у стійці, партері,
-                      тейкдауни, а також ключові відмінності в порівнянні з
-                      техніками у форматі Гі.
-                    </li>
-                    <li>
-                      Дрілл - сесії : (від англ. Drill - вправа, тренування)
-                      являє собою будь-яку вправу, яка складається з техніки, що
-                      періодично повторюється.
-                    </li>
-                    <li>
-                      День боротьби - як правило, кожне наше тренування
-                      закінчується сесією боротьби, 3-6 раундів по 5 хвилин
-                      вільної боротьби або ж за завданням. День боротьби полягає
-                      у відсутності теоретичної частини і складається на 100% з
-                      практики, все тренування включає в себе кругову боротьбу
-                      по 5 хвилин зі опонентом, що змінюється.
-                    </li>
-                  </Box>
-                </TabPanel>
-              </TabPanels>
-            </Tabs>
-          </GridItem>
-        </SimpleGrid>
+                  <Text fontSize="2xl">{slide.label}</Text>
+                  <Text fontSize="lg">{slide.description}</Text>
+                </Stack>
+              </Box>
+            ))}
+          </Flex>
+          <Text {...arrowStyles} left="0" onClick={prevSlide}>
+            &#10094;
+          </Text>
+          <Text {...arrowStyles} right="0" onClick={nextSlide}>
+            &#10095;
+          </Text>
+          <HStack justify="center" pos="absolute" bottom="8px" w="full">
+            {Array.from({
+              length: slidesCount,
+            }).map((_, slide) => (
+              <Box
+                key={`dots-${slide}`}
+                cursor="pointer"
+                boxSize={["7px", null, "15px"]}
+                m="0 2px"
+                bg={
+                  currentSlide === slide ? "blackAlpha.800" : "blackAlpha.500"
+                }
+                rounded="50%"
+                display="inline-block"
+                transition="background-color 0.6s ease"
+                _hover={{
+                  bg: "blackAlpha.800",
+                }}
+                onClick={() => setSlide(slide)}
+              ></Box>
+            ))}
+          </HStack>
+        </Flex>
       </Flex>
     </>
   );
 };
+
 export default Programms;

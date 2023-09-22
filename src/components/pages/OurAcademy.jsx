@@ -13,7 +13,6 @@ const OurAcademy = () => {
         backgroundImage={`url(${Waterlogo})`}
         backgroundSize="contain"
         backgroundRepeat="no-repeat"
-        // backgroundPosition="center center"
         h="100vh"
         w="100vw"
         zIndex="-1"
@@ -21,7 +20,6 @@ const OurAcademy = () => {
       <Flex
         fontFamily="Roboto"
         fontWeight="500"
-        // textTransform="uppercase"
         color="#000"
         background="#222"
         padding="0"

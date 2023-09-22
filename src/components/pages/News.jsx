@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Box, Flex, Text, Image, Button, Fade } from "@chakra-ui/react";
+import { Search2Icon } from "@chakra-ui/icons";
 import Navbar from "../navigation/Navbar";
 import { useNavigate } from "react-router-dom";
-
-import { newscontent } from "../elem/newscontent";
+import { newscontent } from "../../content/newscontent";
 import Waterlogo from "../../assets/img/watericon.png";
 import { useScrollEvent } from "../../hooks";
 import { PATHS } from "../../routes";
@@ -101,7 +101,7 @@ function News() {
                   })
                 }
               >
-                Дізнатися більше
+                <Text padding="5px">Дізнатися більше</Text> <Search2Icon />
               </Button>
             </Flex>
           ))}

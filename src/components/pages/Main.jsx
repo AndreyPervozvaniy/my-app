@@ -1,15 +1,7 @@
 import React from "react";
 import Navbar from "../navigation/Navbar";
-import {
-  Box,
-  Button,
-  Text,
-  ButtonGroup,
-  Container,
-  AbsoluteCenter,
-  Fade,
-  Flex,
-} from "@chakra-ui/react";
+import { Button, Text, Fade, Flex } from "@chakra-ui/react";
+import { ArrowDownIcon } from "@chakra-ui/icons";
 import { useScrollEvent } from "../../hooks";
 const Main = () => {
   const [isVisibleTopButton] = useScrollEvent();
@@ -36,7 +28,6 @@ const Main = () => {
       </Fade>
       <Flex
         fontFamily="Roboto"
-        // fontWeight="300"
         textTransform="uppercase"
         color="#000"
         background="#222"
@@ -45,7 +36,6 @@ const Main = () => {
       >
         <Flex
           backgroundColor="#fff"
-          // fontSize="30px"
           color="#000"
           top="0"
           zIndex="1"
@@ -70,18 +60,14 @@ const Main = () => {
               Почни свій шлях у світ Джіу-Джітсу разом з нами!
             </Text>
           </Flex>{" "}
-          <Flex
-            className="fa fa-arrow-down"
+          <ArrowDownIcon
+            boxSize={8}
             justifyContent="center"
             alignSelf="flex-end"
-            color="black"
-            opacity="50%"
-            padding="15px"
-          ></Flex>
+          />
         </Flex>
         <Flex
           backgroundColor="rgb(57, 2, 255)"
-          // fontSize="16px"
           color="rgb(255, 255, 255)"
           top="100vh"
           zIndex="2"
@@ -109,7 +95,6 @@ const Main = () => {
         </Flex>{" "}
         <Flex
           backgroundColor="rgb(94, 0, 94)"
-          // fontSize="16px"
           color="rgb(255, 255, 255)"
           top="200vh"
           zIndex="4"
@@ -141,7 +126,6 @@ const Main = () => {
         </Flex>
         <Flex
           backgroundColor="rgb(67, 27, 27)"
-          // fontSize="16px"
           color="rgb(255, 255, 255)"
           top="300vh"
           zIndex="6"
@@ -162,15 +146,16 @@ const Main = () => {
             fontWeight="500"
             letterSpacing="4px"
           >
-            На шляху становлення вас, як джитсера, ви обов'язково зіткнетеся з
-            труднощами та питаннями, які будуть ламати Вам голову. Вирішити
-            будь-яке Ваше питання, допоможуть наші інструктори! Люди, які багато
-            років практикують джиу-джитсу, а також інші види спорту!
+            <Text fontSize="20px" fontWeight="500" letterSpacing="4px">
+              На шляху становлення вас, як джитсера, ви обов'язково зіткнетеся з
+              труднощами та питаннями, які будуть ламати Вам голову. Вирішити
+              будь-яке Ваше питання, допоможуть наші інструктори! Люди, які
+              багато років практикують джиу-джитсу, а також інші види спорту!
+            </Text>
           </Flex>
         </Flex>
         <Flex
           backgroundColor="black"
-          // fontSize="16px"
           color="rgb(255, 255, 255)"
           top="400vh"
           zIndex="7"
@@ -192,7 +177,9 @@ const Main = () => {
             fontWeight="500"
             letterSpacing="4px"
           >
-            Почни і ти свій шлях! До зустрічі на татамі, Oss!
+            <Text fontSize="20px" fontWeight="500" letterSpacing="4px">
+              Почни і ти свій шлях! До зустрічі на татамі, Oss!
+            </Text>
           </Flex>
         </Flex>
       </Flex>

@@ -45,12 +45,12 @@ const Schedule = () => {
           <AccordionItem>
             <h2>
               <AccordionButton padding="5px " width="100%">
-                <Flex
+                <Box
                   color="black"
                   fontSize="20px"
                   fontWeight="700"
                   backgroundColor="white"
-                  opacity="80%"
+                  opacity="90%"
                   padding="5px"
                   flex="1"
                   justifyContent="center"
@@ -58,8 +58,9 @@ const Schedule = () => {
                   borderRadius="15px"
                   _hover={{ backgroundColor: "rgba(47, 42, 214, 0.503)" }}
                 >
-                  Доросла група BJJ <AccordionIcon />
-                </Flex>
+                  Доросла група BJJ
+                  <AccordionIcon />
+                </Box>
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4} fontSize="20px">
@@ -141,7 +142,7 @@ const Schedule = () => {
                   fontSize="20px"
                   fontWeight="700"
                   backgroundColor="white"
-                  opacity="80%"
+                  opacity="90%"
                   padding="5px"
                   flex="1"
                   justifyContent="center"
@@ -222,7 +223,7 @@ const Schedule = () => {
                   fontSize="20px"
                   fontWeight="700"
                   backgroundColor="white"
-                  opacity="80%"
+                  opacity="90%"
                   padding="5px"
                   flex="1"
                   justifyContent="center"
@@ -303,7 +304,7 @@ const Schedule = () => {
                   fontSize="20px"
                   fontWeight="700"
                   backgroundColor="white"
-                  opacity="80%"
+                  opacity="90%"
                   padding="5px"
                   flex="1"
                   justifyContent="center"
