@@ -3,7 +3,7 @@ import Navbar from "../navigation/Navbar";
 import Waterlogo from "../../assets/img/watericon.png";
 import { Box, Text, Flex } from "@chakra-ui/react";
 
-const ourAcademy = () => {
+const OurAcademy = () => {
   return (
     <>
       <Navbar />{" "}
@@ -86,4 +86,4 @@ const ourAcademy = () => {
   );
 };
 
-export default ourAcademy;
+export default OurAcademy;

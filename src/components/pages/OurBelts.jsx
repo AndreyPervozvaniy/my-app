@@ -3,7 +3,7 @@ import Navbar from "../navigation/Navbar";
 import Waterlogo from "../../assets/img/watericon.png";
 import { Box } from "@chakra-ui/react";
 
-const ourBelts = () => {
+const OurBelts = () => {
   return (
     <>
       <Navbar />
@@ -22,4 +22,4 @@ const ourBelts = () => {
   );
 };
 
-export default ourBelts;
+export default OurBelts;
