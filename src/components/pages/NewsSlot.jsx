@@ -8,7 +8,7 @@ const NewsSlot = () => {
   const router = useNavigate();
   const location = useLocation();
   const { state } = location;
-  const { text, img } = state;
+  const { text, img, img2 } = state;
   return (
     <>
       <Navbar />{" "}
@@ -52,6 +52,7 @@ const NewsSlot = () => {
             >
               {text}
             </Text>
+            <Image padding="10px" w="80%" h="auto" src={img2}></Image>
             <Button
               background="white"
               border="1px solid grey"

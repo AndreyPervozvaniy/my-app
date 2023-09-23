@@ -4,11 +4,11 @@ import { Button, Text, Fade, Flex } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import { useScrollEvent } from "../../hooks";
 const Main = () => {
-  const [isVisibleTopButton] = useScrollEvent();
+  const [isVisibleBottomButton] = useScrollEvent(); // кнопка всплытия
   return (
     <>
       <Navbar />
-      <Fade in={isVisibleTopButton}>
+      <Fade in={isVisibleBottomButton}>
         <Button
           className="fa fa-arrow-up"
           aria-lavel="topButton"

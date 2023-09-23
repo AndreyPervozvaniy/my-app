@@ -97,7 +97,11 @@ function News() {
               <Button
                 onClick={() =>
                   router(PATHS.NEW_SLOT, {
-                    state: { text: item.text, img: item.image },
+                    state: {
+                      text: item.text,
+                      img: item.image,
+                      img2: item.image2,
+                    },
                   })
                 }
               >

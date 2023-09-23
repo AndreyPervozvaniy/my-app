@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 export function useScrollEvent() {
   const [isVisibleTopButton, setIsVisibleTopButton] = useState(false);
 
@@ -7,10 +8,10 @@ export function useScrollEvent() {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > prevScrollY || !currentScrollY) {
-        setIsVisibleTopButton(false);
-      } else if (currentScrollY < prevScrollY) {
+      if (currentScrollY > prevScrollY || currentScrollY === 0) {
         setIsVisibleTopButton(true);
+      } else {
+        setIsVisibleTopButton(false);
       }
 
       prevScrollY = currentScrollY;
