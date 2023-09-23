@@ -9,7 +9,7 @@
 // import Programms from "../components/pages/Programms";
 // import Schedule from "../components/pages/Schedule";
 // import Contacts from "../components/pages/Contacts";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 const Main = lazy(() => import("../components/pages/Main"));
 const About = lazy(() => import("../components/pages/About"));
 const Instructors = lazy(() => import("../components/pages/Instructors"));
