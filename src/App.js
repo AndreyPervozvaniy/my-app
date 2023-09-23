@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -12,7 +12,11 @@ function App() {
           <Route
             key={route.path}
             path={route.path}
-            element={<route.element />}
+            element={
+              <Suspense>
+                <route.element />
+              </Suspense>
+            }
           />
         ))}
       </Routes>
