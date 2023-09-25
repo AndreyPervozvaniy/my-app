@@ -52,13 +52,32 @@ const Programms = () => {
     },
     [prevSlide, nextSlide]
   );
+  const [lastScrollTime, setLastScrollTime] = useState(Date.now());
+  const handleScroll = useCallback(
+    (event) => {
+      const now = Date.now();
+      if (now - lastScrollTime >= 500) {
+        if (event.deltaY > 0) {
+          // Прокрутка вниз, перейти к следующему слайду
+          nextSlide();
+        } else {
+          // Прокрутка вверх, перейти к предыдущему слайду
+          prevSlide();
+        }
+        setLastScrollTime(now);
+      }
+    },
+    [lastScrollTime, prevSlide, nextSlide]
+  );
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("wheel", handleScroll); // Добавьте эту строку
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("wheel", handleScroll); // Добавьте эту строку
     };
-  }, [handleKeyDown]);
+  }, [handleKeyDown, handleScroll]);
 
   // const SLIDES_INTERVAL_TIME = 5000;
   // const ANIMATION_DIRECTION = "right";

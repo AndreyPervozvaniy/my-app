@@ -4,8 +4,16 @@ import news3 from "../assets/img/newsContentImage/news3.png";
 import news4 from "../assets/img/newsContentImage/news4.jpg";
 import news5 from "../assets/img/newsContentImage/news5.jpg";
 import news6 from "../assets/img/newsContentImage/shahoikoDR.jpg";
-import KruvbassPrizer from "../assets/img/newsContentImage/scr1.png";
+import result2 from "../assets/img/newsContentImage/src4.png";
+import news7 from "../assets/img/newsContentImage/krivbas-challenge-open-cup-2023.png";
+import result1 from "../assets/img/newsContentImage/src3.png";
 export const newscontent = [
+  {
+    text: `23 вересня 2023 року у м. Кривий Ріг пройшов турнір KRIVBAS CHALLENGE OPEN CUP. Наша академія
+вітає учасників із перемогою та зайнятими призовими місцями, а також раді привітати з другим командним призовим місцем!`,
+    image: news7,
+    image2: result1,
+  },
   {
     text: `Наша академія від щирого серця хоче привітати Шагойко Юрія Васильовича з Днем народження!! Бажаємо міцного здоров'я, мирного неба над головою, побільше світлих днів і любові, успіхів на татамі і в боротьбі!`,
     image: news6,
@@ -48,7 +56,7 @@ export const newscontent = [
     `,
 
     image: news2,
-    image2: KruvbassPrizer,
+    image2: result2,
   },
   {
     text: `Сьогодні свій День народження святкує один з компетиторів Гудзенко Костя.
