@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../navigation/Navbar";
 import { useLocation } from "react-router-dom";
 import Waterlogo from "../../assets/img/watericon.png";
@@ -9,6 +9,7 @@ const NewsSlot = () => {
   const location = useLocation();
   const { state } = location;
   const { text, img, img2 } = state;
+  const [isImageExpanded, setIsImageExpanded] = useState(false);
   return (
     <>
       <Navbar />{" "}
@@ -52,7 +53,13 @@ const NewsSlot = () => {
             >
               {text}
             </Text>
-            <Image padding="10px" w="80%" h="auto" src={img2}></Image>
+            <Image
+              padding="10px"
+              w={isImageExpanded ? "110%" : "80%"}
+              h="auto"
+              src={img2}
+              onClick={() => setIsImageExpanded(!isImageExpanded)}
+            ></Image>
             <Button
               background="white"
               border="1px solid grey"

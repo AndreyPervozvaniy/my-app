@@ -80,7 +80,19 @@ function News() {
               //   })
               // }
             >
-              <Image w="60%" src={item.image}></Image>
+              <Image
+                w="60%"
+                src={item.image}
+                onClick={() =>
+                  router(PATHS.NEW_SLOT, {
+                    state: {
+                      text: item.text,
+                      img: item.image,
+                      img2: item.image2,
+                    },
+                  })
+                }
+              ></Image>
               <Text
                 textAlign="center"
                 w="100%"
