@@ -4,6 +4,7 @@ import { Button, Text, Fade, Flex } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import { useScrollEvent } from "../../hooks";
 import video from "../../assets/video/video.mp4";
+import GridListWith from "./Templates.tsx";
 const Main = () => {
   const [isVisibleBottomButton] = useScrollEvent(); // кнопка всплытия
   return (
@@ -87,22 +88,28 @@ const Main = () => {
           />
         </Flex>
         <Flex
-          backgroundColor="rgb(57, 2, 255)"
-          color="rgb(255, 255, 255)"
+          // backgroundColor="rgb(57, 2, 255)"
+          // color="rgb(255, 255, 255)"
           top="100vh"
           zIndex="2"
-          alignItems="center"
-          textAlign="center"
-          padding="100px"
+          // alignItems="center"
+          // textAlign="center"
+          // padding="100px"
           pos="absolute"
           w="100%"
           h="100vh"
-          overflow="hidden"
-          clip="rect(0, auto, auto, 0)"
-          boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
+          // overflow="hidden"
+          // clip="rect(0, auto, auto, 0)"
+          // boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
         >
-          <Flex overflow="hidden" opacity="50%">
-            <Text fontSize="20px" fontWeight="500" letterSpacing="4px">
+          <Flex
+            overflow="hidden"
+            justifyContent="center"
+            alignItems="center"
+            w="100%"
+          >
+            <GridListWith />
+            {/* <Text fontSize="20px" fontWeight="500" letterSpacing="4px">
               Yamasaki Academy Dnipro - одна з філій академії з бразильського
               джиу-джитсу.Це дуже потужне ком'юніті спортсменів, а також тих
               людей, котрі захоплені цим. Люди в очах яких горить цей вид
@@ -110,7 +117,7 @@ const Main = () => {
               кожен незалежно від віку, комплекції, статі, тому на нашому татамі
               ви побачите і дітей, і підлітків, і дорослих, хто вже роками
               практикує наш вид спорту!
-            </Text>
+            </Text> */}
           </Flex>{" "}
         </Flex>{" "}
         <Flex
