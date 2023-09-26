@@ -2,12 +2,11 @@ import React from "react";
 import Navbar from "../navigation/Navbar";
 import { Image, Box, Text, Flex } from "@chakra-ui/react";
 import vlad from "../../assets/img/vlados.jpg";
-import Mikola from "../../assets/img/Mikola.jpg";
 import Coach from "../../assets/img/coach1.png";
 import Icon from "../../assets/img/icon.png";
 import Waterlogo from "../../assets/img/watericon.png";
 import Smile from "../../assets/img/try1.jpg";
-import PhotoKolya from "../../assets/img/Dyadya Kolya.jpg";
+
 const Instructors = () => {
   return (
     <>

@@ -3,6 +3,7 @@ import Navbar from "../navigation/Navbar";
 import { Button, Text, Fade, Flex } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import { useScrollEvent } from "../../hooks";
+import video from "../../assets/video/video.mp4";
 const Main = () => {
   const [isVisibleBottomButton] = useScrollEvent(); // кнопка всплытия
   return (
@@ -48,14 +49,33 @@ const Main = () => {
           overflow="hidden"
           clip="rect(0, auto, auto, 0)"
         >
+          <video
+            autoPlay
+            loop
+            muted
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          >
+            <source src={video} type="video/mp4" />
+            {/* Дополнительные источники для поддержки разных браузеров */}
+          </video>
           <Flex
             justifyContent="center"
             alignItems="center"
             overflow="hidden"
             pos="fixed"
-            opacity="50%"
+            opacity="70%"
           >
-            <Text fontSize="30px" fontWeight="500" letterSpacing="4px">
+            <Text
+              fontSize="30px"
+              color="white"
+              fontWeight="500"
+              letterSpacing="4px"
+            >
               YAMASAKI ACADEMY DNIPRO <br />
               Почни свій шлях у світ Джіу-Джітсу разом з нами!
             </Text>

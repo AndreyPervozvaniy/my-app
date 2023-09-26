@@ -8,7 +8,7 @@ export function useScrollEvent() {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > prevScrollY || currentScrollY === 0) {
+      if (currentScrollY > prevScrollY) {
         setIsVisibleTopButton(true);
       } else {
         setIsVisibleTopButton(false);

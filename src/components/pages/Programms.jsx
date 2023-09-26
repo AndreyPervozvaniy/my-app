@@ -52,30 +52,22 @@ const Programms = () => {
     },
     [prevSlide, nextSlide]
   );
-  const [lastScrollTime, setLastScrollTime] = useState(Date.now());
   const handleScroll = useCallback(
     (event) => {
-      const now = Date.now();
-      if (now - lastScrollTime >= 500) {
-        if (event.deltaY > 0) {
-          // Прокрутка вниз, перейти к следующему слайду
-          nextSlide();
-        } else {
-          // Прокрутка вверх, перейти к предыдущему слайду
-          prevSlide();
-        }
-        setLastScrollTime(now);
+      if (event.deltaY > 0) {
+        nextSlide();
+      } else if (event.deltaY < 0) {
+        prevSlide();
       }
     },
-    [lastScrollTime, prevSlide, nextSlide]
+    [prevSlide, nextSlide]
   );
-
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("wheel", handleScroll); // Добавьте эту строку
+    window.addEventListener("wheel", handleScroll);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("wheel", handleScroll); // Добавьте эту строку
+      window.removeEventListener("wheel", handleScroll);
     };
   }, [handleKeyDown, handleScroll]);
 
@@ -173,11 +165,9 @@ const Programms = () => {
               <Box
                 key={`dots-${slide}`}
                 cursor="pointer"
-                boxSize={["7px", null, "15px"]}
+                boxSize={["7px", null, "7px"]}
                 m="0 2px"
-                bg={
-                  currentSlide === slide ? "blackAlpha.800" : "blackAlpha.500"
-                }
+                bg={currentSlide === slide ? "blackAlpha.800" : "white"}
                 rounded="50%"
                 display="inline-block"
                 transition="background-color 0.6s ease"

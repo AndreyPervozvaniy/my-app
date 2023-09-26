@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Box,
@@ -26,13 +26,30 @@ const Navbar = () => {
     { name: "Наша академия", path: "/ourAcademy" },
     { name: "Наша команда", path: "/ourBelts" },
   ];
-
+  const [showShadow, setShowShadow] = useState(false);
   const router = useNavigate();
+  useEffect(() => {
+    const handleScroll = () => {
+      // Определите, сколько пикселей нужно прокрутить, чтобы показать тень
+      const scrollThreshold = 50; // Например, 100 пикселей
+      if (window.scrollY > scrollThreshold) {
+        setShowShadow(true);
+      } else {
+        setShowShadow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <Flex
       justifyContent="space-between"
-      pos="absolute"
+      pos="fixed"
       w="100%"
       top="0"
       left="0"
@@ -41,6 +58,7 @@ const Navbar = () => {
       padding="0 10%"
       // boxShadow="0 0px 2px #000"
       zIndex="11"
+      boxShadow={showShadow ? "0 2px 4px rgba(0, 0, 0, 0.2)" : "none"} // Добавляем тень при необходимости
     >
       <Flex onClick={() => router("/")}>
         <Box
@@ -60,6 +78,7 @@ const Navbar = () => {
             fontSize="18px"
             fontWeight="normal"
           >
+            {" "}
             {navBarItems.map((route) => {
               if (route.isMenu) {
                 return (
@@ -103,7 +122,7 @@ const Navbar = () => {
                 );
               }
             })}
-          </Flex>
+          </Flex>{" "}
         </Flex>{" "}
       </Flex>
     </Flex>
