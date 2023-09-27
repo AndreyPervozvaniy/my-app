@@ -4,6 +4,7 @@ import {
   AccordionButton,
   AccordionPanel,
   Flex,
+  Box,
   useColorModeValue,
   Text,
   Container,
@@ -17,10 +18,10 @@ export default function AccordionTemplate() {
     <>
       {" "}
       <Accordion
-        w="100%"
+        w="90%"
         allowToggle
-        // justifyContent="center"
-        // alignItems="center"
+        justifyContent="center"
+        alignItems="center"
         // background="linear-gradient(to bottom, #0000ff88 0%, #ffff00ab 120%)"
       >
         <AccordionItem>
@@ -35,9 +36,7 @@ export default function AccordionTemplate() {
                 justifyContent="space-between"
                 alignItems="center"
                 flex="1"
-                // justifyContent="center"
-                borderTop="1px solid black"
-                borderBottom="1px solid black"
+                borderBottom="1px solid grey"
                 // borderRadius="15px"
                 // _hover={{ backgroundColor: "rgba(47, 42, 214, 0.503)" }}
               >
@@ -66,9 +65,7 @@ export default function AccordionTemplate() {
                 justifyContent="space-between"
                 alignItems="center"
                 flex="1"
-                // justifyContent="center"
-                borderTop="1px solid black"
-                borderBottom="1px solid black"
+                borderBottom="1px solid grey"
                 // borderRadius="15px"
                 // _hover={{ backgroundColor: "rgba(47, 42, 214, 0.503)" }}
               >
@@ -101,9 +98,7 @@ export default function AccordionTemplate() {
                 justifyContent="space-between"
                 alignItems="center"
                 flex="1"
-                // justifyContent="center"
-                borderTop="1px solid black"
-                borderBottom="1px solid black"
+                borderBottom="1px solid grey"
                 // borderRadius="15px"
                 // _hover={{ backgroundColor: "rgba(47, 42, 214, 0.503)" }}
               >
@@ -132,9 +127,7 @@ export default function AccordionTemplate() {
                 justifyContent="space-between"
                 alignItems="center"
                 flex="1"
-                // justifyContent="center"
-                borderTop="1px solid black"
-                borderBottom="1px solid black"
+                borderBottom="1px solid grey"
                 // borderRadius="15px"
                 // _hover={{ backgroundColor: "rgba(47, 42, 214, 0.503)" }}
               >
@@ -166,9 +159,7 @@ export default function AccordionTemplate() {
                 justifyContent="space-between"
                 alignItems="center"
                 flex="1"
-                // justifyContent="center"
-                borderTop="1px solid black"
-                borderBottom="1px solid black"
+                borderBottom="1px solid grey"
                 // borderRadius="15px"
                 // _hover={{ backgroundColor: "rgba(47, 42, 214, 0.503)" }}
               >

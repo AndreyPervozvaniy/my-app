@@ -43,7 +43,7 @@ const Main = () => {
         zIndex="-1"
       />
       <Flex
-        fontFamily="Roboto"
+        fontFamily="Sofia Sans Condensed "
         color="#000"
         // background="#222"
         // padding="0"
@@ -149,6 +149,7 @@ const Main = () => {
             overflow="hidden"
             fontSize="20px"
             fontWeight="500"
+            alignItems="center"
             flexDirection="column"
             w="100%"
           >
