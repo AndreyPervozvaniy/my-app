@@ -5,6 +5,7 @@ import { ArrowDownIcon } from "@chakra-ui/icons";
 import { useScrollEvent } from "../../hooks";
 import video from "../../assets/video/video.mp4";
 import GridListWith from "./Templates.tsx";
+import Pricing from "./Card.tsx";
 const Main = () => {
   const [isVisibleBottomButton] = useScrollEvent(); // кнопка всплытия
   return (
@@ -121,8 +122,7 @@ const Main = () => {
           </Flex>{" "}
         </Flex>{" "}
         <Flex
-          backgroundColor="rgb(94, 0, 94)"
-          color="rgb(255, 255, 255)"
+          // color="rgb(255, 255, 255)"
           top="200vh"
           zIndex="4"
           alignItems="center"
@@ -131,24 +131,20 @@ const Main = () => {
           pos="absolute"
           w="100%"
           h="100vh"
-          overflow="hidden"
-          clip="rect(0, auto, auto, 0)"
-          boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
+          // overflow="hidden"
+          // clip="rect(0, auto, auto, 0)"
+          // boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
+          justifyContent="center"
         >
           <Flex
             overflow="hidden"
-            opacity="50%"
             fontSize="20px"
             fontWeight="500"
             letterSpacing="4px"
+            justifyContent="space-between"
+            w="100%"
           >
-            <Text>
-              Філософія нашої школи звучить досить просто, але це фундаментальні
-              речі, без яких ваше джіу-джитсу не працюватиме належним чином! А
-              саме, важливість: роботи з рівновагою опонента, дотримання кутів
-              при виконанні техніки, ключовий аспект роботи тазом та принцип
-              роботи важеля!
-            </Text>
+            <Pricing />
           </Flex>
         </Flex>
         <Flex

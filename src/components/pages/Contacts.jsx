@@ -2,31 +2,16 @@ import React from "react";
 import Navbar from "../navigation/Navbar";
 import {
   Flex,
-  Card,
-  CardHeader,
-  Avatar,
-  Heading,
   Text,
   Tooltip,
-  IconButton,
-  CardBody,
   Image,
-  CardFooter,
   Button,
-  Stack,
-  StackDivider,
-  Badge,
-  Container,
   useDisclosure,
   Modal,
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalCloseButton,
   ModalBody,
-  FormControl,
-  FormLabel,
-  Input,
   ModalFooter,
   Link,
 } from "@chakra-ui/react";
@@ -99,7 +84,6 @@ const Contacts = () => {
                 <Tooltip
                   hasArrow
                   label="Чекаємо на тебе!)"
-                  // bg="white"
                   cursor="pointer"
                   fontSize="xl"
                   color="black"
@@ -269,7 +253,6 @@ const Contacts = () => {
                         <Tooltip
                           hasArrow
                           label="Скануй та приєднуйся!)"
-                          // bg="white"
                           cursor="pointer"
                           fontSize="xl"
                           color="black"
@@ -288,7 +271,6 @@ const Contacts = () => {
                         <Tooltip
                           hasArrow
                           label="Скануй та приєднуйся!)"
-                          // bg="white"
                           cursor="pointer"
                           fontSize="xl"
                           color="black"
@@ -307,7 +289,6 @@ const Contacts = () => {
                         <Tooltip
                           hasArrow
                           label="Скануй та приєднуйся!)"
-                          // bg="white"
                           cursor="pointer"
                           fontSize="xl"
                           color="black"
@@ -326,7 +307,6 @@ const Contacts = () => {
                         <Tooltip
                           hasArrow
                           label="Скануй та приєднуйся!)"
-                          // bg="white"
                           cursor="pointer"
                           fontSize="xl"
                           color="black"
@@ -345,7 +325,6 @@ const Contacts = () => {
                         <Tooltip
                           hasArrow
                           label="Скануй та приєднуйся!)"
-                          // bg="white"
                           cursor="pointer"
                           fontSize="xl"
                           color="black"
@@ -412,7 +391,6 @@ const Contacts = () => {
                         <Tooltip
                           hasArrow
                           label="Скануй та дзвони!)"
-                          // bg="white"
                           cursor="pointer"
                           fontSize="xl"
                           color="black"
@@ -431,7 +409,6 @@ const Contacts = () => {
                         <Tooltip
                           hasArrow
                           label="Скануй та дзвони!)"
-                          // bg="white"
                           cursor="pointer"
                           fontSize="xl"
                           color="black"
@@ -450,7 +427,6 @@ const Contacts = () => {
                         <Tooltip
                           hasArrow
                           label="Скануй та дзвони!)"
-                          // bg="white"
                           cursor="pointer"
                           fontSize="xl"
                           color="black"

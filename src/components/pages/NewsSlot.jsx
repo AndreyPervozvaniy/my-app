@@ -35,7 +35,6 @@ const NewsSlot = () => {
           justifyContent="center"
         >
           <Flex
-            // border="1px solid gray"
             borderRadius="15px"
             p="10px"
             mb="10px"

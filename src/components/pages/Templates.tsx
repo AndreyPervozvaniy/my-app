@@ -19,6 +19,12 @@ import {
   FcCollaboration,
   FcDonate,
   FcManager,
+  FcGraduationCap,
+  FcBullish,
+  FcConferenceCall,
+  FcLike,
+  FcChargeBattery,
+  FcHome,
 } from "react-icons/fc";
 
 interface CardProps {
@@ -51,7 +57,9 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
           {icon}
         </Flex>
         <Box mt={2}>
-          <Heading size="md">{heading}</Heading>
+          <Heading size="md" fontWeight="700">
+            {heading}
+          </Heading>
           <Text mt={1} fontSize={"sm"}>
             {description}
           </Text>
@@ -84,50 +92,50 @@ export default function GridListWith() {
       <Container maxW={"5xl"} mt={12}>
         <Flex flexWrap="wrap" gridGap={6} justify="center">
           <Card
-            heading={"Heading"}
-            icon={<Icon as={FcAssistant} w={10} h={10} />}
+            heading={"Професійність"}
+            icon={<Icon as={FcGraduationCap} w={10} h={10} />}
             description={
-              "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+              "Ми відповідально ставимося до навчання та ставимо у пріоритет пояснення ключових принципів!"
             }
             href={"#"}
           />
           <Card
-            heading={"Heading"}
-            icon={<Icon as={FcCollaboration} w={10} h={10} />}
+            heading={"Товариство"}
+            icon={<Icon as={FcConferenceCall} w={10} h={10} />}
             description={
-              "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+              "Вперше вступивши на татамі, ви приєднуєтеся до найпотужнішого спортивного ком'юніті!"
             }
             href={"#"}
           />{" "}
           <Card
-            heading={"Heading"}
-            icon={<Icon as={FcCollaboration} w={10} h={10} />}
+            heading={"Розвиток"}
+            icon={<Icon as={FcBullish} w={10} h={10} />}
             description={
-              "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+              "BJJ є одним з найкращих інструментів для саморозвитку та становлення особистості!"
             }
             href={"#"}
           />
           <Card
-            heading={"Heading"}
-            icon={<Icon as={FcDonate} w={10} h={10} />}
+            heading={"Самозахист"}
+            icon={<Icon as={FcLike} w={10} h={10} />}
             description={
-              "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+              "Ви освоїте навички та техніки одного з найкращих засобів самозахисту!"
             }
             href={"#"}
           />
           <Card
-            heading={"Heading"}
-            icon={<Icon as={FcManager} w={10} h={10} />}
+            heading={"Джерело енергії"}
+            icon={<Icon as={FcChargeBattery} w={10} h={10} />}
             description={
-              "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+              "Ви відкриєте для себе найефективніше джерело антистресу та нового заряду енергії."
             }
             href={"#"}
           />
           <Card
-            heading={"Heading"}
-            icon={<Icon as={FcAbout} w={10} h={10} />}
+            heading={"Велика родина"}
+            icon={<Icon as={FcHome} w={10} h={10} />}
             description={
-              "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+              "Yamasaki - це сімейний вид спорту в дружній атмосфері, де батьки тренуюся з дітьми пліч-о-пліч"
             }
             href={"#"}
           />

@@ -55,7 +55,6 @@ function News() {
         backgroundImage={`url(${Waterlogo})`}
         backgroundSize="contain"
         backgroundRepeat="no-repeat"
-        // backgroundPosition="center center"
         h="100vh"
         w="100vw"
         zIndex="-1"
@@ -64,9 +63,7 @@ function News() {
         <Box w="90%" h="calc(100vh - 70px)" marginTop="70px">
           {ourNews.map((item, index) => (
             <Flex
-              // border="1px solid gray"
               borderBottom="3px double black"
-              // borderRadius="15px"
               p="10px"
               mb="10px"
               cursor="pointer"
@@ -74,11 +71,6 @@ function News() {
               alignItems="center"
               justifyContent="center"
               key={index}
-              // onClick={() =>
-              //   router("/NewsSlot", {
-              //     state: { text: item.text, img: item.image },
-              //   })
-              // }
             >
               <Image
                 w="60%"
@@ -97,7 +89,6 @@ function News() {
                 textAlign="center"
                 w="100%"
                 overflow="hidden"
-                // maxHeight="1rem"
                 whiteSpace="nowrap"
                 textOverflow="ellipsis"
                 backgroundColor="white"
