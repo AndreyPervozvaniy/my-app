@@ -1,9 +1,10 @@
 import React from "react";
 import Navbar from "../navigation/Navbar";
-import { Button, Text, Fade, Flex } from "@chakra-ui/react";
+import { Button, Text, Fade, Flex, Box } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import { useScrollEvent } from "../../hooks";
 import video from "../../assets/video/video.mp4";
+
 const Main = () => {
   const [isVisibleBottomButton] = useScrollEvent(); // кнопка всплытия
   return (
@@ -196,12 +197,13 @@ const Main = () => {
             fontSize="20px"
             fontWeight="500"
             letterSpacing="4px"
+            flexDirection="column"
           >
             <Text fontSize="20px" fontWeight="500" letterSpacing="4px">
               Почни і ти свій шлях! До зустрічі на татамі, Oss!
             </Text>
-          </Flex>
-        </Flex>
+          </Flex>{" "}
+        </Flex>{" "}
       </Flex>
     </>
   );

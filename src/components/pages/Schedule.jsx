@@ -231,7 +231,7 @@ const Schedule = () => {
                   borderRadius="15px"
                   _hover={{ backgroundColor: "rgba(47, 42, 214, 0.503)" }}
                 >
-                  Дитяча група BJJ (10-15 років)
+                  Підліткова група BJJ (10-15 років)
                   <AccordionIcon />
                 </Box>
               </AccordionButton>
