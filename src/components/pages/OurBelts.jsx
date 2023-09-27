@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../navigation/Navbar";
 import Waterlogo from "../../assets/img/watericon.png";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 const OurBelts = () => {
   return (

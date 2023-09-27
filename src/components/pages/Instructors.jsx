@@ -227,7 +227,7 @@ const Instructors = () => {
             </Box>
             <Box>
               <Text color="#444" fontWeight="700" fontSize="24px">
-                Мирошников Владислав
+                Мирошников Владислав Ігорович
               </Text>
               <Text
                 display="block"
