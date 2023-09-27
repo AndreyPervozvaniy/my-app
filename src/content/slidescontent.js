@@ -1,5 +1,3 @@
-import senya from "../assets/img/senya.jpg";
-import senya2 from "../assets/img/senya2.jpg";
 import red from "../assets/img/red.jpg";
 export const slides = [
   {

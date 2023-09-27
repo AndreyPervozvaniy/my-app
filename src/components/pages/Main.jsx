@@ -4,10 +4,13 @@ import { Button, Text, Fade, Flex, Box } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import { useScrollEvent } from "../../hooks";
 import video from "../../assets/video/video.mp4";
-import GridListWith from "./Templates.tsx";
-import Pricing from "./Card.tsx";
+import AdvantageTemplate from "../elem/AdvantageTemplate.tsx";
+import CardTemplate from "../elem/CardTemplate.tsx";
+import AccordionTemplate from "../elem/AccordionTemplate";
+import Waterlogo from "../../assets/img/watericon.png";
+
 const Main = () => {
-  const [isVisibleBottomButton] = useScrollEvent(); // кнопка всплытия
+  const [isVisibleBottomButton] = useScrollEvent();
   return (
     <>
       <Navbar />
@@ -28,18 +31,27 @@ const Main = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         ></Button>
-      </Fade>
+      </Fade>{" "}
+      <Box
+        position="fixed"
+        opacity="10%"
+        backgroundImage={`url(${Waterlogo})`}
+        backgroundSize="contain"
+        backgroundRepeat="no-repeat"
+        h="100vh"
+        w="100vw"
+        zIndex="-1"
+      />
       <Flex
         fontFamily="Roboto"
-        textTransform="uppercase"
         color="#000"
-        background="#222"
-        padding="0"
-        margin="0"
+        // background="#222"
+        // padding="0"
+        // margin="0"
       >
         <Flex
-          backgroundColor="#fff"
-          color="#000"
+          // // backgroundColor="#fff"
+          // color="#000"
           top="0"
           zIndex="1"
           justifyContent="center"
@@ -48,8 +60,8 @@ const Main = () => {
           pos="absolute"
           w="100%"
           h="100vh"
-          overflow="hidden"
-          clip="rect(0, auto, auto, 0)"
+          // overflow="hidden"
+          // clip="rect(0, auto, auto, 0)"
         >
           <video
             autoPlay
@@ -69,7 +81,7 @@ const Main = () => {
             justifyContent="center"
             alignItems="center"
             overflow="hidden"
-            pos="fixed"
+            pos="absolute"
             opacity="70%"
           >
             <Text
@@ -88,41 +100,17 @@ const Main = () => {
             alignSelf="flex-end"
           />
         </Flex>
-        <Flex
-          // backgroundColor="rgb(57, 2, 255)"
-          // color="rgb(255, 255, 255)"
-          top="100vh"
-          zIndex="2"
-          // alignItems="center"
-          // textAlign="center"
-          // padding="100px"
-          pos="absolute"
-          w="100%"
-          h="100vh"
-          // overflow="hidden"
-          // clip="rect(0, auto, auto, 0)"
-          // boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
-        >
+        <Flex top="100vh" zIndex="2" pos="absolute" w="100%" h="100vh">
           <Flex
             overflow="hidden"
             justifyContent="center"
             alignItems="center"
             w="100%"
           >
-            <GridListWith />
-            {/* <Text fontSize="20px" fontWeight="500" letterSpacing="4px">
-              Yamasaki Academy Dnipro - одна з філій академії з бразильського
-              джиу-джитсу.Це дуже потужне ком'юніті спортсменів, а також тих
-              людей, котрі захоплені цим. Люди в очах яких горить цей вид
-              спорту. Ми впевнені в тому, що цим видом спорту може займатися
-              кожен незалежно від віку, комплекції, статі, тому на нашому татамі
-              ви побачите і дітей, і підлітків, і дорослих, хто вже роками
-              практикує наш вид спорту!
-            </Text> */}
+            <AdvantageTemplate />
           </Flex>{" "}
         </Flex>{" "}
         <Flex
-          // color="rgb(255, 255, 255)"
           top="200vh"
           zIndex="4"
           alignItems="center"
@@ -131,9 +119,6 @@ const Main = () => {
           pos="absolute"
           w="100%"
           h="100vh"
-          // overflow="hidden"
-          // clip="rect(0, auto, auto, 0)"
-          // boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
           justifyContent="center"
         >
           <Flex
@@ -143,38 +128,36 @@ const Main = () => {
             letterSpacing="4px"
             justifyContent="space-between"
             w="100%"
+            textTransform="uppercase"
+            flexDirection="column"
           >
-            <Pricing />
+            <Text textTransform="uppercase" fontSize="30px" fontWeight="bold">
+              Наші класи
+            </Text>
+            <CardTemplate />
           </Flex>
         </Flex>
         <Flex
-          backgroundColor="rgb(67, 27, 27)"
-          color="rgb(255, 255, 255)"
           top="300vh"
           zIndex="6"
-          alignItems="center"
-          textAlign="center"
-          padding="100px"
           pos="absolute"
           w="100%"
           h="100vh"
           overflow="hidden"
-          clip="rect(0, auto, auto, 0)"
-          boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
         >
           <Flex
             overflow="hidden"
-            opacity="50%"
             fontSize="20px"
             fontWeight="500"
-            letterSpacing="4px"
+            flexDirection="column"
+            w="100%"
           >
-            <Text fontSize="20px" fontWeight="500" letterSpacing="4px">
-              На шляху становлення вас, як джитсера, ви обов'язково зіткнетеся з
-              труднощами та питаннями, які будуть ламати Вам голову. Вирішити
-              будь-яке Ваше питання, допоможуть наші інструктори! Люди, які
-              багато років практикують джиу-джитсу, а також інші види спорту!
-            </Text>
+            <Flex justifyContent="center">
+              <Text letterSpacing="4px" fontSize="30px" fontWeight="bold">
+                Ваші запитання – наші відповіді!
+              </Text>
+            </Flex>
+            <AccordionTemplate />
           </Flex>
         </Flex>
         <Flex

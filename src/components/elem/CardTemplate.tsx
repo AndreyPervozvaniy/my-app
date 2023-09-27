@@ -14,12 +14,12 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 import React from "react";
 
-export default function Pricing() {
+export default function CardTemplate() {
   return (
     <Center py={6} w={"100%"}>
       <Flex justifyContent={"space-between"}>
         <Box
-          margin={"0 1rem"}
+          margin={"0 2rem"}
           maxW={"330px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
@@ -47,36 +47,41 @@ export default function Pricing() {
             <Stack direction={"row"} align={"center"} justify={"center"}>
               <Text fontSize={"4xl"} fontWeight={800}>
                 Діти
-              </Text>
-              <Text color={"gray.500"} fontSize={"lg"}>
-                6-9 років
+                <Text color={"gray.500"} fontSize={"lg"}>
+                  6-9 років
+                </Text>
               </Text>
             </Stack>
           </Stack>
 
-          <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
+          <Box
+            bg={useColorModeValue("gray.50", "gray.900")}
+            px={6}
+            py={10}
+            borderRadius={"15px"}
+          >
             <List spacing={3}>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 формати Gi/No-Gi
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 Вивчення базових технік та основ BJJ/MMA
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 Вивчення теорії, drill сесії, спаринги
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 Розвиток дисципліни, поваги та самовпевненості
               </ListItem>
             </List>
           </Box>
         </Box>
         <Box
-          margin={"0 1rem"}
+          margin={"0 2rem"}
           maxW={"330px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
@@ -103,36 +108,41 @@ export default function Pricing() {
             <Stack direction={"row"} align={"center"} justify={"center"}>
               <Text fontSize={"4xl"} fontWeight={800}>
                 Підлітки
-              </Text>
-              <Text color={"gray.500"} fontSize={"lg"}>
-                10-15 років
+                <Text color={"gray.500"} fontSize={"lg"}>
+                  10-15 років
+                </Text>
               </Text>
             </Stack>
           </Stack>
 
-          <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
+          <Box
+            bg={useColorModeValue("gray.50", "gray.900")}
+            px={6}
+            py={10}
+            borderRadius={"15px"}
+          >
             <List spacing={3}>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 формати Gi/No-Gi
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 Вивчення просунутих технік BJJ/MMA
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 Роз'яснення деталей, вільні та позиційні спаринги.
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 Пояснення ключових цінностей
               </ListItem>
             </List>
           </Box>
         </Box>{" "}
         <Box
-          margin={"0 1rem"}
+          margin={"0 2rem"}
           maxW={"330px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
@@ -159,29 +169,34 @@ export default function Pricing() {
             <Stack direction={"row"} align={"center"} justify={"center"}>
               <Text fontSize={"4xl"} fontWeight={800}>
                 Дорослі
-              </Text>
-              <Text color={"gray.500"} fontSize={"lg"}>
-                Раді всім
+                <Text color={"gray.500"} fontSize={"lg"}>
+                  Раді всім
+                </Text>
               </Text>
             </Stack>
           </Stack>
 
-          <Box bg={useColorModeValue("gray.50", "gray.900")} px={6} py={10}>
+          <Box
+            bg={useColorModeValue("gray.50", "gray.900")}
+            px={6}
+            py={10}
+            borderRadius={"15px"}
+          >
             <List spacing={3}>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 формати Gi/No-Gi
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 Вивчення концепцій та методів змагального BJJ.
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 Вільні спаринги, drill сесії,боротьба за завданням
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" />
+                <ListIcon as={CheckIcon} color="green.400" mr={2} />
                 Сесії питання - відповідь
               </ListItem>
             </List>
