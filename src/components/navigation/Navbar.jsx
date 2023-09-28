@@ -76,7 +76,7 @@ const Navbar = () => {
             justifyContent="space-between"
             pos="relative"
             fontSize="18px"
-            fontWeight="normal"
+            fontWeight="bold"
           >
             {" "}
             {navBarItems.map((route) => {
@@ -85,7 +85,7 @@ const Navbar = () => {
                   <Menu>
                     <MenuButton
                       cursor="pointer"
-                      fontWeight="normal"
+                      fontWeight="bold"
                       _hover={{
                         textDecoration: "underline",
                       }}

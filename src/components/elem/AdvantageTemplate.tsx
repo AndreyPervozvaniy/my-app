@@ -51,10 +51,10 @@ const Card = ({ heading, description, icon }: CardProps) => {
           {icon}
         </Flex>
         <Box mt={2}>
-          <Heading fontSize="lg" fontWeight="700" textAlign={"center"}>
+          <Heading fontSize="xl" fontWeight={"bold"} textAlign={"center"}>
             {heading}
           </Heading>
-          <Text mt={1} fontSize={"md"} textAlign={"center"}>
+          <Text mt={1} fontSize={"lg"} textAlign={"center"}>
             {description}
           </Text>
         </Box>
@@ -123,14 +123,14 @@ export default function AdvantageTemplate() {
               heading={"Джерело енергії"}
               icon={<Icon as={FcChargeBattery} w={10} h={10} />}
               description={
-                "Ви відкриєте для себе найефективніше джерело антистресу та нового заряду енергії."
+                "Ви відкриєте для себе найефективніше джерело антистресу та нового заряду енергії!"
               }
             />
             <Card
               heading={"Велика родина"}
               icon={<Icon as={FcHome} w={10} h={10} />}
               description={
-                "Yamasaki -це сімейний вид спорту в дружній атмосфері, де батьки тренуюся з дітьми пліч-о-пліч"
+                "Yamasaki -це сімейний вид спорту в дружній атмосфері, де батьки тренуюся з дітьми пліч-о-пліч!"
               }
             />
           </Flex>

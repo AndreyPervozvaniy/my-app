@@ -34,8 +34,8 @@ export default function CardTemplate() {
             align={"center"}
           >
             <Text
-              fontSize={"sm"}
-              fontWeight={500}
+              fontSize={"md"}
+              fontWeight={"bold"}
               bg={useColorModeValue("green.50", "green.900")}
               p={2}
               px={3}
@@ -45,7 +45,7 @@ export default function CardTemplate() {
               BJJ / MMA
             </Text>
             <Stack direction={"row"} align={"center"} justify={"center"}>
-              <Text fontSize={"4xl"} fontWeight={800}>
+              <Text fontSize={"2xl"} fontWeight={800}>
                 Діти
                 <Text color={"gray.500"} fontSize={"lg"}>
                   6-9 років
@@ -95,8 +95,8 @@ export default function CardTemplate() {
             align={"center"}
           >
             <Text
-              fontSize={"sm"}
-              fontWeight={500}
+              fontSize={"md"}
+              fontWeight={"bold"}
               bg={useColorModeValue("green.50", "green.900")}
               p={2}
               px={3}
@@ -106,7 +106,7 @@ export default function CardTemplate() {
               BJJ/MMA
             </Text>
             <Stack direction={"row"} align={"center"} justify={"center"}>
-              <Text fontSize={"4xl"} fontWeight={800}>
+              <Text fontSize={"2xl"} fontWeight={800}>
                 Підлітки
                 <Text color={"gray.500"} fontSize={"lg"}>
                   10-15 років
@@ -156,8 +156,8 @@ export default function CardTemplate() {
             align={"center"}
           >
             <Text
-              fontSize={"sm"}
-              fontWeight={500}
+              fontSize={"md"}
+              fontWeight={"bold"}
               bg={useColorModeValue("green.50", "green.900")}
               p={2}
               px={3}
@@ -167,7 +167,7 @@ export default function CardTemplate() {
               BJJ
             </Text>
             <Stack direction={"row"} align={"center"} justify={"center"}>
-              <Text fontSize={"4xl"} fontWeight={800}>
+              <Text fontSize={"2xl"} fontWeight={800}>
                 Дорослі
                 <Text color={"gray.500"} fontSize={"lg"}>
                   Раді всім

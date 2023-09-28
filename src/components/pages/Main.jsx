@@ -8,7 +8,8 @@ import AdvantageTemplate from "../elem/AdvantageTemplate.tsx";
 import CardTemplate from "../elem/CardTemplate.tsx";
 import AccordionTemplate from "../elem/AccordionTemplate";
 import Waterlogo from "../../assets/img/watericon.png";
-
+import CarouselTemplate from "../elem/CarouselTemplate.tsx";
+import FooterTemplate from "../elem/FooterTemplate.tsx";
 const Main = () => {
   const [isVisibleBottomButton] = useScrollEvent();
   return (
@@ -32,7 +33,7 @@ const Main = () => {
           }}
         ></Button>
       </Fade>{" "}
-      <Box
+      {/* <Box
         position="fixed"
         opacity="10%"
         backgroundImage={`url(${Waterlogo})`}
@@ -41,7 +42,7 @@ const Main = () => {
         h="100vh"
         w="100vw"
         zIndex="-1"
-      />
+      /> */}
       <Flex
         fontFamily="Sofia Sans Condensed "
         color="#000"
@@ -94,11 +95,11 @@ const Main = () => {
               Почни свій шлях у світ Джіу-Джітсу разом з нами!
             </Text>
           </Flex>{" "}
-          <ArrowDownIcon
+          {/* <ArrowDownIcon
             boxSize={8}
             justifyContent="center"
             alignSelf="flex-end"
-          />
+          /> */}
         </Flex>
         <Flex top="100vh" zIndex="2" pos="absolute" w="100%" h="100vh">
           <Flex
@@ -162,33 +163,26 @@ const Main = () => {
           </Flex>
         </Flex>
         <Flex
-          backgroundColor="black"
-          color="rgb(255, 255, 255)"
+          // backgroundColor="black"
+          // color="rgb(255, 255, 255)"
           top="400vh"
           zIndex="7"
           alignItems="center"
-          textAlign="center"
-          padding="100px"
+          // textAlign="center"
+          // padding="100px"
           justifyContent="center"
           pos="absolute"
           w="100%"
           h="100vh"
           overflow="hidden"
-          clip="rect(0, auto, auto, 0)"
-          boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
+          flexDirection="column"
+          // clip="rect(0, auto, auto, 0)"
+          // boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
         >
-          <Flex
-            overflow="hidden"
-            opacity="50%"
-            fontSize="20px"
-            fontWeight="500"
-            letterSpacing="4px"
-            flexDirection="column"
-          >
-            <Text fontSize="20px" fontWeight="500" letterSpacing="4px">
-              Почни і ти свій шлях! До зустрічі на татамі, Oss!
-            </Text>
+          <Flex overflow="hidden" w="100%">
+            <CarouselTemplate />
           </Flex>{" "}
+          <FooterTemplate />
         </Flex>{" "}
       </Flex>
     </>

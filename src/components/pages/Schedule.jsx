@@ -19,6 +19,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import Waterlogo from "../../assets/img/watericon.png";
+import schedule from "../../assets/img/schedule.png";
 const Schedule = () => {
   return (
     <>
@@ -34,8 +35,8 @@ const Schedule = () => {
         zIndex="-1"
       />
       <Flex h="100vh" alignItems="center" justifyContent="center">
-        {" "}
-        <Accordion
+        <Image src={schedule} w="100%" />
+        {/* <Accordion
           w="90%"
           allowToggle
           justifyContent="center"
@@ -366,7 +367,7 @@ const Schedule = () => {
               </TableContainer>
             </AccordionPanel>
           </AccordionItem>
-        </Accordion>
+        </Accordion> */}
       </Flex>
     </>
   );
