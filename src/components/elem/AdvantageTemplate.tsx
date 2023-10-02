@@ -65,8 +65,9 @@ const Card = ({ heading, description, icon }: CardProps) => {
 
 export default function AdvantageTemplate() {
   return (
-    <Flex justifyContent="center" alignContent="center" w="100%" h={"100vh"}>
+    <Flex justifyContent="center" alignContent="center" w="100%">
       <Flex
+        h="100%"
         p={12}
         flexDirection="column"
         justifyContent="center"

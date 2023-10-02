@@ -17,7 +17,7 @@ import React from "react";
 export default function CardTemplate() {
   return (
     <Center py={6} w={"100%"}>
-      <Flex justifyContent={"space-between"}>
+      <Flex flexWrap="wrap" justify="center">
         <Box
           margin={"0 2rem"}
           maxW={"330px"}
@@ -63,7 +63,7 @@ export default function CardTemplate() {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" mr={2} />
-                формати Gi/No-Gi
+                Формати Gi/No-Gi
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" mr={2} />
@@ -124,7 +124,7 @@ export default function CardTemplate() {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" mr={2} />
-                формати Gi/No-Gi
+                Формати Gi/No-Gi
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" mr={2} />
@@ -185,7 +185,7 @@ export default function CardTemplate() {
             <List spacing={3}>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" mr={2} />
-                формати Gi/No-Gi
+                Формати Gi/No-Gi
               </ListItem>
               <ListItem>
                 <ListIcon as={CheckIcon} color="green.400" mr={2} />

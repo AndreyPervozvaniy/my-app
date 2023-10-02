@@ -33,43 +33,21 @@ const Main = () => {
           }}
         ></Button>
       </Fade>{" "}
-      {/* <Box
-        position="fixed"
-        opacity="10%"
-        backgroundImage={`url(${Waterlogo})`}
-        backgroundSize="contain"
-        backgroundRepeat="no-repeat"
-        h="100vh"
-        w="100vw"
-        zIndex="-1"
-      /> */}
-      <Flex
-        fontFamily="Sofia Sans Condensed "
-        color="#000"
-        // background="#222"
-        // padding="0"
-        // margin="0"
-      >
+      <Flex fontFamily="Sofia Sans Condensed " color="#000" flexDir={"column"}>
         <Flex
-          // // backgroundColor="#fff"
-          // color="#000"
-          top="0"
-          zIndex="1"
+          // // top="0"
+          // zIndex="1"
           justifyContent="center"
           alignItems="center"
           textAlign="center"
-          pos="absolute"
           w="100%"
           h="100vh"
-          // overflow="hidden"
-          // clip="rect(0, auto, auto, 0)"
         >
           <video
             autoPlay
             loop
             muted
             style={{
-              position: "absolute",
               width: "100%",
               height: "100%",
               objectFit: "cover",
@@ -95,31 +73,16 @@ const Main = () => {
               Почни свій шлях у світ Джіу-Джітсу разом з нами!
             </Text>
           </Flex>{" "}
-          {/* <ArrowDownIcon
-            boxSize={8}
-            justifyContent="center"
-            alignSelf="flex-end"
-          /> */}
         </Flex>
-        <Flex top="100vh" zIndex="2" pos="absolute" w="100%" h="100vh">
-          <Flex
-            overflow="hidden"
-            justifyContent="center"
-            alignItems="center"
-            w="100%"
-          >
+        <Flex w="100%" justifyContent="center" alignItems="center">
+          <Flex overflow="hidden">
             <AdvantageTemplate />
           </Flex>{" "}
         </Flex>{" "}
         <Flex
-          top="200vh"
-          zIndex="4"
           alignItems="center"
           textAlign="center"
-          padding="100px"
-          pos="absolute"
           w="100%"
-          h="100vh"
           justifyContent="center"
         >
           <Flex
@@ -129,7 +92,6 @@ const Main = () => {
             letterSpacing="4px"
             justifyContent="space-between"
             w="100%"
-            textTransform="uppercase"
             flexDirection="column"
           >
             <Text textTransform="uppercase" fontSize="30px" fontWeight="bold">
@@ -138,14 +100,7 @@ const Main = () => {
             <CardTemplate />
           </Flex>
         </Flex>
-        <Flex
-          top="300vh"
-          zIndex="6"
-          pos="absolute"
-          w="100%"
-          h="100vh"
-          overflow="hidden"
-        >
+        <Flex w="100%" overflow="hidden">
           <Flex
             overflow="hidden"
             fontSize="20px"
@@ -163,21 +118,11 @@ const Main = () => {
           </Flex>
         </Flex>
         <Flex
-          // backgroundColor="black"
-          // color="rgb(255, 255, 255)"
-          top="400vh"
-          zIndex="7"
           alignItems="center"
-          // textAlign="center"
-          // padding="100px"
           justifyContent="center"
-          pos="absolute"
           w="100%"
-          h="100vh"
           overflow="hidden"
           flexDirection="column"
-          // clip="rect(0, auto, auto, 0)"
-          // boxShadow="inset 0 1px 80px rgba(0, 0, 0, 0.14)"
         >
           <Flex overflow="hidden" w="100%">
             <CarouselTemplate />

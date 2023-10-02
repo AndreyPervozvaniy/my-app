@@ -6,13 +6,13 @@ import Coach from "../../assets/img/coach1.png";
 import Icon from "../../assets/img/icon.png";
 import Waterlogo from "../../assets/img/watericon.png";
 import Smile from "../../assets/img/try1.jpg";
-
+import InstructorsTemplate from "../elem/InstructorTemplate.tsx";
 const Instructors = () => {
   return (
     <>
       <Navbar />{" "}
-      <Box
-        position="absolute"
+      {/* <Box
+        position="fixed "
         opacity="50%"
         backgroundImage={`url(${Waterlogo})`}
         backgroundSize="contain"
@@ -20,15 +20,18 @@ const Instructors = () => {
         h="100vh"
         w="100vw"
         zIndex="-1"
-      />
+      /> */}
       <Flex
-        h="100vh"
-        overflow="hidden"
+        // h="100vh"
+        // overflow="hidden"
         alignItems="center"
-        justifyContent="space-between"
-        padding="5%  "
+        justifyContent="center"
+        padding="5%"
+        flexDir="column"
       >
-        <Flex
+        {" "}
+        <InstructorsTemplate />
+        {/* <Flex
           className="card"
           w="350px"
           h="480px"
@@ -240,7 +243,7 @@ const Instructors = () => {
               </Text>
             </Box>
           </Flex>
-        </Flex>
+        </Flex> */}
       </Flex>
     </>
   );
