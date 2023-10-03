@@ -38,8 +38,8 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
   return (
     <Stack direction={"row"} align={"center"}>
       <Flex
-        w={8}
-        h={8}
+        w={12}
+        h={12}
         align={"center"}
         justify={"center"}
         rounded={"full"}
@@ -68,12 +68,12 @@ export default function InstructorsTemplate() {
             alignSelf={"flex-start"}
             rounded={"md"}
           >
-            Професор
+            Інструктор
           </Text>
           <Heading fontWeight="bold">Косенко Валентин Михайлович</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            Професор дорослої групи. Суддя турнірів з Бразильського джиу-джитсу
-            в Україні.
+            Інструктор дорослої групи. Суддя турнірів з Бразильського
+            джиу-джитсу в Україні.
           </Text>
           <Stack
             spacing={4}
@@ -84,21 +84,21 @@ export default function InstructorsTemplate() {
             }
           >
             <Feature
-              icon={<Icon as={GiBlackBelt} color={"white"} w={5} h={5} />}
-              iconBg={useColorModeValue("brown ", "brown ")}
+              icon={<Icon as={GiBlackBelt} color={"white"} w={8} h={8} />}
+              iconBg={useColorModeValue("brown", "brown ")}
               text={"Коричневий пасок"}
             />
             <Feature
-              icon={<Icon as={GiTeacher} color={"green.500"} w={5} h={5} />}
+              icon={<Icon as={GiTeacher} color={"green.500"} w={8} h={8} />}
               iconBg={useColorModeValue("green.100", "green.900")}
-              text={" Професор дорослої групи"}
+              text={"  Інструктор дорослої групи"}
             />
             <Feature
               icon={
-                <Icon as={GiSandsOfTime} color={"purple.500"} w={5} h={5} />
+                <Icon as={GiSandsOfTime} color={"purple.500"} w={8} h={8} />
               }
               iconBg={useColorModeValue("purple.100", "purple.900")}
-              text={"Практикує джиу-джитсу 13 років"}
+              text={"Практикує джиу-джитсу 12 років"}
             />
           </Stack>
         </Stack>
@@ -125,11 +125,12 @@ export default function InstructorsTemplate() {
             alignSelf={"flex-start"}
             rounded={"md"}
           >
-            Професор
+            Інструктор
           </Text>
           <Heading fontWeight={"bold"}> Шерстюк Микола Васильович</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            Тренер підліткової та дитячої групи з Бразильського джиу джитсу.
+            Інструктор підліткової та дитячої групи з Бразильського джиу джитсу.
+            Займається підготовкою молодших груп до змагань та турнірів.
           </Text>
           <Stack
             spacing={4}
@@ -140,21 +141,21 @@ export default function InstructorsTemplate() {
             }
           >
             <Feature
-              icon={<Icon as={GiBlackBelt} color={"white "} w={5} h={5} />}
+              icon={<Icon as={GiBlackBelt} color={"white "} w={8} h={8} />}
               iconBg={useColorModeValue("purple.700", "purple.900")}
               text={"  Пурпурний пасок"}
             />
             <Feature
-              icon={<Icon as={GiTeacher} color={"green.500"} w={5} h={5} />}
+              icon={<Icon as={GiTeacher} color={"green.500"} w={8} h={8} />}
               iconBg={useColorModeValue("green.100", "green.900")}
-              text={"Професор підліткової та дитячої групи"}
+              text={" Інструктор підліткової та дитячої групи"}
             />
             <Feature
               icon={
-                <Icon as={GiSandsOfTime} color={"purple.500"} w={5} h={5} />
+                <Icon as={GiSandsOfTime} color={"purple.500"} w={8} h={8} />
               }
               iconBg={useColorModeValue("purple.100", "purple.900")}
-              text={"Практикує джиу-джитсу 9 років"}
+              text={"Практикує джиу-джитсу 8 років"}
             />
           </Stack>
         </Stack>
@@ -197,19 +198,21 @@ export default function InstructorsTemplate() {
             }
           >
             <Feature
-              icon={<Icon as={GiBlackBelt} color={"black"} w={5} h={5} />}
+              icon={<Icon as={GiPunchBlast} color={"black"} w={8} h={8} />}
               iconBg={useColorModeValue("white", "white")}
-              text={"Білий пасок"}
+              text={"Володіє навичками кількох дисциплін бойових мистецтв"}
             />
             <Feature
-              icon={<Icon as={GiTeacher} color={"green.500"} w={5} h={5} />}
+              icon={<Icon as={GiTeacher} color={"green.500"} w={8} h={8} />}
               iconBg={useColorModeValue("green.100", "green.900")}
               text={"Інструктор підліткової та дитячої групи"}
             />
             <Feature
-              icon={<Icon as={GiPunchBlast} color={"purple.500"} w={5} h={5} />}
+              icon={
+                <Icon as={GiSandsOfTime} color={"purple.500"} w={8} h={8} />
+              }
               iconBg={useColorModeValue("purple.100", "purple.900")}
-              text={"Практикує ММА 6 років"}
+              text={"Практикує ММА та Бойове самбо 6 років"}
             />
           </Stack>
         </Stack>

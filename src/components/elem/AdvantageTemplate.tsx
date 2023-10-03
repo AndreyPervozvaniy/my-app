@@ -32,7 +32,7 @@ const Card = ({ heading, description, icon }: CardProps) => {
     <Box
       maxW={{ base: "full", md: "275px" }}
       w={"full"}
-      borderWidth="1px"
+      borderWidth="2px"
       borderRadius="lg"
       overflow="hidden"
       bg={"white"}

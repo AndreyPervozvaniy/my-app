@@ -36,10 +36,10 @@ export default function CardTemplate() {
             <Text
               fontSize={"md"}
               fontWeight={"bold"}
-              bg={useColorModeValue("green.50", "green.900")}
+              bg={useColorModeValue("blue.50", "blue.900")}
               p={2}
               px={3}
-              color={"green.500"}
+              color={"blue.500"}
               rounded={"full"}
             >
               BJJ / MMA
@@ -62,19 +62,19 @@ export default function CardTemplate() {
           >
             <List spacing={3}>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Формати Gi/No-Gi
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Вивчення базових технік та основ BJJ/MMA
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Вивчення теорії, drill сесії, спаринги
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Розвиток дисципліни, поваги та самовпевненості
               </ListItem>
             </List>
@@ -97,10 +97,10 @@ export default function CardTemplate() {
             <Text
               fontSize={"md"}
               fontWeight={"bold"}
-              bg={useColorModeValue("green.50", "green.900")}
+              bg={useColorModeValue("blue.50", "blue.900")}
               p={2}
               px={3}
-              color={"green.500"}
+              color={"blue.500"}
               rounded={"full"}
             >
               BJJ/MMA
@@ -123,19 +123,19 @@ export default function CardTemplate() {
           >
             <List spacing={3}>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Формати Gi/No-Gi
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Вивчення просунутих технік BJJ/MMA
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Роз'яснення деталей, вільні та позиційні спаринги.
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Пояснення ключових цінностей
               </ListItem>
             </List>
@@ -158,10 +158,10 @@ export default function CardTemplate() {
             <Text
               fontSize={"md"}
               fontWeight={"bold"}
-              bg={useColorModeValue("green.50", "green.900")}
+              bg={useColorModeValue("blue.50", "blue.900")}
               p={2}
               px={3}
-              color={"green.500"}
+              color={"blue.500"}
               rounded={"full"}
             >
               BJJ
@@ -184,19 +184,19 @@ export default function CardTemplate() {
           >
             <List spacing={3}>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Формати Gi/No-Gi
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Вивчення концепцій та методів змагального BJJ.
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Вільні спаринги, drill сесії,боротьба за завданням
               </ListItem>
               <ListItem>
-                <ListIcon as={CheckIcon} color="green.400" mr={2} />
+                <ListIcon as={CheckIcon} color="blue.700" mr={2} />
                 Сесії питання - відповідь
               </ListItem>
             </List>

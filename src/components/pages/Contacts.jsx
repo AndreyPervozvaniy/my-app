@@ -14,6 +14,10 @@ import {
   ModalBody,
   ModalFooter,
   Link,
+  Container,
+  Stack,
+  Box,
+  Heading,
 } from "@chakra-ui/react";
 import Waterlogo from "../../assets/img/watericon.png";
 import QrPhoneNikolay from "../../assets/img/Дядь коля номер.png";
@@ -25,6 +29,8 @@ import QRyoutube from "../../assets/img/QRtube.png";
 import QRinstaDnipro from "../../assets/img/QR insta bjj.png";
 import GoogleMap from "../../assets/img/google map.png";
 import QRTelega from "../../assets/img/QR telegram.png";
+import ContactTemplate from "../elem/ContactTemplates.tsx";
+import FooterTemplate from "../elem/FooterTemplate.tsx";
 const Contacts = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
@@ -39,8 +45,251 @@ const Contacts = () => {
   } = useDisclosure();
   return (
     <>
-      <Navbar />{" "}
-      <Flex
+      <Navbar />
+      <Flex alignItems="center" justifyContent="center" flexDir={"column"}>
+        {" "}
+        <Container maxW={"7xl"}>
+          <Stack
+            textAlign={{
+              base: "center",
+              sm: "center",
+              md: "center",
+              lg: "left",
+            }}
+            align={"center"}
+            justify="center"
+            spacing={{ base: 8, md: 10 }}
+            py={{ base: 24, md: 28 }}
+            direction={{ base: "column", md: "row" }}
+          >
+            <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+              <Heading
+                lineHeight={1.1}
+                fontWeight={600}
+                fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+              >
+                <Text
+                  as={"span"}
+                  position={"relative"}
+                  _after={{
+                    content: "''",
+                    width: "full",
+                    height: "30%",
+                    position: "absolute",
+                    bottom: 1,
+                    left: 0,
+                    bg: "blue.400",
+                    zIndex: -1,
+                  }}
+                >
+                  Твій шлях
+                </Text>
+                <br />
+                <Text as={"span"} color={"blue.400"}>
+                  - до нас!
+                </Text>
+              </Heading>
+              <Text color={"gray.500"}>
+                Зупинка: вулиця Богдана Хмельницького <br />
+                Маршрути автобусів: A153, 124A, A115, A149, A64Г, А31, А177,
+                А107, А136, А88, А38, А43,А158 <br /> Маршрути тролейбусів: 20,
+                7, 17, 3, 15
+              </Text>
+              <Stack
+                spacing={{ base: 4, sm: 6 }}
+                direction={{ base: "column", sm: "row" }}
+                justifyContent={{
+                  base: "center",
+                  sm: "center",
+                  md: "center",
+                  lg: "left",
+                }}
+              >
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                  colorScheme={"red"}
+                  bg={"blue.400"}
+                  _hover={{ bg: "blue.500" }}
+                >
+                  Контакты
+                </Button>
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                >
+                  Соцсети
+                </Button>{" "}
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                >
+                  Как нас найти?
+                </Button>
+              </Stack>
+            </Stack>
+            <Flex
+              // flex={1}
+              justify={"center"}
+              align={"center"}
+              // position={"relative"}
+              w={"full"}
+            >
+              <Box
+                // position={"relative"}
+                height={"300px"}
+                rounded={"2xl"}
+                boxShadow={"2xl"}
+                width={"full"}
+                overflow={"hidden"}
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1321.7486555802132!2d35.0736516!3d48.5045306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe393edb25bcb%3A0xe91e1f026da0b37e!2sYamasaki%20Academy%20Jiu%20Jitsu!5e0!3m2!1sru!2sua!4v1694594361759!5m2!1sru!2sua"
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                ></iframe>
+              </Box>
+            </Flex>{" "}
+          </Stack>{" "}
+        </Container>{" "}
+        <Flex
+          alignItems="center"
+          justifyContent="center"
+          flexDir={"column"}
+          lineHeight={1.1}
+          fontWeight={600}
+          fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+        >
+          <Text
+            as={"span"}
+            position={"relative"}
+            _after={{
+              content: "''",
+              width: "full",
+              height: "30%",
+              position: "absolute",
+              bottom: 1,
+              left: 0,
+              bg: "blue.400",
+              zIndex: -1,
+            }}
+          >
+            А далі куди?
+          </Text>
+          <br />
+          <Text as={"span"} color={"red.400"}>
+            Ознайомся!
+          </Text>
+        </Flex>
+        <Container maxW={"7xl"}>
+          <Stack
+            textAlign={{
+              base: "center",
+              sm: "center",
+              md: "center",
+              lg: "left",
+            }}
+            align={"center"}
+            spacing={{ base: 8, md: 10 }}
+            py={{ base: 20, md: 28 }}
+            direction={{ base: "column", md: "row" }}
+          >
+            {" "}
+            <Flex
+              flex={1}
+              justify={"center"}
+              align={"center"}
+              position={"relative"}
+              w={"full"}
+            >
+              <Box
+                position={"relative"}
+                height={"300px"}
+                rounded={"2xl"}
+                boxShadow={"2xl"}
+                width={"full"}
+                overflow={"hidden"}
+              >
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/XyQ27GXavDM?si=ixaPX6BKhdyfrQ8b"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </Box>
+            </Flex>
+            <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+              <Heading
+                lineHeight={1.1}
+                fontWeight={600}
+                fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+              >
+                <Text
+                  as={"span"}
+                  position={"relative"}
+                  _after={{
+                    content: "''",
+                    width: "full",
+                    height: "30%",
+                    position: "absolute",
+                    bottom: 1,
+                    left: 0,
+                    bg: "red.400",
+                    zIndex: -1,
+                  }}
+                >
+                  Останній крок та
+                </Text>
+                <br />
+                <Text as={"span"} color={"red.400"}>
+                  фінішна пряма!
+                </Text>
+              </Heading>
+              <Text color={"gray.500"}>
+                Snippy is a rich coding snippets app that lets you create your
+                own code snippets, categorize them, and even sync them in the
+                cloud so you can use them anywhere. All that is free!
+              </Text>
+              <Stack
+                spacing={{ base: 4, sm: 6 }}
+                direction={{ base: "column", sm: "row" }}
+              >
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                  colorScheme={"red"}
+                  bg={"red.400"}
+                  _hover={{ bg: "red.500" }}
+                >
+                  Get started
+                </Button>
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                >
+                  How It Works
+                </Button>
+              </Stack>
+            </Stack>
+          </Stack>
+        </Container>
+      </Flex>
+      {/* <Flex
         position="absolute"
         opacity="50%"
         backgroundImage={`url(${Waterlogo})`}
@@ -53,13 +302,12 @@ const Contacts = () => {
       <Flex
         h="100vh"
         flexDirection="column"
-        alignItems="center"
-        padding="10%"
         justifyContent="center"
+        border="3px solid red"
       >
         {" "}
         <Flex
-          h="92vh"
+          // h="92vh"
           justifyContent="center"
           alignItems="center"
           padding="40px"
@@ -455,7 +703,7 @@ const Contacts = () => {
             </ModalContent>
           </ModalOverlay>
         </Modal>
-      </Flex>
+      </Flex> */}
     </>
   );
 };
