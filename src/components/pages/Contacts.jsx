@@ -14,6 +14,7 @@ import {
   ModalBody,
   ModalFooter,
   Link,
+  Fade,
   Container,
   Stack,
   Box,
@@ -31,7 +32,9 @@ import GoogleMap from "../../assets/img/google map.png";
 import QRTelega from "../../assets/img/QR telegram.png";
 import ContactTemplate from "../elem/ContactTemplates.tsx";
 import FooterTemplate from "../elem/FooterTemplate.tsx";
+import { useScrollEvent } from "../../hooks";
 const Contacts = () => {
+  const [isVisibleBottomButton] = useScrollEvent();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
     isOpen: isSecondOpen,
@@ -46,6 +49,24 @@ const Contacts = () => {
   return (
     <>
       <Navbar />
+      <Fade in={isVisibleBottomButton}>
+        <Button
+          className="fa fa-arrow-up"
+          aria-lavel="topButton"
+          zIndex="12"
+          position="fixed"
+          right={{ base: "5px", xl: "10" }}
+          bottom="55px"
+          w={50}
+          opacity="40%"
+          h={50}
+          borderRadius="full"
+          colorScheme="gray"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        ></Button>
+      </Fade>{" "}
       <Flex alignItems="center" justifyContent="center" flexDir={"column"}>
         {" "}
         <Container maxW={"7xl"}>
@@ -113,6 +134,12 @@ const Contacts = () => {
                   colorScheme={"red"}
                   bg={"blue.400"}
                   _hover={{ bg: "blue.500" }}
+                  onClick={() => {
+                    window.scrollTo({
+                      top: document.body.scrollHeight,
+                      behavior: "smooth",
+                    });
+                  }}
                 >
                   Контакты
                 </Button>
@@ -140,6 +167,7 @@ const Contacts = () => {
               align={"center"}
               // position={"relative"}
               w={"full"}
+              flexDir={"column"}
             >
               <Box
                 // position={"relative"}
@@ -155,7 +183,7 @@ const Contacts = () => {
                   height="100%"
                   loading="lazy"
                 ></iframe>
-              </Box>
+              </Box>{" "}
             </Flex>{" "}
           </Stack>{" "}
         </Container>{" "}
