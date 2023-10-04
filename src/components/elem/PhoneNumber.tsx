@@ -17,13 +17,11 @@ import {
 import React from "react";
 import { FaPhone } from "react-icons/fa";
 
-interface Props {
-  children: React.ReactNode;
-}
+// interface Props {
+//   children: React.ReactNode;
+// }
 
-function PriceWrapper(props: Props) {
-  const { children } = props;
-
+function PriceWrapper({ children }) {
   return (
     <Box
       mb={4}

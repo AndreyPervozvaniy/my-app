@@ -1,249 +1,244 @@
 import React from "react";
 import Navbar from "../navigation/Navbar";
-import { Image, Box, Text, Flex } from "@chakra-ui/react";
-import vlad from "../../assets/img/vlados.jpg";
-import Coach from "../../assets/img/coach1.png";
-import Icon from "../../assets/img/icon.png";
-import Waterlogo from "../../assets/img/watericon.png";
+import { Flex } from "@chakra-ui/react";
+
+import {
+  Container,
+  SimpleGrid,
+  Image,
+  Heading,
+  Text,
+  Stack,
+  StackDivider,
+  Icon,
+  useColorModeValue,
+} from "@chakra-ui/react";
+
+import {
+  GiBlackBelt,
+  GiTeacher,
+  GiSandsOfTime,
+  GiPunchBlast,
+} from "react-icons/gi";
+import { ReactElement } from "react";
+
 import Smile from "../../assets/img/try1.jpg";
-import InstructorsTemplate from "../elem/InstructorTemplate.tsx";
+import Coach from "../../assets/img/coach1.png";
+import vlad from "../../assets/img/vlados.jpg";
+const Feature = ({ text, icon, iconBg }) => {
+  return (
+    <Stack direction={"row"} align={"center"}>
+      <Flex
+        w={12}
+        h={12}
+        align={"center"}
+        justify={"center"}
+        rounded={"full"}
+        bg={iconBg}
+      >
+        {icon}
+      </Flex>
+      <Text fontWeight={600}>{text}</Text>
+    </Stack>
+  );
+};
 const Instructors = () => {
   return (
     <>
       <Navbar />{" "}
-      {/* <Box
-        position="fixed "
-        opacity="50%"
-        backgroundImage={`url(${Waterlogo})`}
-        backgroundSize="contain"
-        backgroundRepeat="no-repeat"
-        h="100vh"
-        w="100vw"
-        zIndex="-1"
-      /> */}
       <Flex
-        // h="100vh"
-        // overflow="hidden"
         alignItems="center"
         justifyContent="center"
         padding="5%"
         flexDir="column"
       >
-        {" "}
-        <InstructorsTemplate />
-        {/* <Flex
-          className="card"
-          w="350px"
-          h="480px"
-          cursor="pointer"
-          position="relative"
-          _hover={{
-            "#front": {
-              transform: "perspective(600px) rotateY(-180deg)",
-            },
-            "#back": {
-              transform: "perspective(600px) rotateY(0)",
-            },
-          }}
-        >
-          <Flex
-            id="front"
-            w="100%"
-            h="100%"
-            overflow="hidden"
-            position="absolute"
-            transition="transform 0.5s ease"
-            borderRadius="10px"
-            background="linear-gradient(#d6d6d6, #f2f2f2)"
-            transform="perspective(600px) rotateY(0)"
+        <Container maxW={"5xl"} py={12}>
+          {" "}
+          <SimpleGrid
+            columns={{ base: 1, md: 2 }}
+            spacing={10}
+            padding={"20px"}
           >
-            <Image
-              w="100%"
-              h="100%"
-              display="block"
-              objectFit="cover"
-              src={Smile}
-            />
-          </Flex>
-          <Box
-            w="100%"
-            h="100%"
-            overflow="hidden"
-            position="absolute"
-            transition="transform 0.5s ease"
-            borderRadius="10px"
-            background="linear-gradient(#d6d6d6, #f2f2f2)"
-            id="back"
-            transform="perspective(600px) rotateY(180deg)"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            textAlign="center"
-          >
-            <Box top="15%" opacity="10%" pos="absolute">
-              <Image src={Icon} />
-            </Box>
-            <Box>
-              <Text color="#444" fontWeight="700" fontSize="24px">
-                Шерстюк Микола Васильович
-              </Text>
+            <Stack spacing={4}>
               <Text
-                display="block"
-                fontSize="18px"
-                fontWeight="600"
-                padding="10px"
+                textTransform={"uppercase"}
+                color={"blue.400"}
+                fontWeight={600}
+                fontSize={"sm"}
+                bg={useColorModeValue("blue.50", "blue.900")}
+                p={2}
+                alignSelf={"flex-start"}
+                rounded={"md"}
               >
-                Пурпурний пасок. Тренер дитячої групи з Бразильського джиу
-                джитсу.
+                Інструктор
               </Text>
-            </Box>
-          </Box>
-        </Flex>
-        <Flex
-          className="card"
-          w="350px"
-          h="480px"
-          cursor="pointer"
-          position="relative"
-          _hover={{
-            "#front": {
-              transform: "perspective(600px) rotateY(-180deg)",
-            },
-            "#back": {
-              transform: "perspective(600px) rotateY(0)",
-            },
-          }}
-        >
-          <Flex
-            id="front"
-            w="100%"
-            h="100%"
-            overflow="hidden"
-            position="absolute"
-            transition="transform 0.5s ease"
-            borderRadius="10px"
-            background="linear-gradient(#d6d6d6, #f2f2f2)"
-            transform="perspective(600px) rotateY(0)"
-            css={{
-              WebkitBackfaceVisibility: "hidden",
-              backfaceVisibility: "hidden",
-            }}
-          >
-            <Image
-              w="100%"
-              h="100%"
-              display="block"
-              objectFit="cover"
-              src={Coach}
-            />
-          </Flex>
-          <Flex
-            w="100%"
-            h="100%"
-            overflow="hidden"
-            position="absolute"
-            transition="transform 0.5s ease"
-            borderRadius="10px"
-            background="linear-gradient(#d6d6d6, #f2f2f2)"
-            id="back"
-            transform="perspective(600px) rotateY(180deg)"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            textAlign="center"
-            css={{
-              WebkitBackfaceVisibility: "hidden",
-              backfaceVisibility: "hidden",
-            }}
-          >
-            <Box top="15%" opacity="10%" pos="absolute">
-              <Image src={Icon} />
-            </Box>
-            <Box>
-              <Text color="#444" fontWeight="700" fontSize="24px">
-                Косенко Валентин Михайлович
+              <Heading fontWeight="bold">Косенко Валентин Михайлович</Heading>
+              <Text color={"gray.500"} fontSize={"lg"}>
+                Інструктор дорослої групи. Суддя турнірів з Бразильського
+                джиу-джитсу в Україні.
               </Text>
+              <Stack
+                spacing={4}
+                divider={
+                  <StackDivider
+                    borderColor={useColorModeValue("gray.100", "gray.700")}
+                  />
+                }
+              >
+                <Feature
+                  icon={<Icon as={GiBlackBelt} color={"white"} w={8} h={8} />}
+                  iconBg={useColorModeValue("brown", "brown ")}
+                  text={"Коричневий пасок"}
+                />
+                <Feature
+                  icon={<Icon as={GiTeacher} color={"green.500"} w={8} h={8} />}
+                  iconBg={useColorModeValue("green.100", "green.900")}
+                  text={"  Інструктор дорослої групи"}
+                />
+                <Feature
+                  icon={
+                    <Icon as={GiSandsOfTime} color={"purple.500"} w={8} h={8} />
+                  }
+                  iconBg={useColorModeValue("purple.100", "purple.900")}
+                  text={"Практикує джиу-джитсу 12 років"}
+                />
+              </Stack>
+            </Stack>
+            <Flex>
+              <Image
+                rounded={"xl"}
+                alt={"feature image"}
+                src={Coach}
+                objectFit={"cover"}
+                w="350px"
+                h="450px"
+              />
+            </Flex>
+          </SimpleGrid>
+          <SimpleGrid
+            columns={{ base: 1, md: 2 }}
+            spacing={10}
+            padding={"20px"}
+          >
+            <Stack spacing={4}>
               <Text
-                display="block"
-                fontSize="18px"
-                fontWeight="600"
-                padding="10px"
+                textTransform={"uppercase"}
+                color={"blue.400"}
+                fontWeight={600}
+                fontSize={"sm"}
+                bg={useColorModeValue("blue.50", "blue.900")}
+                p={2}
+                alignSelf={"flex-start"}
+                rounded={"md"}
               >
-                Тренер дорослої групи. Коричневий пасок з Бразильського
-                джиу-джитсу. Суддя турнірів з Бразильського джиу-джитсу в
-                Україні.
+                Інструктор
               </Text>
-            </Box>
-          </Flex>
-        </Flex>{" "}
-        <Flex
-          className="card"
-          w="350px"
-          h="480px"
-          cursor="pointer"
-          position="relative"
-          _hover={{
-            "#front": {
-              transform: "perspective(600px) rotateY(-180deg)",
-            },
-            "#back": {
-              transform: "perspective(600px) rotateY(0)",
-            },
-          }}
-        >
-          <Flex
-            id="front"
-            w="100%"
-            h="100%"
-            overflow="hidden"
-            position="absolute"
-            transition="transform 0.5s ease"
-            borderRadius="10px"
-            background="linear-gradient(#d6d6d6, #f2f2f2)"
-            transform="perspective(600px) rotateY(0)"
-          >
-            <Image
-              w="100%"
-              h="100%"
-              display="block"
-              objectFit="cover"
-              src={vlad}
-            />
-          </Flex>
-          <Flex
-            w="100%"
-            h="100%"
-            overflow="hidden"
-            position="absolute"
-            transition="transform 0.5s ease"
-            borderRadius="10px"
-            background="linear-gradient(#d6d6d6, #f2f2f2)"
-            id="back"
-            transform="perspective(600px) rotateY(180deg)"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            textAlign="center"
-          >
-            <Box top="15%" opacity="10%" pos="absolute">
-              <Image src={Icon} />
-            </Box>
-            <Box>
-              <Text color="#444" fontWeight="700" fontSize="24px">
-                Мирошников Владислав Ігорович
+              <Heading fontWeight={"bold"}> Шерстюк Микола Васильович</Heading>
+              <Text color={"gray.500"} fontSize={"lg"}>
+                Інструктор підліткової та дитячої групи з Бразильського джиу
+                джитсу. Займається підготовкою молодших груп до змагань та
+                турнірів.
               </Text>
+              <Stack
+                spacing={4}
+                divider={
+                  <StackDivider
+                    borderColor={useColorModeValue("gray.100", "gray.700")}
+                  />
+                }
+              >
+                <Feature
+                  icon={<Icon as={GiBlackBelt} color={"white "} w={8} h={8} />}
+                  iconBg={useColorModeValue("purple.700", "purple.900")}
+                  text={"  Пурпурний пасок"}
+                />
+                <Feature
+                  icon={<Icon as={GiTeacher} color={"green.500"} w={8} h={8} />}
+                  iconBg={useColorModeValue("green.100", "green.900")}
+                  text={" Інструктор підліткової та дитячої групи"}
+                />
+                <Feature
+                  icon={
+                    <Icon as={GiSandsOfTime} color={"purple.500"} w={8} h={8} />
+                  }
+                  iconBg={useColorModeValue("purple.100", "purple.900")}
+                  text={"Практикує джиу-джитсу 8 років"}
+                />
+              </Stack>
+            </Stack>
+            <Flex>
+              <Image
+                rounded={"xl"}
+                alt={"feature image"}
+                src={Smile}
+                objectFit={"fill"}
+                w="350px"
+                h="450px"
+              />
+            </Flex>
+          </SimpleGrid>
+          <SimpleGrid
+            columns={{ base: 1, md: 2 }}
+            spacing={10}
+            padding={"20px"}
+          >
+            <Stack spacing={4}>
               <Text
-                display="block"
-                fontSize="18px"
-                fontWeight="600"
-                padding="10px"
+                textTransform={"uppercase"}
+                color={"blue.400"}
+                fontWeight={600}
+                fontSize={"sm"}
+                bg={useColorModeValue("blue.50", "blue.900")}
+                p={2}
+                alignSelf={"flex-start"}
+                rounded={"md"}
               >
+                Інструктор
+              </Text>
+              <Heading fontWeight="bold">Мирошников Владислав Ігорович</Heading>
+              <Text color={"gray.500"} fontSize={"lg"}>
                 Досвідчений тренер з ММА та Бойового самбо . Практитує
                 бразильське джиу-джитсу.
               </Text>
-            </Box>
-          </Flex>
-        </Flex> */}
+              <Stack
+                spacing={4}
+                divider={
+                  <StackDivider
+                    borderColor={useColorModeValue("gray.100", "gray.700")}
+                  />
+                }
+              >
+                <Feature
+                  icon={<Icon as={GiPunchBlast} color={"black"} w={8} h={8} />}
+                  iconBg={useColorModeValue("white", "white")}
+                  text={"Володіє навичками кількох дисциплін бойових мистецтв"}
+                />
+                <Feature
+                  icon={<Icon as={GiTeacher} color={"green.500"} w={8} h={8} />}
+                  iconBg={useColorModeValue("green.100", "green.900")}
+                  text={"Інструктор підліткової та дитячої групи"}
+                />
+                <Feature
+                  icon={
+                    <Icon as={GiSandsOfTime} color={"purple.500"} w={8} h={8} />
+                  }
+                  iconBg={useColorModeValue("purple.100", "purple.900")}
+                  text={"Практикує ММА та Бойове самбо 6 років"}
+                />
+              </Stack>
+            </Stack>
+            <Flex>
+              <Image
+                rounded={"xl"}
+                alt={"feature image"}
+                src={vlad}
+                objectFit={"cover"}
+                w="350px"
+                h="450px"
+              />
+            </Flex>
+          </SimpleGrid>
+        </Container>
       </Flex>
     </>
   );

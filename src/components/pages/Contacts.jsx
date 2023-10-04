@@ -19,24 +19,83 @@ import {
   Stack,
   Box,
   Heading,
+  useColorModeValue,
+  Icon,
 } from "@chakra-ui/react";
-import Waterlogo from "../../assets/img/watericon.png";
-import QrPhoneNikolay from "../../assets/img/Дядь коля номер.png";
-import QrPhoneValentin from "../../assets/img/номер валентина.png";
-import QrPhoneVlad from "../../assets/img/номер влада.png";
-import instaQR from "../../assets/img/insta bjj kids.png";
-import faceQR from "../../assets/img/qr face.png";
-import QRyoutube from "../../assets/img/QRtube.png";
-import QRinstaDnipro from "../../assets/img/QR insta bjj.png";
-import GoogleMap from "../../assets/img/google map.png";
-import QRTelega from "../../assets/img/QR telegram.png";
-import ContactTemplate from "../elem/ContactTemplates.tsx";
+import {
+  HStack,
+  VStack,
+  List,
+  ListItem,
+  ListIcon,
+  useToast,
+} from "@chakra-ui/react";
+
+import { FaPhone } from "react-icons/fa";
+import {
+  FcAbout,
+  FcAssistant,
+  FcCollaboration,
+  FcDonate,
+  FcManager,
+} from "react-icons/fc";
 import FooterTemplate from "../elem/FooterTemplate.tsx";
 import { useScrollEvent } from "../../hooks";
-import ThreeTierPricingHorizontal from "../elem/NumberTemplates.tsx";
 import ThreeTierPricing from "../elem/PhoneNumber.tsx";
-import GridListWith from "../elem/Society.tsx";
+function PriceWrapper({ children }) {
+  return (
+    <Box
+      mb={4}
+      shadow="base"
+      borderWidth="1px"
+      alignSelf={{ base: "center", lg: "flex-start" }}
+      borderColor={useColorModeValue("gray.200", "gray.500")}
+      borderRadius={"xl"}
+    >
+      {children}
+    </Box>
+  );
+}
+const Card = ({ heading, description, icon, href }) => {
+  return (
+    <Box
+      maxW={{ base: "full", md: "275px" }}
+      w={"full"}
+      borderWidth="1px"
+      borderRadius="lg"
+      overflow="hidden"
+      p={5}
+    >
+      <Stack align={"start"} spacing={2}>
+        <Flex
+          w={16}
+          h={16}
+          align={"center"}
+          justify={"center"}
+          color={"white"}
+          rounded={"full"}
+          bg={useColorModeValue("gray.100", "gray.700")}
+        >
+          {icon}
+        </Flex>
+        <Box mt={2}>
+          <Heading size="md">{heading}</Heading>
+          <Text mt={1} fontSize={"sm"}>
+            {description}
+          </Text>
+        </Box>
+        <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
+          Learn more
+        </Button>
+      </Stack>
+    </Box>
+  );
+};
 const Contacts = () => {
+  const toast = useToast();
+  const saveInClipBoard = (num) => {
+    navigator.clipboard.writeText(num);
+  };
   const [isVisibleBottomButton] = useScrollEvent();
 
   return (
@@ -326,424 +385,261 @@ const Contacts = () => {
             </Stack>
           </Stack>
         </Container>
-        <ThreeTierPricing />
-        <GridListWith />
-      </Flex>
-      {/* <Flex
-        position="absolute"
-        opacity="50%"
-        backgroundImage={`url(${Waterlogo})`}
-        backgroundSize="contain"
-        backgroundRepeat="no-repeat"
-        h="100vh"
-        w="100vw"
-        zIndex="-1"
-      />{" "}
-      <Flex
-        h="100vh"
-        flexDirection="column"
-        justifyContent="center"
-        border="3px solid red"
-      >
-        {" "}
-        <Flex
-          // h="92vh"
-          justifyContent="center"
-          alignItems="center"
-          padding="40px"
-          fontFamily="Roboto"
-        >
-          <Flex fontSize="22px">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1321.7486555802132!2d35.0736516!3d48.5045306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe393edb25bcb%3A0xe91e1f026da0b37e!2sYamasaki%20Academy%20Jiu%20Jitsu!5e0!3m2!1sru!2sua!4v1694594361759!5m2!1sru!2sua"
-              width="800"
-              height="450"
-              allowfullscreen=""
-              loading="lazy"
-            ></iframe>
+        <Box py={12}>
+          <VStack spacing={2} textAlign="center">
+            <Heading as="h1" fontSize="4xl">
+              Контакти наших інструкторів
+            </Heading>
+            <Text fontSize="lg" color={"gray.500"}>
+              {/* Start with 14-day free trial. No credit card needed. Cancel at
+          anytime. */}
+            </Text>
+          </VStack>
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            textAlign="center"
+            justify="center"
+            spacing={{ base: 4, lg: 10 }}
+            py={10}
+          >
+            <PriceWrapper>
+              <Box py={4} px={12}>
+                <Text fontWeight="500" fontSize="xl">
+                  Інструктор підліткової та
+                  <br /> дитячої групи BJJ
+                </Text>
+                <HStack justifyContent="center">
+                  <Text fontSize="xl" fontWeight="600">
+                    Шерстюк Микола
+                  </Text>
+                  {/* <Text fontSize="5xl" fontWeight="900">
+                79
+              </Text>
+              <Text fontSize="3xl" color="gray.500">
+                /month
+              </Text> */}
+                </HStack>
+              </Box>
+              <VStack
+                bg={useColorModeValue("gray.50", "gray.700")}
+                py={4}
+                borderBottomRadius={"xl"}
+              >
+                <List spacing={3} textAlign="start" px={12}>
+                  <ListItem>
+                    <ListIcon as={FaPhone} color="green.500" mr={2} />
+                    +380 73 203 76 64
+                  </ListItem>
+                  {/* <ListItem>
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                Lorem, ipsum dolor.
+              </ListItem>
+              <ListItem>
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                5TB Lorem, ipsum dolor.
+              </ListItem> */}
+                </List>
+                <Box w="80%" pt={7}>
+                  <Button
+                    w="full"
+                    colorScheme="blue"
+                    variant="outline"
+                    onClick={() => saveInClipBoard("+380 73 203 76 64")}
+                  >
+                    Копіювати номер
+                  </Button>
+                </Box>
+              </VStack>
+            </PriceWrapper>
 
-            <Flex
-              justifyContent="space-between"
-              textAlign="center"
-              padding="20px"
-            >
-              <Flex flexDir="column" padding="20px" alignItems="center">
-                {" "}
-                <Tooltip
-                  hasArrow
-                  label="Чекаємо на тебе!)"
-                  cursor="pointer"
-                  fontSize="xl"
-                  color="black"
-                  placement="top"
+            <PriceWrapper>
+              <Box position="relative">
+                <Box
+                  position="absolute"
+                  top="-16px"
+                  left="50%"
+                  style={{ transform: "translate(-50%)" }}
                 >
-                  <Image cursor="pointer" w="150px" src={GoogleMap}></Image>
-                </Tooltip>
-                <Text padding="10px">Yamasaki Google Maps</Text>
-                <Text padding="5px" backgroundColor="white" opacity="80%">
-                  Зупинка: вулиця Богдана Хмельницького
+                  <Text
+                    textTransform="uppercase"
+                    bg={useColorModeValue("blue.400", "blue.700")}
+                    px={3}
+                    py={1}
+                    color={useColorModeValue("gray.900", "gray.300")}
+                    fontSize="sm"
+                    fontWeight="600"
+                    rounded="xl"
+                  >
+                    Професор
+                  </Text>
+                </Box>
+                <Box py={4} px={12}>
+                  <Text fontWeight="500" fontSize="2xl">
+                    Професор академії <br />
+                    та інструктор дорослої групи BJJ
+                  </Text>
+                  <HStack justifyContent="center">
+                    <Text fontSize="3xl" fontWeight="600">
+                      Косенко Валентин
+                    </Text>
+                    {/* <Text fontSize="5xl" fontWeight="900">
+                  149
                 </Text>
-                <Text
-                  padding="5px"
-                  backgroundColor="white"
-                  borderRadius="20px"
-                  opacity="80%"
+                <Text fontSize="3xl" color="gray.500">
+                  /month
+                </Text> */}
+                  </HStack>
+                </Box>
+                <VStack
+                  bg={useColorModeValue("gray.50", "gray.700")}
+                  py={4}
+                  borderBottomRadius={"xl"}
                 >
-                  Маршрути автобусів: A153, 124A, A115, A149, A64Г, А31, А177,
-                  А107, А136, А88, А38, А43,А158{" "}
+                  <List spacing={3} textAlign="start" px={12}>
+                    <ListItem>
+                      <ListIcon as={FaPhone} color="green.500" mr={2} />
+                      +380 50 535 09 61
+                    </ListItem>
+                    {/* <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Lorem, ipsum dolor.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  5TB Lorem, ipsum dolor.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  5TB Lorem, ipsum dolor.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  5TB Lorem, ipsum dolor.
+                </ListItem> */}
+                  </List>
+                  <Box w="80%" pt={7}>
+                    <Button
+                      w="full"
+                      colorScheme="blue"
+                      variant="outline"
+                      onClick={() => saveInClipBoard("+380 50 535 09 61")}
+                    >
+                      Копіювати номер
+                    </Button>
+                  </Box>
+                </VStack>
+              </Box>
+            </PriceWrapper>
+            <PriceWrapper>
+              <Box py={4} px={12}>
+                <Text fontWeight="500" fontSize="xl">
+                  Інструктор з ММА та <br />
+                  Бойового самбо
                 </Text>
-                <Text padding="5px" backgroundColor="white" opacity="80%">
-                  Маршрути тролейбусів: 20, 7, 17, 3, 15
-                </Text>
-              </Flex>
+                <HStack justifyContent="center">
+                  <Text fontSize="xl" fontWeight="600">
+                    Мирошников Владислав
+                  </Text>
+                  {/* <Text fontSize="5xl" fontWeight="900">
+                349
+              </Text>
+              <Text fontSize="3xl" color="gray.500">
+                /month
+              </Text> */}
+                </HStack>
+              </Box>
+              <VStack
+                bg={useColorModeValue("gray.50", "gray.700")}
+                py={4}
+                borderBottomRadius={"xl"}
+              >
+                <List spacing={3} textAlign="start" px={12}>
+                  <ListItem>
+                    <ListIcon as={FaPhone} color="green.500" mr={2} />
+                    +380 95 507 33 70
+                  </ListItem>
+                  {/* <ListItem>
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                Lorem, ipsum dolor.
+              </ListItem>
+              <ListItem>
+                <ListIcon as={FaCheckCircle} color="green.500" />
+                5TB Lorem, ipsum dolor.
+              </ListItem> */}
+                </List>
+                <Box w="80%" pt={7}>
+                  <Button
+                    w="full"
+                    colorScheme="blue"
+                    variant="outline"
+                    onClick={() => saveInClipBoard(" +380 95 507 33 70")}
+                  >
+                    Копіювати номер
+                  </Button>
+                </Box>
+              </VStack>
+            </PriceWrapper>
+          </Stack>
+        </Box>
+        {/* <GridListWith />{" "} */}
+        <Box p={4}>
+          <Stack spacing={4} as={Container} maxW={"5xl"} textAlign={"center"}>
+            <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
+              Short heading
+            </Heading>
+            <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis obcaecati ut cupiditate pariatur, dignissimos, placeat
+              amet officiis.
+            </Text>
+          </Stack>
+
+          <Container maxW={"5xl"} mt={12}>
+            <Flex flexWrap="wrap" gridGap={6} justify="center">
+              <Card
+                heading={"Heading"}
+                icon={<Icon as={FcAssistant} w={10} h={10} />}
+                description={
+                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+                }
+                href={"#"}
+              />
+              <Card
+                heading={"Heading"}
+                icon={<Icon as={FcCollaboration} w={10} h={10} />}
+                description={
+                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+                }
+                href={"#"}
+              />
+              <Card
+                heading={"Heading"}
+                icon={<Icon as={FcDonate} w={10} h={10} />}
+                description={
+                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+                }
+                href={"#"}
+              />
+              <Card
+                heading={"Heading"}
+                icon={<Icon as={FcManager} w={10} h={10} />}
+                description={
+                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+                }
+                href={"#"}
+              />
+              <Card
+                heading={"Heading"}
+                icon={<Icon as={FcAbout} w={10} h={10} />}
+                description={
+                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
+                }
+                href={"#"}
+              />
             </Flex>
-          </Flex>
-        </Flex>
-        <Flex w="100%" justifyContent="space-between">
-          <Button
-            background="white"
-            border="1px solid grey"
-            borderRadius="20px"
-            className="fa fa-phone"
-            w="300px"
-            onClick={() => {
-              onOpen();
-            }}
-          >
-            <Text padding="10px">Контакти</Text>
-          </Button>{" "}
-          <Button
-            className="fa fa-instagram"
-            background="white"
-            border="1px solid grey"
-            borderRadius="20px"
-            w="300px"
-            onClick={() => {
-              onSecondOpen();
-            }}
-          >
-            <Text padding="5px">Соціальні мережі</Text>
-          </Button>{" "}
-          <Button
-            className="fa fa-video-camera"
-            background="white"
-            border="1px solid grey"
-            borderRadius="20px"
-            w="300px"
-            onClick={() => {
-              onThirdOpen();
-            }}
-          >
-            <Text padding="5px">Де нас знайти!</Text>
-          </Button>{" "}
-        </Flex>
-        <Modal isCentered isOpen={isThirdOpen} onClose={onThirdClose}>
-          <ModalOverlay
-            bg="blackAlpha.300"
-            backdropFilter="blur(10px) hue-rotate(0deg)"
-          >
-            <ModalContent>
-              <ModalHeader></ModalHeader>
-              <ModalBody>
-                <Flex
-                  h="92vh"
-                  justifyContent="center"
-                  alignItems="center"
-                  padding="40px"
-                  fontFamily="Roboto"
-                >
-                  <Flex fontSize="22px">
-                    <iframe
-                      width="900"
-                      height="415"
-                      src="https://www.youtube.com/embed/XyQ27GXavDM?si=ixaPX6BKhdyfrQ8b"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe>
-                  </Flex>
-                </Flex>{" "}
-              </ModalBody>
-
-              <ModalFooter justifyContent="center" opacity="100%">
-                <Button
-                  bg="blackAlpha.300"
-                  className="fa fa-sign-out"
-                  onClick={onThirdClose}
-                ></Button>
-              </ModalFooter>
-            </ModalContent>
-          </ModalOverlay>
-        </Modal>
-        <Modal isCentered isOpen={isSecondOpen} onClose={onSecondClose}>
-          <ModalOverlay
-            bg="blackAlpha.300"
-            backdropFilter="blur(10px) hue-rotate(0deg)"
-          >
-            <ModalContent>
-              <ModalHeader></ModalHeader>
-              <ModalBody>
-                <Flex
-                  h="92vh"
-                  justifyContent="center"
-                  alignItems="center"
-                  padding="40px"
-                  fontFamily="Roboto"
-                >
-                  <Text fontSize="22px">
-                    <Text padding="5px">
-                      Instagram Dnipro Kids :
-                      <Link
-                        href=" https://www.instagram.com/bjj_kids_dnipro/"
-                        isExternal
-                      >
-                        {" "}
-                        Инстаграмм{" "}
-                        <Text className="fa  fa-external-link" fontSize="16px">
-                          {" "}
-                        </Text>
-                      </Link>
-                    </Text>
-                    <Text padding="5px">
-                      Yamasaki Facebook :{" "}
-                      <Link
-                        href="  https://www.facebook.com/BrazilianJiuJitsuDnepr/"
-                        isExternal
-                      >
-                        {" "}
-                        Фейсбук{" "}
-                        <Text className="fa  fa-external-link" fontSize="16px">
-                          {" "}
-                        </Text>
-                      </Link>
-                    </Text>
-                    <Text padding="5px">
-                      {" "}
-                      Yamasaki Telegram:{" "}
-                      <Link
-                        href="  https://t.me/YamasakiAcademyDnipro"
-                        isExternal
-                      >
-                        {" "}
-                        Телеграмм{" "}
-                        <Text className="fa  fa-external-link" fontSize="16px">
-                          {" "}
-                        </Text>
-                      </Link>
-                    </Text>
-                    <Flex
-                      justifyContent="space-between"
-                      textAlign="center"
-                      padding="20px"
-                    >
-                      <Flex flexDir="column" padding="20px" alignItems="center">
-                        <Tooltip
-                          hasArrow
-                          label="Скануй та приєднуйся!)"
-                          cursor="pointer"
-                          fontSize="xl"
-                          color="black"
-                          placement="top"
-                        >
-                          <Image
-                            cursor="pointer"
-                            w="150px"
-                            src={instaQR}
-                          ></Image>
-                        </Tooltip>
-                        <Text padding="10px">Yamasaki Dnipro Kids</Text>
-                      </Flex>
-                      <Flex flexDir="column" padding="20px" alignItems="center">
-                        {" "}
-                        <Tooltip
-                          hasArrow
-                          label="Скануй та приєднуйся!)"
-                          cursor="pointer"
-                          fontSize="xl"
-                          color="black"
-                          placement="top"
-                        >
-                          <Image
-                            cursor="pointer"
-                            w="150px"
-                            src={faceQR}
-                          ></Image>
-                        </Tooltip>
-                        <Text padding="10px"> Yamasaki Academy Facebook</Text>{" "}
-                      </Flex>
-                      <Flex flexDir="column" padding="20px" alignItems="center">
-                        {" "}
-                        <Tooltip
-                          hasArrow
-                          label="Скануй та приєднуйся!)"
-                          cursor="pointer"
-                          fontSize="xl"
-                          color="black"
-                          placement="top"
-                        >
-                          <Image
-                            cursor="pointer"
-                            w="150px"
-                            src={QRyoutube}
-                          ></Image>
-                        </Tooltip>
-                        <Text padding="10px">Yamasaki Youtube</Text>
-                      </Flex>
-                      <Flex flexDir="column" padding="20px" alignItems="center">
-                        {" "}
-                        <Tooltip
-                          hasArrow
-                          label="Скануй та приєднуйся!)"
-                          cursor="pointer"
-                          fontSize="xl"
-                          color="black"
-                          placement="top"
-                        >
-                          <Image
-                            cursor="pointer"
-                            w="150px"
-                            src={QRTelega}
-                          ></Image>
-                        </Tooltip>
-                        <Text padding="10px">Yamasaki Telegram</Text>
-                      </Flex>
-                      <Flex flexDir="column" padding="20px" alignItems="center">
-                        {" "}
-                        <Tooltip
-                          hasArrow
-                          label="Скануй та приєднуйся!)"
-                          cursor="pointer"
-                          fontSize="xl"
-                          color="black"
-                          placement="top"
-                        >
-                          <Image
-                            cursor="pointer"
-                            w="150px"
-                            src={QRinstaDnipro}
-                          ></Image>
-                        </Tooltip>
-                        <Text padding="10px">Yamasaki Dnipro</Text>
-                      </Flex>
-                    </Flex>
-                  </Text>
-                </Flex>{" "}
-              </ModalBody>
-
-              <ModalFooter justifyContent="center" opacity="100%">
-                <Button
-                  bg="blackAlpha.300"
-                  className="fa fa-sign-out"
-                  onClick={onSecondClose}
-                ></Button>
-              </ModalFooter>
-            </ModalContent>
-          </ModalOverlay>
-        </Modal>
-        <Modal isCentered isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay
-            bg="blackAlpha.300"
-            backdropFilter="blur(10px) hue-rotate(0deg)"
-          >
-            <ModalContent>
-              <ModalHeader></ModalHeader>
-              <ModalBody>
-                <Flex
-                  h="92vh"
-                  justifyContent="center"
-                  alignItems="center"
-                  padding="40px"
-                  fontFamily="Roboto"
-                >
-                  <Text fontSize="22px">
-                    <Text padding="5px">
-                      Микола Шерстюк - Тренер дитячої групи BJJ : +380 73 203 76
-                      64
-                    </Text>
-                    <Text padding="5px">
-                      Мирошников Владислав - Тренер з ММА та Бойового самбо :
-                      +380 95 507 33 70
-                    </Text>
-                    <Text padding="5px">
-                      {" "}
-                      Косенко Валентин - Тренер дорослої групи BJJ : +380 50 535
-                      09 61
-                    </Text>
-                    <Flex
-                      justifyContent="space-between"
-                      textAlign="center"
-                      padding="20px"
-                    >
-                      <Flex flexDir="column" padding="20px" alignItems="center">
-                        <Tooltip
-                          hasArrow
-                          label="Скануй та дзвони!)"
-                          cursor="pointer"
-                          fontSize="xl"
-                          color="black"
-                          placement="top"
-                        >
-                          <Image
-                            cursor="pointer"
-                            w="150px"
-                            src={QrPhoneNikolay}
-                          ></Image>
-                        </Tooltip>
-                        <Text padding="10px">Микола Шерстюк</Text>
-                      </Flex>
-                      <Flex flexDir="column" padding="20px" alignItems="center">
-                        {" "}
-                        <Tooltip
-                          hasArrow
-                          label="Скануй та дзвони!)"
-                          cursor="pointer"
-                          fontSize="xl"
-                          color="black"
-                          placement="top"
-                        >
-                          <Image
-                            cursor="pointer"
-                            w="150px"
-                            src={QrPhoneVlad}
-                          ></Image>
-                        </Tooltip>
-                        <Text padding="10px"> Мирошников Владислав</Text>{" "}
-                      </Flex>
-                      <Flex flexDir="column" padding="20px" alignItems="center">
-                        {" "}
-                        <Tooltip
-                          hasArrow
-                          label="Скануй та дзвони!)"
-                          cursor="pointer"
-                          fontSize="xl"
-                          color="black"
-                          placement="top"
-                        >
-                          <Image
-                            cursor="pointer"
-                            w="150px"
-                            src={QrPhoneValentin}
-                          ></Image>
-                        </Tooltip>
-                        <Text padding="10px">Косенко Валентин</Text>
-                      </Flex>
-                    </Flex>
-                  </Text>
-                </Flex>{" "}
-              </ModalBody>
-
-              <ModalFooter justifyContent="center" opacity="100%">
-                <Button
-                  bg="blackAlpha.300"
-                  className="fa fa-sign-out"
-                  onClick={onClose}
-                ></Button>
-              </ModalFooter>
-            </ModalContent>
-          </ModalOverlay>
-        </Modal>
-      </Flex> */}
+          </Container>
+        </Box>
+      </Flex>
     </>
   );
 };
