@@ -33,19 +33,12 @@ import QRTelega from "../../assets/img/QR telegram.png";
 import ContactTemplate from "../elem/ContactTemplates.tsx";
 import FooterTemplate from "../elem/FooterTemplate.tsx";
 import { useScrollEvent } from "../../hooks";
+import ThreeTierPricingHorizontal from "../elem/NumberTemplates.tsx";
+import ThreeTierPricing from "../elem/PhoneNumber.tsx";
+import GridListWith from "../elem/Society.tsx";
 const Contacts = () => {
   const [isVisibleBottomButton] = useScrollEvent();
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const {
-    isOpen: isSecondOpen,
-    onOpen: onSecondOpen,
-    onClose: onSecondClose,
-  } = useDisclosure();
-  const {
-    isOpen: isThirdOpen,
-    onOpen: onThirdOpen,
-    onClose: onThirdClose,
-  } = useDisclosure();
+
   return (
     <>
       <Navbar />
@@ -110,10 +103,10 @@ const Contacts = () => {
                   - до нас!
                 </Text>
               </Heading>
-              <Text color={"gray.500"}>
+              <Text color={"black"}>
                 Зупинка: вулиця Богдана Хмельницького <br />
                 Маршрути автобусів: A153, 124A, A115, A149, A64Г, А31, А177,
-                А107, А136, А88, А38, А43,А158 <br /> Маршрути тролейбусів: 20,
+                А107, А136, А88, А38, А43, А158 <br /> Маршрути тролейбусів: 20,
                 7, 17, 3, 15
               </Text>
               <Stack
@@ -135,10 +128,11 @@ const Contacts = () => {
                   bg={"blue.400"}
                   _hover={{ bg: "blue.500" }}
                   onClick={() => {
-                    window.scrollTo({
-                      top: document.body.scrollHeight,
-                      behavior: "smooth",
-                    });
+                    const InstructorContact =
+                      document.getElementById("InstructorContact");
+                    if (InstructorContact) {
+                      InstructorContact.scrollIntoView({ behavior: "smooth" });
+                    }
                   }}
                 >
                   Контакты
@@ -156,6 +150,13 @@ const Contacts = () => {
                   size={"lg"}
                   fontWeight={"normal"}
                   px={6}
+                  bg="red.400"
+                  onClick={() => {
+                    const videoBlock = document.getElementById("videoBlock");
+                    if (videoBlock) {
+                      videoBlock.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
                   Как нас найти?
                 </Button>
@@ -212,7 +213,7 @@ const Contacts = () => {
             А далі куди?
           </Text>
           <br />
-          <Text as={"span"} color={"red.400"}>
+          <Text as={"span"} color={"red.400"} id="videoBlock">
             Ознайомся!
           </Text>
         </Flex>
@@ -244,6 +245,7 @@ const Contacts = () => {
                 boxShadow={"2xl"}
                 width={"full"}
                 overflow={"hidden"}
+                id="videoBlock"
               >
                 <iframe
                   width="100%"
@@ -284,10 +286,10 @@ const Contacts = () => {
                   фінішна пряма!
                 </Text>
               </Heading>
-              <Text color={"gray.500"}>
-                Snippy is a rich coding snippets app that lets you create your
-                own code snippets, categorize them, and even sync them in the
-                cloud so you can use them anywhere. All that is free!
+              <Text color={"black"}>
+                Нас не так просто знайти, як здається! Тому ми спеціально для
+                тебе записали відеомаршрут! Якщо виникнуть запитання, ви можете
+                зв'язатися з одним із інструкторів для уточнення інформації.
               </Text>
               <Stack
                 spacing={{ base: 4, sm: 6 }}
@@ -299,10 +301,18 @@ const Contacts = () => {
                   fontWeight={"normal"}
                   px={6}
                   colorScheme={"red"}
-                  bg={"red.400"}
-                  _hover={{ bg: "red.500" }}
+                  id="InstructorContact"
+                  bg={"blue.400"}
+                  _hover={{ bg: "blue.500" }}
+                  onClick={() => {
+                    const InstructorContact =
+                      document.getElementById("InstructorContact");
+                    if (InstructorContact) {
+                      InstructorContact.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
-                  Get started
+                  Контакты
                 </Button>
                 <Button
                   rounded={"full"}
@@ -310,12 +320,14 @@ const Contacts = () => {
                   fontWeight={"normal"}
                   px={6}
                 >
-                  How It Works
+                  Соцсети
                 </Button>
               </Stack>
             </Stack>
           </Stack>
         </Container>
+        <ThreeTierPricing />
+        <GridListWith />
       </Flex>
       {/* <Flex
         position="absolute"
