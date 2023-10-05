@@ -25,6 +25,7 @@ import { ReactElement } from "react";
 import Smile from "../../assets/img/try1.jpg";
 import Coach from "../../assets/img/coach1.png";
 import vlad from "../../assets/img/vlados.jpg";
+import Elevator from "../elem/Elevator";
 const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={"row"} align={"center"}>
@@ -45,7 +46,7 @@ const Feature = ({ text, icon, iconBg }) => {
 const Instructors = () => {
   return (
     <>
-      <Navbar />{" "}
+      <Navbar /> <Elevator />
       <Flex
         alignItems="center"
         justifyContent="center"

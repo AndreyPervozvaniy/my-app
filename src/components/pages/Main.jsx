@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../navigation/Navbar";
 import { Button, Text, Fade, Flex, Box } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
@@ -27,6 +27,8 @@ import {
   ListIcon,
   Heading,
   Icon,
+  Slider,
+  useBreakpointValue,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
@@ -71,6 +73,10 @@ const Card = ({ heading, description, icon }) => {
 };
 const Main = () => {
   const [isVisibleBottomButton] = useScrollEvent();
+  // const [slider, setSlider] = useState < Slider || null > null;
+
+  const top = useBreakpointValue({ base: "90%", md: "50%" });
+  const side = useBreakpointValue({ base: "30%", md: "40px" });
   return (
     <>
       <Navbar />

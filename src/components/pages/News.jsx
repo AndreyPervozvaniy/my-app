@@ -7,6 +7,7 @@ import { newscontent } from "../../content/newscontent";
 import Waterlogo from "../../assets/img/watericon.png";
 import { useScrollEvent } from "../../hooks";
 import { PATHS } from "../../routes";
+import Elevator from "../elem/Elevator";
 function News() {
   const router = useNavigate();
   const [page, setPage] = useState(1);
@@ -29,26 +30,7 @@ function News() {
 
   return (
     <>
-      <Navbar />{" "}
-      <Fade in={isVisibleTopButton}>
-        <Button
-          className="fa fa-arrow-up"
-          aria-lavel="topButton"
-          zIndex="12"
-          position="fixed"
-          right={{ base: "5px", xl: "10" }}
-          bottom="55px"
-          w={50}
-          h={50}
-          color="white"
-          background="rgb(63, 72, 204)"
-          borderRadius="full"
-          colorScheme="gray"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        ></Button>
-      </Fade>{" "}
+      <Navbar /> <Elevator />
       <Box
         position="fixed"
         opacity="60%"

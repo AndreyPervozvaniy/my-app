@@ -6,13 +6,6 @@ import {
   Tooltip,
   Image,
   Button,
-  useDisclosure,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
   Link,
   Fade,
   Container,
@@ -21,8 +14,6 @@ import {
   Heading,
   useColorModeValue,
   Icon,
-} from "@chakra-ui/react";
-import {
   HStack,
   VStack,
   List,
@@ -30,8 +21,8 @@ import {
   ListIcon,
   useToast,
 } from "@chakra-ui/react";
-
-import { FaPhone } from "react-icons/fa";
+import Elevator from "../elem/Elevator";
+import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
 import {
   FcAbout,
   FcAssistant,
@@ -39,9 +30,9 @@ import {
   FcDonate,
   FcManager,
 } from "react-icons/fc";
-import FooterTemplate from "../elem/FooterTemplate.tsx";
+
 import { useScrollEvent } from "../../hooks";
-import ThreeTierPricing from "../elem/PhoneNumber.tsx";
+import FooterTemplate from "../elem/FooterTemplate";
 function PriceWrapper({ children }) {
   return (
     <Box
@@ -57,6 +48,7 @@ function PriceWrapper({ children }) {
   );
 }
 const Card = ({ heading, description, icon, href }) => {
+  //---------------------------------------------- кнопки соцсетей-----------------------------------
   return (
     <Box
       maxW={{ base: "full", md: "275px" }}
@@ -66,26 +58,26 @@ const Card = ({ heading, description, icon, href }) => {
       overflow="hidden"
       p={5}
     >
-      <Stack align={"start"} spacing={2}>
+      <Stack align={"center"} spacing={2}>
         <Flex
           w={16}
           h={16}
           align={"center"}
           justify={"center"}
-          color={"white"}
+          // color={"white"}
           rounded={"full"}
           bg={useColorModeValue("gray.100", "gray.700")}
         >
           {icon}
         </Flex>
-        <Box mt={2}>
+        <Box mt={2} textAlign={"center"}>
           <Heading size="md">{heading}</Heading>
           <Text mt={1} fontSize={"sm"}>
             {description}
           </Text>
         </Box>
         <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
-          Learn more
+          Приєднуйся
         </Button>
       </Stack>
     </Box>
@@ -101,26 +93,9 @@ const Contacts = () => {
   return (
     <>
       <Navbar />
-      <Fade in={isVisibleBottomButton}>
-        <Button
-          className="fa fa-arrow-up"
-          aria-lavel="topButton"
-          zIndex="12"
-          position="fixed"
-          right={{ base: "5px", xl: "10" }}
-          bottom="55px"
-          w={50}
-          opacity="40%"
-          h={50}
-          borderRadius="full"
-          colorScheme="gray"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        ></Button>
-      </Fade>{" "}
+      <Elevator />
+      {/* =====================================окна с гугл картой и ютубом ================================*/}
       <Flex alignItems="center" justifyContent="center" flexDir={"column"}>
-        {" "}
         <Container maxW={"7xl"}>
           <Stack
             textAlign={{
@@ -194,15 +169,21 @@ const Contacts = () => {
                     }
                   }}
                 >
-                  Контакты
+                  Контакти
                 </Button>
                 <Button
                   rounded={"full"}
                   size={"lg"}
                   fontWeight={"normal"}
                   px={6}
+                  onClick={() => {
+                    const Society = document.getElementById("Society");
+                    if (Society) {
+                      Society.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
-                  Соцсети
+                  Соцмережі
                 </Button>{" "}
                 <Button
                   rounded={"full"}
@@ -217,7 +198,7 @@ const Contacts = () => {
                     }
                   }}
                 >
-                  Как нас найти?
+                  Як нас знайти ?
                 </Button>
               </Stack>
             </Stack>
@@ -269,11 +250,11 @@ const Contacts = () => {
               zIndex: -1,
             }}
           >
-            А далі куди?
+            Останній крок та
           </Text>
           <br />
           <Text as={"span"} color={"red.400"} id="videoBlock">
-            Ознайомся!
+            фінішна пряма!
           </Text>
         </Flex>
         <Container maxW={"7xl"}>
@@ -338,11 +319,11 @@ const Contacts = () => {
                     zIndex: -1,
                   }}
                 >
-                  Останній крок та
+                  Якщо загубився
                 </Text>
                 <br />
                 <Text as={"span"} color={"red.400"}>
-                  фінішна пряма!
+                  – подивися!
                 </Text>
               </Heading>
               <Text color={"black"}>
@@ -371,20 +352,27 @@ const Contacts = () => {
                     }
                   }}
                 >
-                  Контакты
+                  Контакти
                 </Button>
                 <Button
                   rounded={"full"}
                   size={"lg"}
                   fontWeight={"normal"}
                   px={6}
+                  onClick={() => {
+                    const Society = document.getElementById("Society");
+                    if (Society) {
+                      Society.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
-                  Соцсети
+                  Соцмережі
                 </Button>
               </Stack>
             </Stack>
           </Stack>
         </Container>
+        {/*============================= бокс с номерами ===================================== */}
         <Box py={12}>
           <VStack spacing={2} textAlign="center">
             <Heading as="h1" fontSize="4xl">
@@ -581,64 +569,79 @@ const Contacts = () => {
             </PriceWrapper>
           </Stack>
         </Box>
-        {/* <GridListWith />{" "} */}
+        {/*======================================= бокс с соцсетями====================================== */}
         <Box p={4}>
           <Stack spacing={4} as={Container} maxW={"5xl"} textAlign={"center"}>
-            <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
-              Short heading
+            <Heading
+              fontSize={{ base: "2xl", sm: "4xl" }}
+              fontWeight={"bold"}
+              id="Society"
+            >
+              Yamasaki у соцмережах!
             </Heading>
             <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis obcaecati ut cupiditate pariatur, dignissimos, placeat
-              amet officiis.
+              Слідкуйте за новинами та подіями життя нашої академії, також
+              завжди раді новим людям у наших лавах! Підписуйся, питай,
+              приєднуйся!
             </Text>
           </Stack>
 
           <Container maxW={"5xl"} mt={12}>
             <Flex flexWrap="wrap" gridGap={6} justify="center">
-              <Card
-                heading={"Heading"}
-                icon={<Icon as={FcAssistant} w={10} h={10} />}
-                description={
-                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
-                }
-                href={"#"}
-              />
-              <Card
-                heading={"Heading"}
-                icon={<Icon as={FcCollaboration} w={10} h={10} />}
-                description={
-                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
-                }
-                href={"#"}
-              />
-              <Card
-                heading={"Heading"}
-                icon={<Icon as={FcDonate} w={10} h={10} />}
-                description={
-                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
-                }
-                href={"#"}
-              />
-              <Card
-                heading={"Heading"}
-                icon={<Icon as={FcManager} w={10} h={10} />}
-                description={
-                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
-                }
-                href={"#"}
-              />
-              <Card
+              <Link href="https://t.me/+JZvRQ-LtbyU1OWEy" target="_blank">
+                {" "}
+                <Card
+                  heading={"Yamasaki News"}
+                  icon={<Icon as={FaTelegram} w={10} h={10} />}
+                  description={"Наша група з новинами та оголошеннями."}
+                  href={"https://t.me/+JZvRQ-LtbyU1OWEy"}
+                />
+              </Link>
+              <Link
+                href="https://instagram.com/bjj_kids_dnipro?igshid=MzRlODBiNWFlZA=="
+                target="_blank"
+              >
+                {" "}
+                <Card
+                  heading={"Yamasaki Dnipro Kids"}
+                  icon={<Icon as={FaInstagram} w={10} h={10} />}
+                  description={"Сторінка дитячої та підліткової групи."}
+                  href={"#"}
+                />
+              </Link>
+              <Link href="https://t.me/YamasakiAcademyDnipro" target="_blank">
+                {" "}
+                <Card
+                  heading={"Yamasaki FAQ"}
+                  icon={<Icon as={FaTelegram} w={10} h={10} />}
+                  description={
+                    "Якщо у вас є питання, можете поставити їх особисто!"
+                  }
+                  href={"#"}
+                />
+              </Link>
+              {/* <Link href="https://instagram.com/bjj_dnipro?igshid=MzRlODBiNWFlZA==">
+                {" "}
+                <Card
+                  heading={"Yamasaki Dnipro"}
+                  icon={<Icon as={FaInstagram} w={10} h={10} />}
+                  description={"Сторінка старшої групи"}
+                  href={"#"}
+                />
+              </Link> */}
+
+              {/* <Card
                 heading={"Heading"}
                 icon={<Icon as={FcAbout} w={10} h={10} />}
                 description={
                   "Lorem ipsum dolor sit amet catetur, adipisicing elit."
                 }
                 href={"#"}
-              />
+              /> */}
             </Flex>
           </Container>
         </Box>
+        <FooterTemplate />
       </Flex>
     </>
   );
