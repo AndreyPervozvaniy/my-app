@@ -588,7 +588,7 @@ const Contacts = () => {
 
           <Container maxW={"5xl"} mt={12}>
             <Flex flexWrap="wrap" gridGap={6} justify="center">
-              <Link href="https://t.me/+JZvRQ-LtbyU1OWEy" target="_blank">
+              <Link href="https://t.me/+JZvRQ-LtbyU1OWEy" isExternal>
                 {" "}
                 <Card
                   heading={"Yamasaki News"}
@@ -599,7 +599,7 @@ const Contacts = () => {
               </Link>
               <Link
                 href="https://instagram.com/bjj_kids_dnipro?igshid=MzRlODBiNWFlZA=="
-                target="_blank"
+                isExternal
               >
                 {" "}
                 <Card
@@ -609,7 +609,7 @@ const Contacts = () => {
                   href={"#"}
                 />
               </Link>
-              <Link href="https://t.me/YamasakiAcademyDnipro" target="_blank">
+              <Link href="https://t.me/YamasakiAcademyDnipro" isExternal>
                 {" "}
                 <Card
                   heading={"Yamasaki FAQ"}
