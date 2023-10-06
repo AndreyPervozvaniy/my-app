@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../navigation/Navbar";
+import Navbar from "../navigation/Nav";
 import Waterlogo from "../../assets/img/watericon.png";
 import { Box, Text, Flex } from "@chakra-ui/react";
 

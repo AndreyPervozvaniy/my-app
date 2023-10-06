@@ -1,13 +1,13 @@
 import React from "react";
-import Navbar from "../navigation/Navbar";
+
 import Waterlogo from "../../assets/img/watericon.png";
 import { Box, Flex } from "@chakra-ui/react";
-
+import Navbar from "../navigation/Nav";
 const OurBelts = () => {
   return (
     <>
       <Navbar />
-      <Box
+      {/* <Box
         position="absolute"
         opacity="50%"
         backgroundImage={`url(${Waterlogo})`}
@@ -17,7 +17,9 @@ const OurBelts = () => {
         h="100vh"
         w="100vw"
         zIndex="-1"
-      />{" "}
+      />{" "} */}
+      <Flex h={"100vh"}></Flex>
+      <Flex h={"100vh"}></Flex>
     </>
   );
 };

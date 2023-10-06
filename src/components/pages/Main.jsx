@@ -17,7 +17,7 @@ import {
 
 import Waterlogo from "../../assets/img/watericon.png";
 import CarouselTemplate from "../elem/CarouselTemplate.tsx";
-import FooterTemplate from "../elem/FooterTemplate.tsx";
+
 import {
   Accordion,
   Center,
@@ -697,7 +697,6 @@ const Main = () => {
           <Flex overflow="hidden" w="100%">
             <CarouselTemplate />
           </Flex>{" "}
-          <FooterTemplate />
         </Flex>{" "}
       </Flex>
     </>
