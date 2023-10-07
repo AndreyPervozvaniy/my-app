@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Navbar from "../navigation/Navbar";
+import Navbar from "../navigation/Nav";
 import Waterlogo from "../../assets/img/watericon.png";
 import { Box, Flex, Stack, Image, Text, HStack } from "@chakra-ui/react";
 import { slides } from "../../content/slidescontent";

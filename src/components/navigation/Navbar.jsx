@@ -57,7 +57,7 @@ const Navbar = () => {
       alignItems="center"
       padding="0 10%"
       // boxShadow="0 0px 2px #000"
-      zIndex="11"
+      // zIndex="11"
       boxShadow={showShadow ? "0 2px 4px rgba(0, 0, 0, 0.2)" : "none"} // Добавляем тень при необходимости
     >
       <Flex onClick={() => router("/")}>

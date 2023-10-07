@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "../navigation/Navbar";
+import Navbar from "../navigation/Nav";
 import { Button, Text, Fade, Flex, Box } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import { useScrollEvent } from "../../hooks";
-import video from "../../assets/video/video.mp4";
+import video from "../../assets/video/asd.mp4";
 
 import { CheckIcon } from "@chakra-ui/icons";
 import {
@@ -453,6 +453,7 @@ const Main = () => {
               allowToggle
               justifyContent="center"
               alignItems="center"
+
               // background="linear-gradient(to bottom, #0000ff88 0%, #ffff00ab 120%)"
             >
               <AccordionItem>

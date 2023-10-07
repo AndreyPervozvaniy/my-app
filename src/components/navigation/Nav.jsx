@@ -8,6 +8,7 @@ import {
   Menu,
   MenuButton,
   MenuList,
+  Image,
   MenuItem,
   Stack,
   Icon,
@@ -17,12 +18,21 @@ import {
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 import { GiHamburgerMenu } from "react-icons/gi";
+import Logo from "../../assets/img/LOGO.png";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 import { RiFlashlightFill } from "react-icons/ri";
 import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+} from "@chakra-ui/react";
 
 const navLinks = [
   //   { name: "Про нас", isMenu: true },
@@ -41,6 +51,15 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [showShadow, setShowShadow] = useState(false);
   const btnRef = React.useRef();
+  const [issOpen, setIsOpen] = useState(false);
+
+  const onnClose = () => {
+    setIsOpen(false);
+  };
+
+  const onnOpen = () => {
+    setIsOpen(true);
+  };
   const router = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
@@ -69,19 +88,26 @@ export default function Navbar() {
       left="0"
       background="white"
       alignItems="center"
-      padding="0 10%"
+      padding="0 5%"
       // boxShadow="0 0px 2px #000"
       zIndex="11"
       boxShadow={showShadow ? "0 2px 4px rgba(0, 0, 0, 0.2)" : "none"}
     >
-      <Flex h={16} alignItems="center" justifyContent="space-around" mx="auto">
-        <Icon as={RiFlashlightFill} h={8} w={8} />
+      <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
+        <Image
+          w="200px"
+          src={Logo}
+          onClick={() => router("/")}
+          transition="all 0.7s"
+          cursor="pointer"
+          _hover={{ transform: "scale(1.2)" }}
+        />
 
         <HStack
           spacing={3}
           alignItems="center"
           fontSize={"lg"}
-          display={{ base: "none", md: "flex" }}
+          display={{ base: "none", lg: "flex" }}
         >
           {" "}
           <Menu autoSelect={false} isLazy>
@@ -131,31 +157,43 @@ export default function Navbar() {
 
         <IconButton
           size="md"
-          icon={isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+          icon={<GiHamburgerMenu />}
           aria-label="Open Menu"
-          display={{ base: "inherit", md: "none" }}
-          onClick={isOpen ? onClose : onOpen}
+          display={{ base: "inherit", lg: "none" }}
+          onClick={issOpen ? onnClose : onnOpen}
         />
       </Flex>
 
-      {/* Mobile Screen Links */}
-      {isOpen ? (
-        <Box pb={4} display={{ base: "inherit", md: "none" }}>
-          <Stack as="nav" spacing={2}>
-            {navLinks.map((link, index) => (
-              <NavLink key={index} {...link} onClose={onClose} />
-            ))}
-            <Text fontWeight="semibold" color="gray.500">
-              Про нас
-            </Text>
-            <Stack pl={2} spacing={1} mt={"0 !important"}>
-              {dropdownLinks.map((link, index) => (
-                <NavLink key={index} {...link} onClose={onClose} />
-              ))}
-            </Stack>
-          </Stack>
-        </Box>
-      ) : null}
+      <Drawer placement="right" onClose={onClose} isOpen={issOpen}>
+        <DrawerOverlay>
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>Меню</DrawerHeader>
+            <DrawerBody
+              bgColor={"white"}
+              h={"100%"}
+              textAlign={"center"}
+              padding={"7%"}
+              fontSize={"lg"}
+              overflowY="auto"
+            >
+              <Stack as="nav" spacing={2}>
+                {navLinks.map((link, index) => (
+                  <NavLink key={index} {...link} onClose={onClose} />
+                ))}
+                <Text fontWeight="semibold" color="gray.500">
+                  Про нас
+                </Text>
+                <Stack pl={2} spacing={1} mt={"0 !important"}>
+                  {dropdownLinks.map((link, index) => (
+                    <NavLink key={index} {...link} onClose={onClose} />
+                  ))}
+                </Stack>
+              </Stack>
+            </DrawerBody>
+          </DrawerContent>
+        </DrawerOverlay>
+      </Drawer>
     </Box>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../navigation/Navbar";
+import Navbar from "../navigation/Nav";
 import { useLocation } from "react-router-dom";
 import Waterlogo from "../../assets/img/watericon.png";
 import { Flex, Box, Image, Button, Text } from "@chakra-ui/react";

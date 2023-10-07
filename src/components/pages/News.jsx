@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Box, Flex, Text, Image, Button, Fade } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
-import Navbar from "../navigation/Navbar";
+import Navbar from "../navigation/Nav";
 import { useNavigate } from "react-router-dom";
 import { newscontent } from "../../content/newscontent";
 import Waterlogo from "../../assets/img/watericon.png";
