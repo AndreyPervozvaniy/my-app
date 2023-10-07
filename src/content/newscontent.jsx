@@ -7,7 +7,14 @@ import news6 from "../assets/img/newsContentImage/shahoikoDR.jpg";
 import result2 from "../assets/img/newsContentImage/src4.png";
 import news7 from "../assets/img/newsContentImage/krivbas-challenge-open-cup-2023.png";
 import result1 from "../assets/img/newsContentImage/src3.png";
+import result3 from "../assets/img/newsContentImage/src5.png";
+import news8 from "../assets/img/newsContentImage/asgard-jiu-jitsu-cup-3-2023.png";
 export const newscontent = [
+  {
+    text: `07 жовтня 2023 року наша Академія взяла участь у турнірі Asgard Jiu-Jitsu Cup-3, який проходив у місті Кривий Ріг. Наша академія вітає всіх спортсменів, які взяли участь, дякує організаторам за якісно проведений турнір, а також хоче привітати всіх наших спортсменів із призовими місцями!`,
+    image: news8,
+    image2: result3,
+  },
   {
     text: `23 вересня 2023 року у м. Кривий Ріг пройшов турнір KRIVBAS CHALLENGE OPEN CUP. Наша академія
 вітає учасників із перемогою та зайнятими призовими місцями, а також раді привітати з другим командним призовим місцем!`,
