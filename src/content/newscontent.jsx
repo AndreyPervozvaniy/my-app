@@ -9,7 +9,12 @@ import news7 from "../assets/img/newsContentImage/krivbas-challenge-open-cup-202
 import result1 from "../assets/img/newsContentImage/src3.png";
 import result3 from "../assets/img/newsContentImage/src5.png";
 import news8 from "../assets/img/newsContentImage/asgard-jiu-jitsu-cup-3-2023.png";
+import vova from "../assets/img/newsContentImage/vova.jpg";
 export const newscontent = [
+  {
+    text: `10 жовтня 2023 року відзначає своє День народження один із найяскравіших представників нашої академії – Володимир Гончар. Наша академія хоче від щирого серця привітати Володимира, а також побажати міцного здоров'я, успіхів у творчості, на татамі і в житті!`,
+    image: vova,
+  },
   {
     text: `07 жовтня 2023 року наша Академія взяла участь у турнірі Asgard Jiu-Jitsu Cup-3, який проходив у місті Кривий Ріг. Наша академія вітає всіх спортсменів, які взяли участь, дякує організаторам за якісно проведений турнір, а також хоче привітати всіх наших спортсменів із призовими місцями!`,
     image: news8,
