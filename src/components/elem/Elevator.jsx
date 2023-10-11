@@ -4,7 +4,6 @@ const Elevator = () => {
   const [isVisibleBottomButton] = useScrollEvent();
   return (
     <Fade in={isVisibleBottomButton}>
-      {/* =============================================кнопка всплытия================================*/}
       <Button
         className="fa fa-arrow-up"
         aria-lavel="topButton"

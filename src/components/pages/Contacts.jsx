@@ -23,13 +23,6 @@ import {
 } from "@chakra-ui/react";
 import Elevator from "../elem/Elevator";
 import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
-import {
-  FcAbout,
-  FcAssistant,
-  FcCollaboration,
-  FcDonate,
-  FcManager,
-} from "react-icons/fc";
 
 import { useScrollEvent } from "../../hooks";
 import FooterTemplate from "../elem/FooterTemplate";

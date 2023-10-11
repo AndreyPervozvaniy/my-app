@@ -16,7 +16,7 @@ import {
 } from "react-icons/fc";
 
 import Waterlogo from "../../assets/img/watericon.png";
-import CarouselTemplate from "../elem/CarouselTemplate.tsx";
+import CarouselTemplate from "../elem/Carousel";
 
 import {
   Accordion,
