@@ -1,46 +1,9 @@
 import React from "react";
 import Navbar from "../navigation/Nav";
 import { Box, Container, SimpleGrid, Text, Flex } from "@chakra-ui/react";
+import { statData } from "../../utils";
 
 const Schedule = () => {
-  const statData = [
-    {
-      id: 1,
-      label: "Дитяча група BJJ : 15:30 - 17:00",
-      label2: "Підліткова група BJJ : 17:00 - 18:30",
-      label3: "Доросла група BJJ: 18:45 - 20:45",
-      score: "Понеділок",
-    },
-    {
-      id: 2,
-      label: "Підліткова група MMA : 17:00 - 18:30",
-      score: "Вівторок",
-    },
-    {
-      id: 3,
-      label: "Дитяча група BJJ : 15:30 - 17:00",
-      label2: "Підліткова група BJJ : 17:00 - 18:30",
-      label3: "Доросла група BJJ: 18:45 - 20:45",
-      score: "Середа",
-    },
-    {
-      id: 4,
-      label: "Підліткова група MMA : 17:00 - 18:30",
-      score: "Четвер",
-    },
-    {
-      id: 5,
-      label: "Дитяча група BJJ : 15:30 - 17:00",
-      label2: "Підліткова група BJJ : 17:00 - 18:30",
-      label3: "Доросла група BJJ: 18:45 - 20:45",
-      score: "П'ятниця",
-    },
-    {
-      id: 6,
-      label: "Доросла група BJJ: 09:00 - 11:00",
-      score: "Субота",
-    },
-  ];
   return (
     <>
       <Navbar />

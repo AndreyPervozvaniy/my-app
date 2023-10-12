@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 
 import Slider from "react-slick";
-import { cards } from "../../content/ContentMainPageSlider";
+import { cards } from "../../utils";
 
 const settings = {
   dots: true,
