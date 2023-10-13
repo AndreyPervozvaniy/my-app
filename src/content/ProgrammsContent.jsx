@@ -1,0 +1,141 @@
+export const ProgrammsInfo = [
+  {
+    title: "Automatic Watch",
+    price: "$350.00 USD",
+    description:
+      "Тренування у форматі Гі - являють собою один із двох основних форматів тренувань у Бразилському джіу-джитсу. Особливістю цього формату є те, що практикуючі займаються в Гі (кімоно), що надає більший спектр контролю опонента, а також відрізняється у техніках, які є, наприклад, у форматі Ноу - Гі.",
+    features: [
+      "Chronograph",
+      "Master Chronometer Certified",
+      "Tachymeter",
+      "Anti‑magnetic",
+      "Chronometer",
+      "Small seconds",
+    ],
+    details: [
+      { title: "Between lugs", value: "20 mm" },
+      { title: "Bracelet", value: "leather strap" },
+      { title: "Case", value: "Steel" },
+      { title: "Case diameter", value: "42 mm" },
+      { title: "Dial color", value: "Black" },
+      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
+    ],
+    imageUrl:
+      "https://i.pinimg.com/originals/31/9c/aa/319caa1a4db56436a7b3e9a772ec7ec8.jpg",
+  },
+  {
+    title: "Automatic Watch",
+    price: "$350.00 USD",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    features: [
+      "Chronograph",
+      "Master Chronometer Certified",
+      "Tachymeter",
+      "Anti‑magnetic",
+      "Chronometer",
+      "Small seconds",
+    ],
+    details: [
+      { title: "Between lugs", value: "20 mm" },
+      { title: "Bracelet", value: "leather strap" },
+      { title: "Case", value: "Steel" },
+      { title: "Case diameter", value: "42 mm" },
+      { title: "Dial color", value: "Black" },
+      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
+    ],
+    imageUrl:
+      "https://graciebotany.com.au/wp-content/uploads/2023/03/gracie-botany-no-gi-jiu-jitsu-training.jpg",
+  },
+  {
+    title: "Automatic Watch",
+    price: "$350.00 USD",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    features: [
+      "Chronograph",
+      "Master Chronometer Certified",
+      "Tachymeter",
+      "Anti‑magnetic",
+      "Chronometer",
+      "Small seconds",
+    ],
+    details: [
+      { title: "Between lugs", value: "20 mm" },
+      { title: "Bracelet", value: "leather strap" },
+      { title: "Case", value: "Steel" },
+      { title: "Case diameter", value: "42 mm" },
+      { title: "Dial color", value: "Black" },
+      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
+    ],
+    imageUrl:
+      "https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080",
+  },
+  {
+    title: "Automatic Watch",
+    price: "$350.00 USD",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    features: [
+      "Chronograph",
+      "Master Chronometer Certified",
+      "Tachymeter",
+      "Anti‑magnetic",
+      "Chronometer",
+      "Small seconds",
+    ],
+    details: [
+      { title: "Between lugs", value: "20 mm" },
+      { title: "Bracelet", value: "leather strap" },
+      { title: "Case", value: "Steel" },
+      { title: "Case diameter", value: "42 mm" },
+      { title: "Dial color", value: "Black" },
+      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
+    ],
+    imageUrl:
+      "https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080",
+  },
+  {
+    title: "Automatic Watch",
+    price: "$350.00 USD",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    features: [
+      "Chronograph",
+      "Master Chronometer Certified",
+      "Tachymeter",
+      "Anti‑magnetic",
+      "Chronometer",
+      "Small seconds",
+    ],
+    details: [
+      { title: "Between lugs", value: "20 mm" },
+      { title: "Bracelet", value: "leather strap" },
+      { title: "Case", value: "Steel" },
+      { title: "Case diameter", value: "42 mm" },
+      { title: "Dial color", value: "Black" },
+      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
+    ],
+    imageUrl:
+      "https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080",
+  },
+  {
+    title: "Automatic Watch",
+    price: "$350.00 USD",
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    features: [
+      "Chronograph",
+      "Master Chronometer Certified",
+      "Tachymeter",
+      "Anti‑magnetic",
+      "Chronometer",
+      "Small seconds",
+    ],
+    details: [
+      { title: "Between lugs", value: "20 mm" },
+      { title: "Bracelet", value: "leather strap" },
+      { title: "Case", value: "Steel" },
+      { title: "Case diameter", value: "42 mm" },
+      { title: "Dial color", value: "Black" },
+      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
+    ],
+    imageUrl:
+      "https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080",
+  },
+];
