@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Navbar from "../navigation/Nav";
-
 import {
   Box,
   chakra,
@@ -10,18 +9,16 @@ import {
   Image,
   Flex,
   VStack,
-  Button,
   Heading,
   SimpleGrid,
   StackDivider,
-  VisuallyHidden,
   List,
   ListItem,
+  ListIcon,
 } from "@chakra-ui/react";
-import { MdLocalShipping } from "react-icons/md";
 import { ProgrammsInfo } from "../../content/ProgrammsContent";
 import Elevator from "../elem/Elevator";
-
+import { FaPlus } from "react-icons/fa";
 const Programms = () => {
   return (
     <>
@@ -36,7 +33,7 @@ const Programms = () => {
               spacing={{ base: 2, md: 2 }}
               py={{ base: 18, md: 6 }}
             >
-              <Flex>
+              <Flex paddingTop={"5%"}>
                 <Image
                   rounded={"md"}
                   alt={"product image"}
@@ -50,22 +47,15 @@ const Programms = () => {
               <Stack spacing={{ base: 6, md: 2 }}>
                 <Box as={"header"}>
                   <Heading
-                    padding={"2%"}
                     lineHeight={1.1}
                     fontWeight={600}
-                    fontSize={{ base: "2xl", sm: "4xl", lg: "5xl" }}
+                    fontSize={{ base: "2xl", sm: "4xl", lg: "4xl" }}
+                    color={"#3f48cc"}
+                    padding={{ base: 2, md: 2, lg: 0 }}
                   >
                     {product.title}
                   </Heading>
-                  {/* <Text
-              color={("gray.900", "gray.400")}
-              fontWeight={300}
-              fontSize={"2xl"}
-            >
-              $350.00 USD
-            </Text> */}
                 </Box>
-
                 <Stack
                   spacing={{ base: 4, sm: 6 }}
                   direction={"column"}
@@ -74,60 +64,35 @@ const Programms = () => {
                   }
                 >
                   <VStack spacing={{ base: 4, sm: 6 }}>
-                    {/* <Text
-                color={("gray.500", "gray.400")}
-                fontSize={"2xl"}
-                fontWeight={"300"}
-              >
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore
-              </Text> */}
-                    <Text fontSize={"lg"} padding={"2%"}>
+                    <Text fontSize={"lg"} padding={{ base: 2, md: 2, lg: 0 }}>
                       {product.description}
                     </Text>
                   </VStack>
                   <Box>
                     <Text
-                      fontSize={{ base: "16px", lg: "18px" }}
-                      color={("yellow.500", "yellow.300")}
+                      fontSize={{ base: "2xl", sm: "3xl", lg: "3xl" }}
+                      color={"#3f48cc"}
                       fontWeight={"500"}
-                      textTransform={"uppercase"}
-                      padding={"2%"}
+                      padding={{ base: 2, md: 2, lg: 0 }}
                     >
-                      Features
+                      Переваги
                     </Text>
-
-                    <SimpleGrid columns={{ base: 1, md: 2 }} padding={"2%"}>
+                    <SimpleGrid
+                      columns={{ base: 1, md: 1, lg: 2 }}
+                      padding={{ base: 2, md: 2, lg: 0 }}
+                    >
                       {product.features.map((feature, featureIndex) => (
                         <List key={featureIndex}>
-                          <ListItem>{feature}</ListItem>
+                          <ListItem>
+                            {" "}
+                            <ListIcon as={FaPlus} color="#3f48cc" mr={2} />
+                            {feature}
+                          </ListItem>
                         </List>
                       ))}
                     </SimpleGrid>
                   </Box>
-                  <Box>
-                    {/* <Text
-                      fontSize={{ base: "16px", lg: "18px" }}
-                      color={("yellow.500", "yellow.300")}
-                      fontWeight={"500"}
-                      textTransform={"uppercase"}
-                      mb={"4"}
-                      padding={"2%"}
-                    >
-                      Product Details
-                    </Text>
-
-                    <List spacing={2} padding={"2%"}>
-                      {product.details.map((detail, detailIndex) => (
-                        <ListItem key={detailIndex}>
-                          <Text as={"span"} fontWeight={"bold"}>
-                            {detail.title}:
-                          </Text>{" "}
-                          {detail.value}
-                        </ListItem>
-                      ))}
-                    </List> */}
-                  </Box>
+                  <Box></Box>
                 </Stack>
               </Stack>
             </SimpleGrid>

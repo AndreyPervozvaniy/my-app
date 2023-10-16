@@ -11,6 +11,7 @@ import elnikova from "../../src/assets/img/elnikova.jpg";
 import Smile from "../assets/img/try1.jpg";
 import Coach from "../assets/img/coach1.png";
 import vlad from "../assets/img/vlados.jpg";
+import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
 import {
   GiBlackBelt,
   GiTeacher,
@@ -168,9 +169,9 @@ export const Question = [
 export const InstructorsInfo = [
   {
     name: "Косенко Валентин Михайлович",
-    title: "Інструктор",
+    title: "Професор",
     description:
-      "Інструктор дорослої групи. Суддя турнірів з Бразильського джиу-джитсу в Україні.",
+      "Професор та головний інструктор Ямасакі Академії. Займається підготовкою та навчанням старшої групи. Також є суддею турнірів з Бразильського джіу-джитсу.",
     role: "Інструктор дорослої групи",
     experience: "Практикує джиу-джитсу 12 років",
     imageSrc: Coach,
@@ -239,5 +240,42 @@ export const statData = [
     id: 6,
     label: "Доросла група BJJ: 09:00 - 11:00",
     score: "Субота",
+  },
+];
+export const InstructorsPhone = [
+  {
+    name: "Шерстюк Микола",
+    category: "Інструктор підліткової та дитячої групи ",
+    phone: "+380 73 203 76 64",
+  },
+  {
+    name: "Косенко Валентин",
+    category: "Професор академії та інструктор дорослої групи  ",
+    phone: "+380 50 535 09 61",
+  },
+  {
+    name: "Мирошников Владислав",
+    category: "Інструктор з ММА та Бойового самбо",
+    phone: "+380 95 507 33 70",
+  },
+];
+export const SocialLinksContacts = [
+  {
+    href: "https://t.me/+JZvRQ-LtbyU1OWEy",
+    heading: "Yamasaki News",
+    icon: <Icon as={FaTelegram} w={10} h={10} />,
+    description: "Наша група з новинами та оголошеннями.",
+  },
+  {
+    href: "https://instagram.com/bjj_kids_dnipro?igshid=MzRlODBiNWFlZA==",
+    heading: "Yamasaki Dnipro Kids",
+    icon: <Icon as={FaInstagram} w={10} h={10} />,
+    description: "Сторінка дитячої та підліткової групи.",
+  },
+  {
+    href: "https://t.me/YamasakiAcademyDnipro",
+    heading: "Yamasaki FAQ",
+    icon: <Icon as={FaTelegram} w={10} h={10} />,
+    description: "Якщо у вас є питання, можете поставити їх особисто!",
   },
 ];

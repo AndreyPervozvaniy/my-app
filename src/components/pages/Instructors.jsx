@@ -60,7 +60,7 @@ const Instructors = () => {
                   textTransform={"uppercase"}
                   color={"blue.400"}
                   fontWeight={600}
-                  fontSize={"sm"}
+                  fontSize={"md"}
                   bg={"blue.50"}
                   p={2}
                   alignSelf={"flex-start"}

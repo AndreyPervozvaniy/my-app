@@ -1,16 +1,16 @@
 export const ProgrammsInfo = [
   {
-    title: "Automatic Watch",
+    title: "Формат Гі",
     price: "$350.00 USD",
     description:
       "Тренування у форматі Гі - являють собою один із двох основних форматів тренувань у Бразилському джіу-джитсу. Особливістю цього формату є те, що практикуючі займаються в Гі (кімоно), що надає більший спектр контролю опонента, а також відрізняється у техніках, які є, наприклад, у форматі Ноу - Гі.",
     features: [
-      "Chronograph",
-      "Master Chronometer Certified",
-      "Tachymeter",
-      "Anti‑magnetic",
-      "Chronometer",
-      "Small seconds",
+      "Більша кількість хватів, задушливих та контролю.",
+      "Адаптації та зміцнення хвату.",
+      "Концентрація на техніці, оскільки Гі створює необхідні умови для контролю.",
+      "Вивчення стратегії використання Гі у боротьбі.",
+      "Гі підсилює важливість тиску та контролю в BJJ.",
+      "Адаптація технік в Гі/Но-Гі та ключові відмінності.",
     ],
     details: [
       { title: "Between lugs", value: "20 mm" },
@@ -24,16 +24,17 @@ export const ProgrammsInfo = [
       "https://i.pinimg.com/originals/31/9c/aa/319caa1a4db56436a7b3e9a772ec7ec8.jpg",
   },
   {
-    title: "Automatic Watch",
+    title: "Формат Но-Гі",
     price: "$350.00 USD",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    description:
+      "Тренування бразильського джиу-джитсу без традиційного Гі може принести багато переваг. Тренування без гі стає все більш популярним серед практикуючих, і тут ми досліджуємо деякі переваги відмови від гі в обмін на рашгарди та шорти.",
     features: [
-      "Chronograph",
-      "Master Chronometer Certified",
-      "Tachymeter",
-      "Anti‑magnetic",
-      "Chronometer",
-      "Small seconds",
+      "Без Gi греплери рухаються швидше та мають більшу свободу рухів. ",
+      "Тренування без Гі – чудовий спосіб стати сильнішим.",
+      "Но-Гі – це вправи з більшою інтенсивністю.",
+      "Однією з головних переваг може бути кардіовитривалість.",
+      "Чудовий спосіб освоїти інстинктивні реакції на незнайомі сценарії.",
+      "Посилення уваги до основ сабмішн-боротьби.",
     ],
     details: [
       { title: "Between lugs", value: "20 mm" },
@@ -47,16 +48,17 @@ export const ProgrammsInfo = [
       "https://graciebotany.com.au/wp-content/uploads/2023/03/gracie-botany-no-gi-jiu-jitsu-training.jpg",
   },
   {
-    title: "Automatic Watch",
+    title: "Drill сесії",
     price: "$350.00 USD",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    description:
+      "Drill сесії - особливо корисно для розвитку груп м’язів, які використовуються в BJJ, особливо для стегон. Рух стегна є вирішальним у BJJ, оскільки він дозволяє практикуючим генерувати силу та виконувати такі техніки, як підйоми та подання. Однак багатьом учням BJJ важко навчитися правильно рухати стегнами, що робить Drill сесії важливим інструментом для вдосконалення.",
     features: [
-      "Chronograph",
-      "Master Chronometer Certified",
-      "Tachymeter",
-      "Anti‑magnetic",
-      "Chronometer",
-      "Small seconds",
+      "Повторюючи техніку  - знову і знову, розвивається м’язова пам’ять.",
+      "Тренування вимагають дисципліни та зосередженості.",
+      "Сесії дозволяють   виявити та посилити свої слабкі сторони.",
+      "Можливість атакувати з обох боків дає змогу скористатися слабшою стороною.",
+      "Вправи спрямовані на вдосконалення рухів і мобільності практикуючого.",
+      "Допомагають практикуючому розвинути необхідні рефлекси.",
     ],
     details: [
       { title: "Between lugs", value: "20 mm" },
@@ -67,19 +69,20 @@ export const ProgrammsInfo = [
       { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080",
+      "https://evolve-mma.com/wp-content/uploads/2022/03/bjj-drills.jpg",
   },
   {
-    title: "Automatic Watch",
+    title: "День боротьби",
     price: "$350.00 USD",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    description:
+      "Практика є ключовим аспектом у тренуваннях та покращення своїх навичок, техніки та фізичної підготовки. Тому, наприкінці кожного тренування ми проводимо невеликі сесії боротьби з 5-6 раундів. Але окрім цього, щосуботи в нашій академії ми практикуємо день боротьби. Де все тренування присвячене циклічній боротьбі по колу.",
     features: [
-      "Chronograph",
-      "Master Chronometer Certified",
-      "Tachymeter",
-      "Anti‑magnetic",
-      "Chronometer",
-      "Small seconds",
+      "Відточуєте свою техніку та покращуєте гру.",
+      "Тренуєте та покращуєте свою витривалість.",
+      "Маєте можливість поборотися із носіями різних стилів боротьби.",
+      "Маєте можливість відпрацювати всілякі ситуації та сценарії боротьби.",
+      "Зміцнюєте свої сильні сторони та опрацьовуєте слабкі.",
+      "Отримуєте необхідний досвід боротьби.",
     ],
     details: [
       { title: "Between lugs", value: "20 mm" },
@@ -90,19 +93,19 @@ export const ProgrammsInfo = [
       { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080",
+      "https://atosjiujitsuhq.com/wp-content/uploads/2022/06/open-mat.jpeg",
   },
   {
-    title: "Automatic Watch",
+    title: "Участь на семінарах та відкритих килимах",
     price: "$350.00 USD",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    description:
+      "Участь не є основним аспектом наших тренувань, проте наші практикуючі часто є гостями на подібних заходах. Так як це чудова можливість освоїти нові техніки, зміцнити свою, дізнатися щось нове, отримати безцінний досвід, а також стати частиною цього потужного ком'юніті.",
     features: [
-      "Chronograph",
-      "Master Chronometer Certified",
-      "Tachymeter",
-      "Anti‑magnetic",
-      "Chronometer",
-      "Small seconds",
+      "Відмінна можливість здобути досвід за стінами нашої академії.",
+      "Нові знайомства, місця та атмосфера.",
+      "Можливість познайомитися з іншими методами навчання та викладання.",
+      "Ознайомлення з філософією інших академій.",
+      "Вивчення нових технік, вправ та концепцій.",
     ],
     details: [
       { title: "Between lugs", value: "20 mm" },
@@ -113,19 +116,20 @@ export const ProgrammsInfo = [
       { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080",
+      "https://bjjcampfinder.com/app/uploads/2020/07/Seminar-BJJ-Summer-Week-1024x684.jpg",
   },
   {
-    title: "Automatic Watch",
+    title: "Підготовка до змагань та турнірів.",
     price: "$350.00 USD",
-    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr...",
+    description:
+      "У стінах нашої академії ви зможете отримати потрібні знання, навички та досвід, які необхідні для перемоги на змаганнях. Практикуючі нашої академії мають високі показники на змаганнях та завжди показують відмінний результат.",
     features: [
-      "Chronograph",
-      "Master Chronometer Certified",
-      "Tachymeter",
-      "Anti‑magnetic",
-      "Chronometer",
-      "Small seconds",
+      "Участь у змаганнях сприяє розвитку навичок джиу-джитсу.",
+      "Турніри надають цінний досвід бою під тиском.",
+      "Змагання дозволяють оцінити ваш поточний рівень майстерності.",
+      "Участь у турнірах вимагає суворої підготовки та самодисципліни.",
+      "Турніри надають відмінну можливість зустрітися з однодумцями.",
+      "Конкурентна складова змагань може зробити заняття джиу-джитсу більш захоплюючим.",
     ],
     details: [
       { title: "Between lugs", value: "20 mm" },
@@ -136,6 +140,6 @@ export const ProgrammsInfo = [
       { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080",
+      "https://thefightersguide.com/wp-content/uploads/2022/06/first-bjj-competition.jpg",
   },
 ];

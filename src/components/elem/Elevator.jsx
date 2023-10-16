@@ -15,7 +15,8 @@ const Elevator = () => {
         opacity="80%"
         h={50}
         borderRadius="full"
-        colorScheme="gray"
+        color={"white"}
+        bgColor={"#3f48cc"}
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}

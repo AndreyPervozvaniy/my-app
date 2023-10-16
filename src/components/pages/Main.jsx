@@ -95,7 +95,7 @@ const Main = () => {
             alignItems="center"
             overflow="hidden"
             pos="absolute"
-            opacity="70%"
+            opacity="90%"
           >
             <Text
               fontSize="30px"
@@ -190,7 +190,7 @@ const Main = () => {
                         bg={"blue.50"}
                         p={2}
                         px={3}
-                        color={"blue.500"}
+                        color={"#3f48cc"}
                         rounded={"full"}
                       >
                         {card.heading}
@@ -202,7 +202,7 @@ const Main = () => {
                       >
                         <Text fontSize={"2xl"} fontWeight={800}>
                           {card.title}
-                          <Text color={"gray.500"} fontSize={"lg"}>
+                          <Text color={"#3f48cc"} fontSize={"lg"}>
                             {card.age}
                           </Text>
                         </Text>
@@ -212,7 +212,7 @@ const Main = () => {
                       <List spacing={3}>
                         {card.features.map((feature, featureIndex) => (
                           <ListItem key={featureIndex}>
-                            <ListIcon as={CheckIcon} color="blue.700" mr={2} />
+                            <ListIcon as={CheckIcon} color="#3f48cc" mr={2} />
                             {feature}
                           </ListItem>
                         ))}

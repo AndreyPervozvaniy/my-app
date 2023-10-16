@@ -26,6 +26,7 @@ import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
 
 import { useScrollEvent } from "../../hooks";
 import FooterTemplate from "../elem/FooterTemplate";
+import { InstructorsPhone, SocialLinksContacts } from "../../utils";
 function PriceWrapper({ children }) {
   return (
     <Box
@@ -130,7 +131,7 @@ const Contacts = () => {
                   - до нас!
                 </Text>
               </Heading>
-              <Text color={"black"}>
+              <Text color={"black"} padding={"5px"}>
                 Зупинка: вулиця Богдана Хмельницького <br />
                 Маршрути автобусів: A153, 124A, A115, A149, A64Г, А31, А177,
                 А107, А136, А88, А38, А43, А158 <br /> Маршрути тролейбусів: 20,
@@ -319,7 +320,7 @@ const Contacts = () => {
                   – подивися!
                 </Text>
               </Heading>
-              <Text color={"black"}>
+              <Text color={"black"} padding="5px">
                 Нас не так просто знайти, як здається! Тому ми спеціально для
                 тебе записали відеомаршрут! Якщо виникнуть запитання, ви можете
                 зв'язатися з одним із інструкторів для уточнення інформації.
@@ -371,195 +372,47 @@ const Contacts = () => {
             <Heading as="h1" fontSize="4xl">
               Контакти наших інструкторів
             </Heading>
-            <Text fontSize="lg" color={"gray.500"}>
-              {/* Start with 14-day free trial. No credit card needed. Cancel at
-          anytime. */}
-            </Text>
           </VStack>
           <Stack
-            direction={{ base: "column", md: "row" }}
+            direction={{ base: "column", md: "column", lg: "row" }}
             textAlign="center"
             justify="center"
             spacing={{ base: 4, lg: 10 }}
             py={10}
+            padding={{ base: 0, md: "0 2%", lg: "0 2%" }}
           >
-            <PriceWrapper>
-              <Box py={4} px={12}>
-                <Text fontWeight="500" fontSize="xl">
-                  Інструктор підліткової та
-                  <br /> дитячої групи BJJ
-                </Text>
-                <HStack justifyContent="center">
-                  <Text fontSize="xl" fontWeight="600">
-                    Шерстюк Микола
-                  </Text>
-                  {/* <Text fontSize="5xl" fontWeight="900">
-                79
-              </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
-              </Text> */}
-                </HStack>
-              </Box>
-              <VStack
-                bg={useColorModeValue("gray.50", "gray.700")}
-                py={4}
-                borderBottomRadius={"xl"}
-              >
-                <List spacing={3} textAlign="start" px={12}>
-                  <ListItem>
-                    <ListIcon as={FaPhone} color="green.500" mr={2} />
-                    +380 73 203 76 64
-                  </ListItem>
-                  {/* <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
-              </ListItem> */}
-                </List>
-                <Box w="80%" pt={7}>
-                  <Button
-                    w="full"
-                    colorScheme="blue"
-                    variant="outline"
-                    onClick={() => saveInClipBoard("+380 73 203 76 64")}
-                  >
-                    Копіювати номер
-                  </Button>
-                </Box>
-              </VStack>
-            </PriceWrapper>
-
-            <PriceWrapper>
-              <Box position="relative">
-                <Box
-                  position="absolute"
-                  top="-16px"
-                  left="50%"
-                  style={{ transform: "translate(-50%)" }}
-                >
-                  <Text
-                    textTransform="uppercase"
-                    bg={useColorModeValue("blue.400", "blue.700")}
-                    px={3}
-                    py={1}
-                    color={useColorModeValue("gray.900", "gray.300")}
-                    fontSize="sm"
-                    fontWeight="600"
-                    rounded="xl"
-                  >
-                    Професор
-                  </Text>
-                </Box>
+            {InstructorsPhone.map((instructor, index) => (
+              <PriceWrapper key={index}>
                 <Box py={4} px={12}>
-                  <Text fontWeight="500" fontSize="2xl">
-                    Професор академії <br />
-                    та інструктор дорослої групи BJJ
+                  <Text fontWeight="500" fontSize="xl">
+                    {instructor.category}
                   </Text>
                   <HStack justifyContent="center">
-                    <Text fontSize="3xl" fontWeight="600">
-                      Косенко Валентин
+                    <Text fontSize="xl " fontWeight="600">
+                      {instructor.name}
                     </Text>
-                    {/* <Text fontSize="5xl" fontWeight="900">
-                  149
-                </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /month
-                </Text> */}
                   </HStack>
                 </Box>
-                <VStack
-                  bg={useColorModeValue("gray.50", "gray.700")}
-                  py={4}
-                  borderBottomRadius={"xl"}
-                >
+                <VStack bg={"gray.50"} py={4} borderBottomRadius={"xl"}>
                   <List spacing={3} textAlign="start" px={12}>
                     <ListItem>
                       <ListIcon as={FaPhone} color="green.500" mr={2} />
-                      +380 50 535 09 61
+                      {instructor.phone}
                     </ListItem>
-                    {/* <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem> */}
                   </List>
                   <Box w="80%" pt={7}>
                     <Button
                       w="full"
                       colorScheme="blue"
                       variant="outline"
-                      onClick={() => saveInClipBoard("+380 50 535 09 61")}
+                      onClick={() => saveInClipBoard(instructor.phone)}
                     >
                       Копіювати номер
                     </Button>
                   </Box>
                 </VStack>
-              </Box>
-            </PriceWrapper>
-            <PriceWrapper>
-              <Box py={4} px={12}>
-                <Text fontWeight="500" fontSize="xl">
-                  Інструктор з ММА та <br />
-                  Бойового самбо
-                </Text>
-                <HStack justifyContent="center">
-                  <Text fontSize="xl" fontWeight="600">
-                    Мирошников Владислав
-                  </Text>
-                  {/* <Text fontSize="5xl" fontWeight="900">
-                349
-              </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
-              </Text> */}
-                </HStack>
-              </Box>
-              <VStack
-                bg={useColorModeValue("gray.50", "gray.700")}
-                py={4}
-                borderBottomRadius={"xl"}
-              >
-                <List spacing={3} textAlign="start" px={12}>
-                  <ListItem>
-                    <ListIcon as={FaPhone} color="green.500" mr={2} />
-                    +380 95 507 33 70
-                  </ListItem>
-                  {/* <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
-              </ListItem> */}
-                </List>
-                <Box w="80%" pt={7}>
-                  <Button
-                    w="full"
-                    colorScheme="blue"
-                    variant="outline"
-                    onClick={() => saveInClipBoard(" +380 95 507 33 70")}
-                  >
-                    Копіювати номер
-                  </Button>
-                </Box>
-              </VStack>
-            </PriceWrapper>
+              </PriceWrapper>
+            ))}
           </Stack>
         </Box>
         {/*======================================= бокс с соцсетями====================================== */}
@@ -581,56 +434,15 @@ const Contacts = () => {
 
           <Container maxW={"5xl"} mt={12}>
             <Flex flexWrap="wrap" gridGap={6} justify="center">
-              <Link href="https://t.me/+JZvRQ-LtbyU1OWEy" isExternal>
-                {" "}
-                <Card
-                  heading={"Yamasaki News"}
-                  icon={<Icon as={FaTelegram} w={10} h={10} />}
-                  description={"Наша група з новинами та оголошеннями."}
-                  href={"https://t.me/+JZvRQ-LtbyU1OWEy"}
-                />
-              </Link>
-              <Link
-                href="https://instagram.com/bjj_kids_dnipro?igshid=MzRlODBiNWFlZA=="
-                isExternal
-              >
-                {" "}
-                <Card
-                  heading={"Yamasaki Dnipro Kids"}
-                  icon={<Icon as={FaInstagram} w={10} h={10} />}
-                  description={"Сторінка дитячої та підліткової групи."}
-                  href={"#"}
-                />
-              </Link>
-              <Link href="https://t.me/YamasakiAcademyDnipro" isExternal>
-                {" "}
-                <Card
-                  heading={"Yamasaki FAQ"}
-                  icon={<Icon as={FaTelegram} w={10} h={10} />}
-                  description={
-                    "Якщо у вас є питання, можете поставити їх особисто!"
-                  }
-                  href={"#"}
-                />
-              </Link>
-              {/* <Link href="https://instagram.com/bjj_dnipro?igshid=MzRlODBiNWFlZA==">
-                {" "}
-                <Card
-                  heading={"Yamasaki Dnipro"}
-                  icon={<Icon as={FaInstagram} w={10} h={10} />}
-                  description={"Сторінка старшої групи"}
-                  href={"#"}
-                />
-              </Link> */}
-
-              {/* <Card
-                heading={"Heading"}
-                icon={<Icon as={FcAbout} w={10} h={10} />}
-                description={
-                  "Lorem ipsum dolor sit amet catetur, adipisicing elit."
-                }
-                href={"#"}
-              /> */}
+              {SocialLinksContacts.map((link, index) => (
+                <Link href={link.href} isExternal key={index}>
+                  <Card
+                    heading={link.heading}
+                    icon={link.icon}
+                    description={link.description}
+                  />
+                </Link>
+              ))}
             </Flex>
           </Container>
         </Box>
