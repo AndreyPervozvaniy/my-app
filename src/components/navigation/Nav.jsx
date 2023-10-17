@@ -89,7 +89,7 @@ export default function Navbar() {
       background="white"
       alignItems="center"
       padding="0 5%"
-      // boxShadow="0 0px 2px #000"
+      fontWeight={"bold"}
       zIndex="11"
       boxShadow={showShadow ? "0 2px 4px rgba(0, 0, 0, 0.2)" : "none"}
     >
@@ -117,7 +117,7 @@ export default function Navbar() {
                   _hover={{ color: "black.400", textDecoration: "underline" }}
                 >
                   <Flex alignItems="center">
-                    <Text>Про нас </Text>
+                    <Text fontWeight={"bold"}>Про нас </Text>
                     <Icon
                       as={BiChevronDown}
                       h={5}
@@ -176,14 +176,14 @@ export default function Navbar() {
               padding={"7%"}
               fontSize={"lg"}
               overflowY="auto"
+              fontWeight={"bold"}
             >
               <Stack as="nav" spacing={2}>
                 {navLinks.map((link, index) => (
                   <NavLink key={index} {...link} onClose={onClose} />
                 ))}
-                <Text fontWeight="semibold" color="gray.500">
-                  Про нас
-                </Text>
+                <Text fontWeight="bold">Про нас </Text>
+
                 <Stack pl={2} spacing={1} mt={"0 !important"}>
                   {dropdownLinks.map((link, index) => (
                     <NavLink key={index} {...link} onClose={onClose} />

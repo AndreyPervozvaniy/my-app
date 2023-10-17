@@ -10,6 +10,16 @@ const NewsSlot = () => {
   const { state } = location;
   const { text, img, img2 } = state;
   const [isImageExpanded, setIsImageExpanded] = useState(false);
+  const [showDownloadButton, setShowDownloadButton] = useState(!!img2);
+
+  // Функция для обработки скачивания при нажатии кнопки "Скачать"
+  const handleDownload = () => {
+    // Создаем элемент-якорь для запуска скачивания
+    const a = document.createElement("a");
+    a.href = img2;
+    a.download = "Result.jpg"; // Вы можете настроить имя файла здесь
+    a.click();
+  };
   return (
     <>
       <Navbar />{" "}
@@ -69,7 +79,19 @@ const NewsSlot = () => {
               onClick={() => router("/news")}
             >
               <Text padding="10px">Повернутися</Text>
-            </Button>
+            </Button>{" "}
+            {showDownloadButton && (
+              <Button
+                background="white"
+                border="1px solid grey"
+                borderRadius="20px"
+                padding="10px"
+                marginBottom="20px"
+                onClick={handleDownload}
+              >
+                <Text padding="10px">Завантажити результат</Text>
+              </Button>
+            )}
           </Flex>
         </Box>
       </Flex>

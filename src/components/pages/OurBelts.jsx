@@ -3,7 +3,6 @@ import React from "react";
 import Waterlogo from "../../assets/img/watericon.png";
 import { Box, Flex } from "@chakra-ui/react";
 import Navbar from "../navigation/Nav";
-import Index from "../elem/NewPage";
 
 const OurBelts = () => {
   return (
@@ -20,9 +19,7 @@ const OurBelts = () => {
         w="100vw"
         zIndex="-1"
       />{" "} */}
-      <Flex h={"100vh"}>
-        <Index />
-      </Flex>
+      <Flex h={"100vh"}></Flex>
       <Flex h={"100vh"}></Flex>
     </>
   );
