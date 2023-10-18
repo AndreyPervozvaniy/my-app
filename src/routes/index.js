@@ -27,7 +27,7 @@ export const PATHS = {
   CONTACTS: "/contacts",
   INSTRUCTORS: "/instructors",
   PROGRAMMS: "/programms",
-  SHEDULE: "/shedule",
+  SHEDULE: "/schedule",
   OURACADEMY: "/ourAcademy",
   OURBELTS: "/ourBelts",
   NEWS: "/news",

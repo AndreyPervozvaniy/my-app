@@ -38,7 +38,7 @@ const navLinks = [
   //   { name: "Про нас", isMenu: true },
   { name: "Програма тренувань", path: "/programms" },
   { name: "Інструктори", path: "/instructors" },
-  { name: "Розклад", path: "/shedule" },
+  { name: "Розклад", path: "/schedule" },
   { name: "Новини", path: "/news" },
   { name: "Контакти", path: "/contacts" },
 ];

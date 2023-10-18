@@ -18,7 +18,8 @@ import {
 } from "@chakra-ui/react";
 import { ProgrammsInfo } from "../../content/ProgrammsContent";
 import Elevator from "../elem/Elevator";
-import { FaPlus } from "react-icons/fa";
+import { FcPlus } from "react-icons/fc";
+import SmallCentered from "../elem/Footer";
 const Programms = () => {
   return (
     <>
@@ -83,9 +84,8 @@ const Programms = () => {
                     >
                       {product.features.map((feature, featureIndex) => (
                         <List key={featureIndex}>
-                          <ListItem>
-                            {" "}
-                            <ListIcon as={FaPlus} color="#3f48cc" mr={2} />
+                          <ListItem display="flex" alignItems="center">
+                            <ListIcon as={FcPlus} color="#3f48cc" mr={2} />
                             {feature}
                           </ListItem>
                         </List>
@@ -99,6 +99,7 @@ const Programms = () => {
           ))}
         </Container>
       </Flex>
+      <SmallCentered />
     </>
   );
 };

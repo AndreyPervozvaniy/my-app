@@ -25,8 +25,9 @@ import Elevator from "../elem/Elevator";
 import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
 
 import { useScrollEvent } from "../../hooks";
-import FooterTemplate from "../elem/FooterTemplate";
+
 import { InstructorsPhone, SocialLinksContacts } from "../../utils";
+import SmallCentered from "../elem/Footer";
 function PriceWrapper({ children }) {
   return (
     <Box
@@ -446,8 +447,8 @@ const Contacts = () => {
             </Flex>
           </Container>
         </Box>
-        <FooterTemplate />
       </Flex>
+      <SmallCentered />
     </>
   );
 };

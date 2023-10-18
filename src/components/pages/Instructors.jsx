@@ -20,6 +20,7 @@ import {
 } from "react-icons/gi";
 import Elevator from "../elem/Elevator";
 import { InstructorsInfo } from "../../utils";
+import SmallCentered from "../elem/Footer";
 const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={"row"} align={"center"}>
@@ -116,6 +117,7 @@ const Instructors = () => {
           ))}
         </Container>
       </Flex>
+      <SmallCentered />
     </>
   );
 };

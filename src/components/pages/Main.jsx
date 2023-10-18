@@ -27,6 +27,7 @@ import Elevator from "../elem/Elevator";
 import { Advantage } from "../../utils";
 import { Class } from "../../utils";
 import { Question } from "../../utils";
+import SmallCentered from "../elem/Footer";
 const Card = ({ heading, description, icon }) => {
   return (
     <Box
@@ -286,6 +287,7 @@ const Main = () => {
           </Flex>{" "}
         </Flex>{" "}
       </Flex>
+      <SmallCentered />
     </>
   );
 };

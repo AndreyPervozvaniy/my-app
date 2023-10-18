@@ -8,6 +8,7 @@ import Waterlogo from "../../assets/img/watericon.png";
 import { useScrollEvent } from "../../hooks";
 import { PATHS } from "../../routes";
 import Elevator from "../elem/Elevator";
+import SmallCentered from "../elem/Footer";
 function News() {
   const router = useNavigate();
   const [page, setPage] = useState(1);
@@ -94,9 +95,8 @@ function News() {
               </Button>
             </Flex>
           ))}
-
           <Flex justifyContent="center" padding="20px">
-            <Flex justify="space-between" w="100%">
+            <Flex justify="space-around" w="100%">
               {pagination.map((item, index) => (
                 <Flex
                   justifyContent="center"
@@ -115,9 +115,10 @@ function News() {
                 </Flex>
               ))}
             </Flex>
-          </Flex>
-        </Box>
-      </Flex>
+          </Flex>{" "}
+          <SmallCentered />
+        </Box>{" "}
+      </Flex>{" "}
     </>
   );
 }

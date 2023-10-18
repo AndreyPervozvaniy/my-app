@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import Waterlogo from "../../assets/img/watericon.png";
 import { Flex, Box, Image, Button, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import SmallCentered from "../elem/Footer";
 const NewsSlot = () => {
   const router = useNavigate();
   const location = useLocation();
@@ -92,7 +93,7 @@ const NewsSlot = () => {
                 <Text padding="10px">Завантажити результат</Text>
               </Button>
             )}
-          </Flex>
+          </Flex>{" "}
         </Box>
       </Flex>
     </>
