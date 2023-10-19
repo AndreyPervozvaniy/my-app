@@ -204,6 +204,23 @@ export const InstructorsInfo = [
     icon: <Icon as={GiPunchBlast} color={"black"} w={8} h={8} />,
   },
 ];
+export const socialButtonsData = [
+  {
+    label: "Telegram",
+    href: "https://t.me/+JZvRQ-LtbyU1OWEy",
+    icon: <FaTelegram />,
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/bjj_kids_dnipro?igshid=MzRlODBiNWFlZA==",
+    icon: <FaInstagram />,
+  },
+  {
+    label: "Telegram",
+    href: "https://t.me/YamasakiAcademyDnipro",
+    icon: <FaTelegram />,
+  },
+];
 export const statData = [
   {
     id: 1,
@@ -270,7 +287,7 @@ export const SocialLinksContacts = [
     href: "https://instagram.com/bjj_kids_dnipro?igshid=MzRlODBiNWFlZA==",
     heading: "Yamasaki Dnipro Kids",
     icon: <Icon as={FaInstagram} w={10} h={10} />,
-    description: "Сторінка дитячої та підліткової групи.",
+    description: "Сторінка дитячої та підліткової групи BJJ.",
   },
   {
     href: "https://t.me/YamasakiAcademyDnipro",

@@ -369,7 +369,7 @@ const Contacts = () => {
         </Container>
         {/*============================= бокс с номерами ===================================== */}
         <Box py={12}>
-          <VStack spacing={2} textAlign="center">
+          <VStack spacing={2} textAlign="center" p={4}>
             <Heading as="h1" fontSize="4xl">
               Контакти наших інструкторів
             </Heading>
@@ -433,7 +433,7 @@ const Contacts = () => {
             </Text>
           </Stack>
 
-          <Container maxW={"5xl"} mt={12}>
+          <Container maxW={"5xl"} mt={12} mb={12} p={4}>
             <Flex flexWrap="wrap" gridGap={6} justify="center">
               {SocialLinksContacts.map((link, index) => (
                 <Link href={link.href} isExternal key={index}>

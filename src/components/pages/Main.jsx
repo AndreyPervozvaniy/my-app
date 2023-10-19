@@ -234,7 +234,7 @@ const Main = () => {
             flexDirection="column"
             w="100%"
           >
-            <Flex justifyContent="center">
+            <Flex justifyContent="center" textAlign={"center"}>
               <Text letterSpacing="4px" fontSize="30px" fontWeight="bold">
                 Ваші запитання – наші відповіді!
               </Text>
@@ -282,6 +282,9 @@ const Main = () => {
           overflow="hidden"
           flexDirection="column"
         >
+          <Text letterSpacing="4px" fontSize="30px" fontWeight="bold" p={8}>
+            Наші спогади!
+          </Text>
           <Flex overflow="hidden" w="100%">
             <CarouselTemplate />
           </Flex>{" "}

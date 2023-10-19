@@ -10,12 +10,19 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
+  Button,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTelegram, FaTwitter, FaYoutube } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaPhone,
+  FaTelegram,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 import { ReactNode } from "react";
 import Logo from "../../assets/img/LOGO.png";
 import { useNavigate } from "react-router-dom";
-
+import { socialButtonsData } from "../../utils";
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
@@ -42,6 +49,9 @@ const SocialButton = ({ children, label, href }) => {
 
 export default function SmallCentered() {
   const router = useNavigate();
+  const handleRouteClick = (path) => {
+    router(path); // Вызываем функцию router для выполнения перехода на указанный путь
+  };
   const routes = [
     { label: "Програма тренувань", path: "/programms" },
     { label: "Інструктори", path: "/instructors" },
@@ -54,9 +64,8 @@ export default function SmallCentered() {
     <Box
       bg={useColorModeValue("white", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
-      borderTopWidth={1}
-      borderStyle={"solid"}
-      borderColor={useColorModeValue("gray.200", "gray.700")}
+      // borderTop={"1px solid rgba(0, 0, 0, 0.2)"}
+      boxShadow="0 -2px 4px rgba(0, 0, 0, 0.2)"
     >
       <Container
         as={Stack}
@@ -82,8 +91,12 @@ export default function SmallCentered() {
           flexWrap="wrap"
         >
           {routes.map((route, index) => (
-            <Link key={index} href={route.path}>
-              <a>{route.label}</a>
+            <Link
+              cursor={"pointer"}
+              key={index}
+              onClick={() => handleRouteClick(route.path)} // Вызываем функцию handleRouteClick при клике
+            >
+              {route.label}
             </Link>
           ))}
         </Stack>
@@ -108,15 +121,13 @@ export default function SmallCentered() {
             Andrew, Bulka, Serg.
           </Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Telegram"} href={"#"}>
-              <FaTelegram />
-            </SocialButton>
-            <SocialButton label={"YouTube"} href={"#"}>
-              <FaYoutube />
-            </SocialButton>
-            <SocialButton label={"Instagram"} href={"#"}>
-              <FaInstagram />
-            </SocialButton>
+            {socialButtonsData.map((button, index) => (
+              <SocialButton key={index} label={button.label}>
+                <Link href={button.href} isExternal>
+                  {button.icon}
+                </Link>
+              </SocialButton>
+            ))}
           </Stack>
         </Container>
       </Box>
