@@ -115,9 +115,10 @@ export default function SmallCentered() {
           spacing={4}
           justify={{ base: "center", md: "space-around" }}
           align={{ base: "center", md: "center" }}
+          p={4}
         >
           <Text textAlign={{ base: "center" }}>
-            © 2023 Yamasaki Academy Dnipro. All rights reserved. Made with 🧡 by
+            © 2023 Yamasaki Academy. All rights reserved. Made with 🧡 by
             Andrew, Bulka, Serg.
           </Text>
           <Stack direction={"row"} spacing={6}>

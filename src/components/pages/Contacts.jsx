@@ -377,10 +377,11 @@ const Contacts = () => {
           <Stack
             direction={{ base: "column", md: "column", lg: "row" }}
             textAlign="center"
-            justify="center"
+            justify="space-between"
             spacing={{ base: 4, lg: 10 }}
             py={10}
-            padding={{ base: 0, md: "0 2%", lg: "0 2%" }}
+            p={4}
+            // padding={{ base: 0, md: "0 2%", lg: "0 2%" }}
           >
             {InstructorsPhone.map((instructor, index) => (
               <PriceWrapper key={index}>

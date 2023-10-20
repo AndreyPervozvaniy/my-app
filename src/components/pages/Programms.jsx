@@ -52,7 +52,8 @@ const Programms = () => {
                     fontWeight={600}
                     fontSize={{ base: "2xl", sm: "4xl", lg: "4xl" }}
                     color={"#3f48cc"}
-                    padding={{ base: 2, md: 2, lg: 0 }}
+                    // padding={{ base: 2, md: 2, lg: 0 }}
+                    p={2}
                   >
                     {product.title}
                   </Heading>
@@ -65,7 +66,11 @@ const Programms = () => {
                   }
                 >
                   <VStack spacing={{ base: 4, sm: 6 }}>
-                    <Text fontSize={"lg"} padding={{ base: 2, md: 2, lg: 0 }}>
+                    <Text
+                      fontSize={"lg"}
+                      // padding={{ base: 2, sm: 2, md: 2, lg: 0 }}
+                      p={2}
+                    >
                       {product.description}
                     </Text>
                   </VStack>
@@ -74,18 +79,24 @@ const Programms = () => {
                       fontSize={{ base: "2xl", sm: "3xl", lg: "3xl" }}
                       color={"#3f48cc"}
                       fontWeight={"500"}
-                      padding={{ base: 2, md: 2, lg: 0 }}
+                      p={2}
                     >
                       Переваги
                     </Text>
-                    <SimpleGrid
-                      columns={{ base: 1, md: 1, lg: 2 }}
-                      padding={{ base: 2, md: 2, lg: 0 }}
-                    >
+                    <SimpleGrid columns={{ base: 1, md: 1, lg: 2 }} p={2}>
                       {product.features.map((feature, featureIndex) => (
                         <List key={featureIndex}>
-                          <ListItem display="flex" alignItems="center">
-                            <ListIcon as={FcPlus} color="#3f48cc" mr={2} />
+                          <ListItem
+                            display="flex"
+                            alignItems="center"
+                            borderBottom={{
+                              base: "0.1px solid grey",
+                              sm: "0.1px solid grey",
+                              md: "none",
+                              lg: "none",
+                            }}
+                          >
+                            <ListIcon as={FcPlus} color="#3f48cc" mr={1} />
                             {feature}
                           </ListItem>
                         </List>

@@ -11,7 +11,7 @@ const Schedule = () => {
       <Flex alignItems="center" justifyContent="center" padding={"10%"}>
         <Container maxW="7xl" p={{ base: 5, md: 10 }} textAlign={"center"}>
           <SimpleGrid
-            columns={{ base: 1, sm: 2, md: 3 }}
+            columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
             spacing={5}
             mt={12}
             mb={4}

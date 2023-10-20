@@ -43,10 +43,9 @@ function News() {
         zIndex="-1"
       />{" "}
       <Flex justifyContent="center" alignItems="center" h="100vh" w="100%">
-        <Box w="90%" h="calc(100vh - 70px)" marginTop="70px">
+        <Box w="full" h="calc(100vh - 70px)" marginTop="70px">
           {ourNews.map((item, index) => (
             <Flex
-              borderBottom="3px double black"
               p="10px"
               mb="10px"
               cursor="pointer"
@@ -98,11 +97,10 @@ function News() {
           <Flex justifyContent="center" padding="20px">
             <Flex justify="space-around" w="100%">
               {pagination.map((item, index) => (
-                <Flex
+                <Button
                   justifyContent="center"
                   alignItems="center"
                   key={index}
-                  border="1px solid black"
                   borderRadius="50%"
                   h="40px"
                   transition="all 0.5s ease"
@@ -112,7 +110,7 @@ function News() {
                   _hover={{ bg: "rgb(63, 72, 204)", transform: "scale(1.2)" }}
                 >
                   {item}
-                </Flex>
+                </Button>
               ))}
             </Flex>
           </Flex>{" "}
