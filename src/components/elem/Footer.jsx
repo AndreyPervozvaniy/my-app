@@ -50,7 +50,7 @@ const SocialButton = ({ children, label, href }) => {
 export default function SmallCentered() {
   const router = useNavigate();
   const handleRouteClick = (path) => {
-    router(path); // Вызываем функцию router для выполнения перехода на указанный путь
+    router(path);
   };
   const routes = [
     { label: "Програма тренувань", path: "/programms" },
@@ -64,7 +64,6 @@ export default function SmallCentered() {
     <Box
       bg={useColorModeValue("white", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
-      // borderTop={"1px solid rgba(0, 0, 0, 0.2)"}
       boxShadow="0 -2px 4px rgba(0, 0, 0, 0.2)"
     >
       <Container
@@ -94,7 +93,7 @@ export default function SmallCentered() {
             <Link
               cursor={"pointer"}
               key={index}
-              onClick={() => handleRouteClick(route.path)} // Вызываем функцию handleRouteClick при клике
+              onClick={() => handleRouteClick(route.path)}
             >
               {route.label}
             </Link>
@@ -102,11 +101,7 @@ export default function SmallCentered() {
         </Stack>
       </Container>
 
-      <Box
-      // borderTopWidth={1}
-      // borderStyle={"solid"}
-      // borderColor={useColorModeValue("gray.200", "gray.700")}
-      >
+      <Box>
         <Container
           as={Stack}
           maxW={"full"}

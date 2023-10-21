@@ -23,7 +23,7 @@ import {
 } from "@chakra-ui/react";
 import Elevator from "../elem/Elevator";
 import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
-
+import { buttons } from "../../utils";
 import { useScrollEvent } from "../../hooks";
 
 import { InstructorsPhone, SocialLinksContacts } from "../../utils";
@@ -79,6 +79,12 @@ const Card = ({ heading, description, icon, href }) => {
   );
 };
 const Contacts = () => {
+  const handleButtonClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const toast = useToast();
   const saveInClipBoard = (num) => {
     navigator.clipboard.writeText(num);
@@ -103,7 +109,7 @@ const Contacts = () => {
             justify="center"
             spacing={{ base: 8, md: 10 }}
             py={{ base: 24, md: 28 }}
-            direction={{ base: "column", md: "row" }}
+            direction={{ base: "column", md: "column", lg: "row" }}
           >
             <Stack flex={1} spacing={{ base: 5, md: 10 }}>
               <Heading
@@ -148,53 +154,20 @@ const Contacts = () => {
                   lg: "left",
                 }}
               >
-                <Button
-                  rounded={"full"}
-                  size={"lg"}
-                  fontWeight={"normal"}
-                  px={6}
-                  colorScheme={"red"}
-                  bg={"blue.400"}
-                  _hover={{ bg: "blue.500" }}
-                  onClick={() => {
-                    const InstructorContact =
-                      document.getElementById("InstructorContact");
-                    if (InstructorContact) {
-                      InstructorContact.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  Контакти
-                </Button>
-                <Button
-                  rounded={"full"}
-                  size={"lg"}
-                  fontWeight={"normal"}
-                  px={6}
-                  onClick={() => {
-                    const Society = document.getElementById("Society");
-                    if (Society) {
-                      Society.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  Соцмережі
-                </Button>{" "}
-                <Button
-                  rounded={"full"}
-                  size={"lg"}
-                  fontWeight={"normal"}
-                  px={6}
-                  bg="red.400"
-                  onClick={() => {
-                    const videoBlock = document.getElementById("videoBlock");
-                    if (videoBlock) {
-                      videoBlock.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  Як нас знайти ?
-                </Button>
+                {buttons.map((button, index) => (
+                  <Button
+                    key={index}
+                    rounded="full"
+                    size="lg"
+                    fontWeight="normal"
+                    px={6}
+                    colorScheme={button.colorScheme || "gray"} // По умолчанию 'gray'
+                    bg={button.bgColor || "gray.100"} // По умолчанию 'gray.100'
+                    onClick={() => handleButtonClick(button.id)}
+                  >
+                    {button.label}
+                  </Button>
+                ))}
               </Stack>
             </Stack>
             <Flex
@@ -263,7 +236,7 @@ const Contacts = () => {
             align={"center"}
             spacing={{ base: 8, md: 10 }}
             py={{ base: 20, md: 28 }}
-            direction={{ base: "column", md: "row" }}
+            direction={{ base: "column", md: "column", lg: "row" }}
           >
             {" "}
             <Flex
@@ -329,40 +302,22 @@ const Contacts = () => {
               <Stack
                 spacing={{ base: 4, sm: 6 }}
                 direction={{ base: "column", sm: "row" }}
+                justify={"center"}
               >
-                <Button
-                  rounded={"full"}
-                  size={"lg"}
-                  fontWeight={"normal"}
-                  px={6}
-                  colorScheme={"red"}
-                  id="InstructorContact"
-                  bg={"blue.400"}
-                  _hover={{ bg: "blue.500" }}
-                  onClick={() => {
-                    const InstructorContact =
-                      document.getElementById("InstructorContact");
-                    if (InstructorContact) {
-                      InstructorContact.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  Контакти
-                </Button>
-                <Button
-                  rounded={"full"}
-                  size={"lg"}
-                  fontWeight={"normal"}
-                  px={6}
-                  onClick={() => {
-                    const Society = document.getElementById("Society");
-                    if (Society) {
-                      Society.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                >
-                  Соцмережі
-                </Button>
+                {buttons.map((button, index) => (
+                  <Button
+                    key={index}
+                    rounded="full"
+                    size="lg"
+                    fontWeight="normal"
+                    px={6}
+                    colorScheme={button.colorScheme || "gray"} // По умолчанию 'gray'
+                    bg={button.bgColor || "gray.100"} // По умолчанию 'gray.100'
+                    onClick={() => handleButtonClick(button.id)}
+                  >
+                    {button.label}
+                  </Button>
+                ))}
               </Stack>
             </Stack>
           </Stack>
@@ -377,11 +332,12 @@ const Contacts = () => {
           <Stack
             direction={{ base: "column", md: "column", lg: "row" }}
             textAlign="center"
-            justify="space-between"
+            justify="center"
             spacing={{ base: 4, lg: 10 }}
             py={10}
             p={4}
             // padding={{ base: 0, md: "0 2%", lg: "0 2%" }}
+            flexWrap={"wrap"}
           >
             {InstructorsPhone.map((instructor, index) => (
               <PriceWrapper key={index}>

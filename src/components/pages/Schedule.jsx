@@ -34,7 +34,7 @@ const Schedule = () => {
           </SimpleGrid>
         </Container>
       </Flex>{" "}
-      <SmallCentered />
+      {/* <SmallCentered /> */}
     </>
   );
 };

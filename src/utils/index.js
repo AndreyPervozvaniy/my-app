@@ -127,7 +127,7 @@ export const Advantage = [
     heading: "Велика родина",
     icon: <Icon as={FcHome} w={10} h={10} />,
     description:
-      "Yamasaki -це сімейний вид спорту в дружній атмосфері, де батьки тренуюся з дітьми пліч-о-пліч!",
+      "Yamasaki - це сімейний вид спорту в дружній атмосфері, де батьки тренуюся з дітьми пліч-о-пліч!",
   },
 ];
 export const Question = [
@@ -295,4 +295,21 @@ export const SocialLinksContacts = [
     icon: <Icon as={FaTelegram} w={10} h={10} />,
     description: "Якщо у вас є питання, можете поставити їх особисто!",
   },
+];
+export const buttons = [
+  {
+    label: "Контакти",
+    id: "InstructorContact",
+    colorScheme: "red",
+    bgColor: "blue.400",
+  },
+  {
+    label: "Соцмережі",
+    id: "Society",
+  },
+  // {
+  //   label: "Як нас знайти ?",
+  //   id: "videoBlock",
+  //   bgColor: "red.400",
+  // },
 ];

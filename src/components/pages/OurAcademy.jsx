@@ -7,16 +7,6 @@ const OurAcademy = () => {
   return (
     <>
       <Navbar />{" "}
-      {/* <Box
-        position="absolute"
-        opacity="20%"
-        backgroundImage={`url(${Waterlogo})`}
-        backgroundSize="contain"
-        backgroundRepeat="no-repeat"
-        h="100vh"
-        w="100vw"
-        zIndex="-1"
-      /> */}
       <Flex
         fontFamily="Roboto"
         fontWeight="500"
