@@ -13,6 +13,8 @@ import Coach from "../assets/img/coach1.png";
 import vlad from "../assets/img/vlados.jpg";
 import kids from "../assets/img/kids.jpg";
 import guysnogi from "../assets/img/guysnogi.jpg";
+import river from "../assets/img/vizit.png";
+import integralseminar from "../assets/img/integralseminar.png";
 import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
 import {
   GiBlackBelt,
@@ -65,6 +67,9 @@ export const Class = [
 ];
 
 export const cards = [
+  {
+    img: integralseminar,
+  },
   {
     img: river,
   },
