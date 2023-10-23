@@ -11,6 +11,8 @@ import elnikova from "../../src/assets/img/elnikova.jpg";
 import Smile from "../assets/img/try1.jpg";
 import Coach from "../assets/img/coach1.png";
 import vlad from "../assets/img/vlados.jpg";
+import kids from "../assets/img/kids.jpg";
+import guysnogi from "../assets/img/guysnogi.jpg";
 import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
 import {
   GiBlackBelt,
@@ -63,6 +65,15 @@ export const Class = [
 ];
 
 export const cards = [
+  {
+    img: river,
+  },
+  {
+    img: kids,
+  },
+  {
+    img: guysnogi,
+  },
   {
     img: logo,
   },
@@ -312,4 +323,27 @@ export const buttons = [
   //   id: "videoBlock",
   //   bgColor: "red.400",
   // },
+];
+export const ContainerData = [
+  {
+    headingText: "Твій шлях",
+    headingText1: " - до нас!",
+    locationInfo: "Зупинка: вулиця Богдана Хмельницького",
+    bus: "Маршрути автобусів: A153, 124A, A115, A149, A64Г, А31, А177,А107, А136, А88, А38, А43, А158 ",
+    trolley: " Маршрути тролейбусів: 20,7, 17, 3, 15",
+    bgColor: "blue.400",
+    mapEmbedURL:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1321.7486555802132!2d35.0736516!3d48.5045306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe393edb25bcb%3A0xe91e1f026da0b37e!2sYamasaki%20Academy%20Jiu%20Jitsu!5e0!3m2!1sru!2sua!4v1694594361759!5m2!1sru!2sua",
+  },
+  {
+    headingText: "Якщо загубився",
+    headingText1: " – подивися!",
+    locationInfo: "Нас не так просто знайти, як здається!  ",
+    bus: "Тому ми спеціально для тебе записали відеомаршрут!",
+    trolley:
+      " Якщо виникнуть запитання, ви можете зв'язатися з одним із інструкторів для уточнення інформації.",
+    mapEmbedURL:
+      "https://www.youtube.com/embed/XyQ27GXavDM?si=ixaPX6BKhdyfrQ8b",
+    bgColor: "red.400",
+  },
 ];

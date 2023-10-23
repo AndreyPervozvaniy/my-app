@@ -52,7 +52,6 @@ const Programms = () => {
                     fontWeight={600}
                     fontSize={{ base: "2xl", sm: "4xl", lg: "4xl" }}
                     color={"#3f48cc"}
-                    // padding={{ base: 2, md: 2, lg: 0 }}
                     p={2}
                   >
                     {product.title}
@@ -66,11 +65,7 @@ const Programms = () => {
                   }
                 >
                   <VStack spacing={{ base: 4, sm: 6 }}>
-                    <Text
-                      fontSize={"lg"}
-                      // padding={{ base: 2, sm: 2, md: 2, lg: 0 }}
-                      p={2}
-                    >
+                    <Text fontSize={"lg"} p={2}>
                       {product.description}
                     </Text>
                   </VStack>

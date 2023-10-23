@@ -3,17 +3,13 @@ import Navbar from "../navigation/Nav";
 import {
   Flex,
   Text,
-  Tooltip,
-  Image,
   Button,
   Link,
-  Fade,
   Container,
   Stack,
   Box,
   Heading,
   useColorModeValue,
-  Icon,
   HStack,
   VStack,
   List,
@@ -22,10 +18,11 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import Elevator from "../elem/Elevator";
-import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 import { buttons } from "../../utils";
 import { useScrollEvent } from "../../hooks";
-
+import { ContainerData } from "../../utils";
+import ButtonBlock from "../elem/ButtonTemplate";
 import { InstructorsPhone, SocialLinksContacts } from "../../utils";
 import SmallCentered from "../elem/Footer";
 function PriceWrapper({ children }) {
@@ -59,7 +56,6 @@ const Card = ({ heading, description, icon, href }) => {
           h={16}
           align={"center"}
           justify={"center"}
-          // color={"white"}
           rounded={"full"}
           bg={useColorModeValue("gray.100", "gray.700")}
         >
@@ -97,233 +93,105 @@ const Contacts = () => {
       <Elevator />
       {/* =====================================окна с гугл картой и ютубом ================================*/}
       <Flex alignItems="center" justifyContent="center" flexDir={"column"}>
-        <Container maxW={"7xl"}>
-          <Stack
-            textAlign={{
-              base: "center",
-              sm: "center",
-              md: "center",
-              lg: "left",
-            }}
-            align={"center"}
-            justify="center"
-            spacing={{ base: 8, md: 10 }}
-            py={{ base: 24, md: 28 }}
-            direction={{ base: "column", md: "column", lg: "row" }}
-          >
-            <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-              <Heading
-                lineHeight={1.1}
-                fontWeight={600}
-                fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
-              >
-                <Text
-                  as={"span"}
-                  position={"relative"}
-                  _after={{
-                    content: "''",
-                    width: "full",
-                    height: "30%",
-                    position: "absolute",
-                    bottom: 1,
-                    left: 0,
-                    bg: "blue.400",
-                    zIndex: -1,
-                  }}
+        {ContainerData.map((container, index) => (
+          <Container maxW={"7xl"} key={index} padding={2}>
+            <Stack
+              textAlign={{
+                base: "center",
+                sm: "center",
+                md: "center",
+                lg: "left",
+              }}
+              align={"center"}
+              justify="center"
+              spacing={{ base: 8, md: 10 }}
+              py={{ base: 24, md: 28 }}
+              direction={{ base: "column", md: "column", lg: "row" }}
+            >
+              <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+                <Heading
+                  lineHeight={1.1}
+                  fontWeight={600}
+                  fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
                 >
-                  Твій шлях
-                </Text>
-                <br />
-                <Text as={"span"} color={"blue.400"}>
-                  - до нас!
-                </Text>
-              </Heading>
-              <Text color={"black"} padding={"5px"}>
-                Зупинка: вулиця Богдана Хмельницького <br />
-                Маршрути автобусів: A153, 124A, A115, A149, A64Г, А31, А177,
-                А107, А136, А88, А38, А43, А158 <br /> Маршрути тролейбусів: 20,
-                7, 17, 3, 15
-              </Text>
-              <Stack
-                spacing={{ base: 4, sm: 6 }}
-                direction={{ base: "column", sm: "row" }}
-                justifyContent={{
-                  base: "center",
-                  sm: "center",
-                  md: "center",
-                  lg: "left",
-                }}
-              >
-                {buttons.map((button, index) => (
-                  <Button
-                    key={index}
-                    rounded="full"
-                    size="lg"
-                    fontWeight="normal"
-                    px={6}
-                    colorScheme={button.colorScheme || "gray"} // По умолчанию 'gray'
-                    bg={button.bgColor || "gray.100"} // По умолчанию 'gray.100'
-                    onClick={() => handleButtonClick(button.id)}
+                  <Text
+                    as={"span"}
+                    position={"relative"}
+                    _after={{
+                      content: "''",
+                      width: "full",
+                      height: "30%",
+                      position: "absolute",
+                      bottom: 1,
+                      left: 0,
+                      bg: container.bgColor,
+                      zIndex: -1,
+                    }}
                   >
-                    {button.label}
-                  </Button>
-                ))}
-              </Stack>
-            </Stack>
-            <Flex
-              // flex={1}
-              justify={"center"}
-              align={"center"}
-              // position={"relative"}
-              w={"full"}
-              flexDir={"column"}
-            >
-              <Box
-                // position={"relative"}
-                height={"300px"}
-                rounded={"2xl"}
-                boxShadow={"2xl"}
-                width={"full"}
-                overflow={"hidden"}
-              >
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1321.7486555802132!2d35.0736516!3d48.5045306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe393edb25bcb%3A0xe91e1f026da0b37e!2sYamasaki%20Academy%20Jiu%20Jitsu!5e0!3m2!1sru!2sua!4v1694594361759!5m2!1sru!2sua"
-                  width="100%"
-                  height="100%"
-                  loading="lazy"
-                ></iframe>
-              </Box>{" "}
-            </Flex>{" "}
-          </Stack>{" "}
-        </Container>{" "}
-        <Flex
-          alignItems="center"
-          justifyContent="center"
-          flexDir={"column"}
-          lineHeight={1.1}
-          fontWeight={600}
-          fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
-        >
-          <Text
-            as={"span"}
-            position={"relative"}
-            _after={{
-              content: "''",
-              width: "full",
-              height: "30%",
-              position: "absolute",
-              bottom: 1,
-              left: 0,
-              bg: "blue.400",
-              zIndex: -1,
-            }}
-          >
-            Останній крок та
-          </Text>
-          <br />
-          <Text as={"span"} color={"red.400"} id="videoBlock">
-            фінішна пряма!
-          </Text>
-        </Flex>
-        <Container maxW={"7xl"}>
-          <Stack
-            textAlign={{
-              base: "center",
-              sm: "center",
-              md: "center",
-              lg: "left",
-            }}
-            align={"center"}
-            spacing={{ base: 8, md: 10 }}
-            py={{ base: 20, md: 28 }}
-            direction={{ base: "column", md: "column", lg: "row" }}
-          >
-            {" "}
-            <Flex
-              flex={1}
-              justify={"center"}
-              align={"center"}
-              position={"relative"}
-              w={"full"}
-            >
-              <Box
-                position={"relative"}
-                height={"300px"}
-                rounded={"2xl"}
-                boxShadow={"2xl"}
-                width={"full"}
-                overflow={"hidden"}
-                id="videoBlock"
-              >
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/XyQ27GXavDM?si=ixaPX6BKhdyfrQ8b"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  loading="lazy"
-                ></iframe>
-              </Box>
-            </Flex>
-            <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-              <Heading
-                lineHeight={1.1}
-                fontWeight={600}
-                fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
-              >
-                <Text
-                  as={"span"}
-                  position={"relative"}
-                  _after={{
-                    content: "''",
-                    width: "full",
-                    height: "30%",
-                    position: "absolute",
-                    bottom: 1,
-                    left: 0,
-                    bg: "red.400",
-                    zIndex: -1,
+                    {container.headingText}
+                  </Text>
+                  <br />
+                  <Text as={"span"} color={container.bgColor}>
+                    {container.headingText1}
+                  </Text>
+                </Heading>
+                <Text color={"black"} padding={"5px"}>
+                  {container.locationInfo} <br />
+                  {container.bus}
+                  <br /> {container.trolley}
+                </Text>
+                <Stack
+                  spacing={{ base: 4, sm: 6 }}
+                  direction={{ base: "column", sm: "row" }}
+                  justifyContent={{
+                    base: "center",
+                    sm: "center",
+                    md: "center",
+                    lg: "left",
                   }}
                 >
-                  Якщо загубився
-                </Text>
-                <br />
-                <Text as={"span"} color={"red.400"}>
-                  – подивися!
-                </Text>
-              </Heading>
-              <Text color={"black"} padding="5px">
-                Нас не так просто знайти, як здається! Тому ми спеціально для
-                тебе записали відеомаршрут! Якщо виникнуть запитання, ви можете
-                зв'язатися з одним із інструкторів для уточнення інформації.
-              </Text>
-              <Stack
-                spacing={{ base: 4, sm: 6 }}
-                direction={{ base: "column", sm: "row" }}
+                  {buttons.map((button, index) => (
+                    <ButtonBlock
+                      key={index}
+                      label={button.label}
+                      onClick={() => handleButtonClick(button.id)}
+                      colorScheme={button.colorScheme || "gray"}
+                      bgColor={button.bgColor || "gray.100"}
+                    />
+                  ))}
+                </Stack>
+              </Stack>
+              <Flex
+                flex={1}
                 justify={"center"}
+                align={"center"}
+                w={"full"}
+                flexDir={"column"}
               >
-                {buttons.map((button, index) => (
-                  <Button
-                    key={index}
-                    rounded="full"
-                    size="lg"
-                    fontWeight="normal"
-                    px={6}
-                    colorScheme={button.colorScheme || "gray"} // По умолчанию 'gray'
-                    bg={button.bgColor || "gray.100"} // По умолчанию 'gray.100'
-                    onClick={() => handleButtonClick(button.id)}
-                  >
-                    {button.label}
-                  </Button>
-                ))}
-              </Stack>
-            </Stack>
-          </Stack>
-        </Container>
+                <Box
+                  height={"300px"}
+                  rounded={"2xl"}
+                  boxShadow={"2xl"}
+                  width={"full"}
+                  overflow={"hidden"}
+                >
+                  <iframe
+                    src={container.mapEmbedURL}
+                    width="100%"
+                    height="100%"
+                    loading="lazy"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </Box>{" "}
+              </Flex>{" "}
+            </Stack>{" "}
+          </Container>
+        ))}
+
         {/*============================= бокс с номерами ===================================== */}
-        <Box py={12}>
+        <Box py={12} id="InstructorContact">
           <VStack spacing={2} textAlign="center" p={4}>
             <Heading as="h1" fontSize="4xl">
               Контакти наших інструкторів
@@ -336,7 +204,6 @@ const Contacts = () => {
             spacing={{ base: 4, lg: 10 }}
             py={10}
             p={4}
-            // padding={{ base: 0, md: "0 2%", lg: "0 2%" }}
             flexWrap={"wrap"}
           >
             {InstructorsPhone.map((instructor, index) => (
