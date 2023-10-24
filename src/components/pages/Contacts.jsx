@@ -136,6 +136,8 @@ const Contacts = () => {
                   </Text>
                 </Heading>
                 <Text color={"black"} padding={"5px"}>
+                  {container.street}
+                  <br />
                   {container.locationInfo} <br />
                   {container.bus}
                   <br /> {container.trolley}

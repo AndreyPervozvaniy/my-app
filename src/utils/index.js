@@ -41,6 +41,7 @@ export const Class = [
       "Вивчення теорії, drill сесії, спаринги",
       "Розвиток дисципліни, поваги та самовпевненості",
     ],
+    color: "#3f48cc",
   },
   {
     heading: "BJJ / MMA",
@@ -52,6 +53,7 @@ export const Class = [
       "Роз'яснення деталей, вільні та позиційні спаринги",
       "Пояснення ключових цінностей",
     ],
+    color: "purple",
   },
   {
     heading: "BJJ / MMA",
@@ -63,6 +65,7 @@ export const Class = [
       "Вільні спаринги, drill сесії, боротьба за завданням",
       "Сесії питання - відповідь",
     ],
+    color: "brown",
   },
 ];
 
@@ -333,6 +336,7 @@ export const ContainerData = [
   {
     headingText: "Твій шлях",
     headingText1: " - до нас!",
+    street: "Вулиця: Тимчасова, 2А",
     locationInfo: "Зупинка: вулиця Богдана Хмельницького",
     bus: "Маршрути автобусів: A153, 124A, A115, A149, A64Г, А31, А177,А107, А136, А88, А38, А43, А158 ",
     trolley: " Маршрути тролейбусів: 20,7, 17, 3, 15",
@@ -351,4 +355,61 @@ export const ContainerData = [
       "https://www.youtube.com/embed/XyQ27GXavDM?si=ixaPX6BKhdyfrQ8b",
     bgColor: "red.400",
   },
+];
+export const testimonialsData = [
+  {
+    heading: "",
+    text: "Крутой талантливый тренер.  Удобное расположение зала, новый, очень удобный. Сын каждую тренировку ждёт с нетерпением! Занимаемся 1,5 года на одном дыхании. Мне, как маме, очень нравится наблюдать за успехами ребёнка. Борьба воспитывает волю и дух, учит быть предприимчивым и быстро принимать решения, конечно же развивает физически)",
+    avatar: {
+      src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+      name: "Диана Самченко",
+      title: "Любляча мама",
+    },
+  },
+  {
+    heading: " ",
+    text: "Если вы хотите научится БЖЖ то вам сюда. Очень нравится то что теория совмещается с практикой, борьба почти каждую тренировку. Суббота 'день борьбы', 2 часа борьбы с разными соперниками.",
+    avatar: {
+      src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+      name: "Максим Хижняк",
+      title: "Батько та синій пояс нашої академії",
+    },
+  },
+  {
+    heading: "Efficient Collaborating",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    avatar: {
+      src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+      name: "Jane Cooper",
+      title: "CEO at ABC Corporation",
+    },
+  },
+  {
+    heading: "Efficient Collaborating",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    avatar: {
+      src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+      name: "Jane Cooper",
+      title: "CEO at ABC Corporation",
+    },
+  },
+  {
+    heading: "Efficient Collaborating",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    avatar: {
+      src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+      name: "Jane Cooper",
+      title: "CEO at ABC Corporation",
+    },
+  },
+  {
+    heading: "Efficient Collaborating",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    avatar: {
+      src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+      name: "Jane Cooper",
+      title: "CEO at ABC Corporation",
+    },
+  },
+  // Add more objects for other testimonials
 ];

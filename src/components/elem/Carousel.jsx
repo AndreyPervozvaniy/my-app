@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import { cards } from "../../utils";
 
 const settings = {
-  dots: true,
+  dots: false,
   arrows: false,
   fade: true,
   infinite: true,
@@ -76,7 +76,7 @@ export default function CarouselTemplate() {
         {cards.map((card, index) => (
           <Box
             key={index}
-            height={"2xl"}
+            height="100vh"
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"

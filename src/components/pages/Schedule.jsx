@@ -30,7 +30,7 @@ const Schedule = () => {
                 <Text>{data.label}</Text>
                 <Text>{data.label2}</Text> <Text>{data.label3}</Text>
               </Box>
-            ))}
+            ))}{" "}
           </SimpleGrid>
         </Container>
       </Flex>{" "}

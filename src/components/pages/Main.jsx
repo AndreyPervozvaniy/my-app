@@ -191,7 +191,7 @@ const Main = () => {
                         bg={"blue.50"}
                         p={2}
                         px={3}
-                        color={"#3f48cc"}
+                        color={card.color}
                         rounded={"full"}
                       >
                         {card.heading}
@@ -203,7 +203,7 @@ const Main = () => {
                       >
                         <Text fontSize={"2xl"} fontWeight={800}>
                           {card.title}
-                          <Text color={"#3f48cc"} fontSize={"lg"}>
+                          <Text color={card.color} fontSize={"lg"}>
                             {card.age}
                           </Text>
                         </Text>
@@ -213,7 +213,11 @@ const Main = () => {
                       <List spacing={3}>
                         {card.features.map((feature, featureIndex) => (
                           <ListItem key={featureIndex}>
-                            <ListIcon as={CheckIcon} color="#3f48cc" mr={2} />
+                            <ListIcon
+                              as={CheckIcon}
+                              color={card.color}
+                              mr={2}
+                            />
                             {feature}
                           </ListItem>
                         ))}
@@ -281,14 +285,15 @@ const Main = () => {
           w="100%"
           overflow="hidden"
           flexDirection="column"
+          textAlign={"center"}
         >
           <Text letterSpacing="4px" fontSize="30px" fontWeight="bold" p={8}>
             Наші спогади!
           </Text>
           <Flex overflow="hidden" w="100%">
             <CarouselTemplate />
-          </Flex>{" "}
-        </Flex>{" "}
+          </Flex>
+        </Flex>
       </Flex>
       <SmallCentered />
     </>
