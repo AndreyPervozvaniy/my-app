@@ -363,7 +363,7 @@ export const testimonialsData = [
     avatar: {
       src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
       name: "Диана Самченко",
-      title: "Любляча мама",
+      title: " ",
     },
   },
   {
@@ -372,44 +372,43 @@ export const testimonialsData = [
     avatar: {
       src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
       name: "Максим Хижняк",
-      title: "Батько та синій пояс нашої академії",
+      title: " ",
     },
   },
   {
-    heading: "Efficient Collaborating",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    heading: " ",
+    text: "Рекомендуем, ребенок бежит на тренировки, ходим уже 3-й год.Как кто то нидеде написал, это не просто тренировки,это действительно большая дружная семья.Спасибо,что Вы есть💪👍",
     avatar: {
       src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-      name: "Jane Cooper",
-      title: "CEO at ABC Corporation",
+      name: "  Yana Kozachok",
+      title: " ",
     },
   },
   {
-    heading: "Efficient Collaborating",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    heading: " ",
+    text: "Отличный клуб бразильского джиу джитсу! Что нравиться больше всего - возможность начать занятия в любом возрасте (я начал в 25 лет), есть детские группы. Особенно нужно выделить профессионализм тренеров, сплоченность коллектива и дружественную обстановку в зале. Отличный зал по BJJ в Днепре.",
     avatar: {
       src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-      name: "Jane Cooper",
-      title: "CEO at ABC Corporation",
+      name: "Сергей Коротич",
+      title: " ",
     },
   },
   {
-    heading: "Efficient Collaborating",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    heading: " ",
+    text: "Отличная школа джиу-джитсу.Крутые тренера, группы для разных возрастов (есть детские), атмосфера поддержки и взаимоуважения на тренировках и соревнованиях.И немаловажно – современный и хорошо оборудованный зал.Сын ждет тренировок с нетерпением и занимается с удовольствием. Рекомендую всем.",
     avatar: {
       src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-      name: "Jane Cooper",
-      title: "CEO at ABC Corporation",
+      name: "Данил Самченко",
+      title: " ",
     },
   },
   {
-    heading: "Efficient Collaborating",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.",
+    heading: " ",
+    text: "Рекомендуем всем,отличная спортивная секция,ходит сын третий год,нравится очень ,уже и правда стали как семья все)В первую очередь это заслуга нашего любимого тренера, первоклассного мастера своего дела!!!!",
     avatar: {
       src: "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-      name: "Jane Cooper",
-      title: "CEO at ABC Corporation",
+      name: "Лариса Гончар",
+      title: " ",
     },
   },
-  // Add more objects for other testimonials
 ];

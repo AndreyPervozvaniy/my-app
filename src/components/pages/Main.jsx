@@ -28,6 +28,7 @@ import { Advantage } from "../../utils";
 import { Class } from "../../utils";
 import { Question } from "../../utils";
 import SmallCentered from "../elem/Footer";
+import CustomHeading from "../elem/HeadingTemplate";
 const Card = ({ heading, description, icon }) => {
   return (
     <Box
@@ -119,20 +120,28 @@ const Main = () => {
               alignContent="center"
             >
               <Stack spacing={6} as={Container} maxW={"5xl"}>
-                <Heading
+                <CustomHeading
+                  headingFontSize={{ base: "2xl", sm: "3xl" }}
+                  headingFontWeight={"bold"}
+                  text={"Чому саме Yamasaki Academy?"}
+                  textFontSize={{ base: "lg", sm: "xl" }}
+                  color={"gray.600"}
+                  text2={
+                    " Практикуючи джиу-джитсу у стінах нашої академії, ви отримаєте:"
+                  }
+                />
+                {/* <Heading
                   fontSize={{ base: "2xl", sm: "3xl" }}
                   fontWeight={"bold"}
                   textAlign={"center"}
-                >
-                  Чому саме Yamasaki Academy?
-                </Heading>
+                ></Heading>
                 <Text
-                  color={"gray.600"}
+                  
                   fontSize={{ base: "lg", sm: "xl" }}
                   textAlign={"center"}
                 >
                   Практикуючи джиу-джитсу у стінах нашої академії, ви отримаєте:
-                </Text>
+                </Text> */}
               </Stack>
               <Container maxW={"5xl"} mt={12}>
                 <Flex flexWrap="wrap" gridGap={6} justify="center">
@@ -164,9 +173,7 @@ const Main = () => {
             w="100%"
             flexDirection="column"
           >
-            <Text textTransform="uppercase" fontSize="30px" fontWeight="bold">
-              Наші класи
-            </Text>
+            <Text fontSize="30px" fontWeight="bold"></Text>
             <Center py={6} w={"100%"}>
               <Flex flexWrap="wrap" justify="center">
                 {Class.map((card, index) => (

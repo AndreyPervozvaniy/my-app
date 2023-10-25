@@ -4,12 +4,14 @@ import { Box, Container, SimpleGrid, Text, Flex } from "@chakra-ui/react";
 import { statData } from "../../utils";
 import SmallCentered from "../elem/Footer";
 import { BiTimer } from "react-icons/bi";
+import CustomHeading from "../elem/HeadingTemplate";
 const Schedule = () => {
   return (
     <>
       <Navbar />
       <Flex alignItems="center" justifyContent="center" padding={"10%"}>
         <Container maxW="7xl" p={{ base: 5, md: 10 }} textAlign={"center"}>
+          <CustomHeading text={"Розклад"} />
           <SimpleGrid
             columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
             spacing={5}

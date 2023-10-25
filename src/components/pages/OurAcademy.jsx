@@ -17,6 +17,9 @@ import {
 } from "@chakra-ui/react";
 import SmallCentered from "../elem/Footer";
 import { testimonialsData } from "../../utils";
+import Elevator from "../elem/Elevator";
+import CustomHeading from "../elem/HeadingTemplate";
+import { FcApproval } from "react-icons/fc";
 const OurAcademy = () => {
   const Testimonial = (props) => {
     const { children } = props;
@@ -74,17 +77,17 @@ const OurAcademy = () => {
       <Text
         textAlign={"center"}
         color={useColorModeValue("gray.600", "gray.400")}
-        fontSize={"sm"}
+        fontSize={"lg"}
       >
         {children}
       </Text>
     );
   };
 
-  const TestimonialAvatar = ({ src, name, title }) => {
+  const TestimonialAvatar = ({ icon, name, title }) => {
     return (
       <Flex align={"center"} mt={8} direction={"column"}>
-        <Avatar src={src} mb={2} />
+        <Icon as={icon} fontSize="3xl" mb={2} />
         <Stack spacing={-1} align={"center"}>
           <Text fontWeight={600}>{name}</Text>
           <Text
@@ -99,7 +102,7 @@ const OurAcademy = () => {
   };
   return (
     <>
-      <Navbar />{" "}
+      <Navbar /> <Elevator />
       <Container maxW={"full"} p={2}>
         <Stack
           as={Box}
@@ -107,17 +110,12 @@ const OurAcademy = () => {
           spacing={{ base: 8, md: 14 }}
           py={{ base: 20, md: 36 }}
         >
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-            lineHeight={"110%"}
-          >
-            Трохи про -
-            <br />
-            <Text as={"span"} color={"#3f48cc"}>
-              нашу академію!
-            </Text>
-          </Heading>
+          <CustomHeading
+            text={"  Трохи про -"}
+            text2={" нашу академію!"}
+            headingFontWeight={400}
+          />
+
           <Text
             color={"black"}
             fontSize={{ base: "lg", sm: "lg " }}
@@ -158,39 +156,35 @@ const OurAcademy = () => {
       <Box bg={useColorModeValue("white", "gray.700")} p={4}>
         <Container maxW={"full"} py={16} as={Stack} spacing={12}>
           <Stack spacing={0} textAlign={"center"}>
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-              lineHeight={"110%"}
-            >
-              Що про нас говорять -
-              <br />
-              <Text as={"span"} color={"#3f48cc"}>
-                батьки, учні та гості.
-              </Text>
-            </Heading>
+            <CustomHeading
+              text={"  Що про нас говорять -"}
+              text2={"батьки, учні та гості."}
+            />
           </Stack>
-          <SimpleGrid
-            direction={{ base: "column", md: "column" }}
-            spacing={{ base: 10, md: 4, lg: 10 }}
-            flexWrap={"wrap"}
-            textAlign="center"
-            justify="center"
-          >
-            {testimonialsData.map((testimonial, index) => (
-              <Testimonial key={index}>
-                <TestimonialContent>
-                  <TestimonialHeading>{testimonial.heading}</TestimonialHeading>
-                  <TestimonialText>{testimonial.text}</TestimonialText>
-                </TestimonialContent>
-                <TestimonialAvatar
-                  src={testimonial.avatar.src}
-                  name={testimonial.avatar.name}
-                  title={testimonial.avatar.title}
-                />
-              </Testimonial>
-            ))}
-          </SimpleGrid>
+          <Flex justify="center" align="center">
+            {" "}
+            <SimpleGrid
+              spacing={{ base: 10, md: 4, lg: 10 }}
+              textAlign="center"
+              w={"3xl"}
+            >
+              {testimonialsData.map((testimonial, index) => (
+                <Testimonial key={index}>
+                  <TestimonialContent>
+                    <TestimonialHeading>
+                      {testimonial.heading}
+                    </TestimonialHeading>
+                    <TestimonialText>{testimonial.text}</TestimonialText>
+                  </TestimonialContent>
+                  <TestimonialAvatar
+                    icon={FcApproval}
+                    name={testimonial.avatar.name}
+                    title={testimonial.avatar.title}
+                  />
+                </Testimonial>
+              ))}
+            </SimpleGrid>
+          </Flex>
         </Container>
       </Box>{" "}
       <SmallCentered />
