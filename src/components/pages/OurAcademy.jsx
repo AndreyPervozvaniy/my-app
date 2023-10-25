@@ -110,16 +110,11 @@ const OurAcademy = () => {
           spacing={{ base: 8, md: 14 }}
           py={{ base: 20, md: 36 }}
         >
-          <CustomHeading
-            text={"  Трохи про -"}
-            text2={" нашу академію!"}
-            headingFontWeight={400}
-          />
+          <CustomHeading text={"  Трохи про -"} text2={" нашу академію!"} />
 
           <Text
             color={"black"}
             fontSize={{ base: "lg", sm: "lg " }}
-            // fontWeight={"bold"}
             textAlign={"center"}
           >
             Yamasaki Academy Jiu Jitsu Dnipro є представництвом міжнародної

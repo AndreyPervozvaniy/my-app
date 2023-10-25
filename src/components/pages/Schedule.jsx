@@ -11,7 +11,7 @@ const Schedule = () => {
       <Navbar />
       <Flex alignItems="center" justifyContent="center" padding={"10%"}>
         <Container maxW="7xl" p={{ base: 5, md: 10 }} textAlign={"center"}>
-          <CustomHeading text={"Розклад"} />
+          <CustomHeading text={"Розклад наших класів"} />
           <SimpleGrid
             columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
             spacing={5}

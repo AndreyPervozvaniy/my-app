@@ -173,7 +173,13 @@ const Main = () => {
             w="100%"
             flexDirection="column"
           >
-            <Text fontSize="30px" fontWeight="bold"></Text>
+            <CustomHeading
+              text={"Наші класи"}
+              textTransform="uppercase"
+              headingFontWeight={"bold"}
+              headingFontSize={{ base: "2xl", sm: "3xl" }}
+            />
+            {/* <Text fontSize="30px" fontWeight="bold"></Text> */}
             <Center py={6} w={"100%"}>
               <Flex flexWrap="wrap" justify="center">
                 {Class.map((card, index) => (

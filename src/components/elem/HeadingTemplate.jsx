@@ -12,10 +12,11 @@ function CustomHeading({
 }) {
   return (
     <Heading
-      fontWeight={headingFontWeight || 600}
-      fontSize={headingFontSize || { base: "2xl", sm: "4xl", md: "6xl" }}
+      fontWeight={headingFontWeight || 500}
+      fontSize={headingFontSize || { base: "2xl", sm: "4xl", md: "5xl" }}
       lineHeight={"110%"}
       textAlign={"center"}
+      textTransform="uppercase"
       p={2}
     >
       {text}
