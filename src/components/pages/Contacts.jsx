@@ -15,16 +15,15 @@ import {
   List,
   ListItem,
   ListIcon,
-  useToast,
 } from "@chakra-ui/react";
 import Elevator from "../elem/Elevator";
 import { FaPhone } from "react-icons/fa";
 import { buttons } from "../../utils";
-import { useScrollEvent } from "../../hooks";
 import { ContainerData } from "../../utils";
 import ButtonBlock from "../elem/ButtonTemplate";
 import { InstructorsPhone, SocialLinksContacts } from "../../utils";
 import SmallCentered from "../elem/Footer";
+import { useContactsHooks } from "../../hooks";
 function PriceWrapper({ children }) {
   return (
     <Box
@@ -75,15 +74,7 @@ const Card = ({ heading, description, icon, href }) => {
   );
 };
 const Contacts = () => {
-  const handleButtonClick = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  const saveInClipBoard = (num) => {
-    navigator.clipboard.writeText(num);
-  };
+  const { handleButtonClick, saveInClipBoard } = useContactsHooks();
 
   return (
     <>

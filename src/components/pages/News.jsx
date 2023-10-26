@@ -2,32 +2,13 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Box, Flex, Text, Image, Button, Fade } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import Navbar from "../navigation/Nav";
-import { useNavigate } from "react-router-dom";
-import { newscontent } from "../../content/newscontent";
 import Waterlogo from "../../assets/img/watericon.png";
-import { useScrollEvent } from "../../hooks";
 import { PATHS } from "../../routes";
 import Elevator from "../elem/Elevator";
 import SmallCentered from "../elem/Footer";
+import { useNewsHooks } from "../../hooks";
 function News() {
-  const router = useNavigate();
-  const [page, setPage] = useState(1);
-
-  const pagination = useMemo(() => {
-    const pagesCount = Math.ceil(newscontent.length / 5);
-
-    const pages = [];
-
-    for (let i = 1; i <= pagesCount; i++) {
-      pages.push(i);
-    }
-
-    return pages;
-  }, []);
-
-  const ourNews = useMemo(() => {
-    return newscontent.slice((page - 1) * 5, page * 5);
-  }, [page]);
+  const { router, page, setPage, pagination, ourNews } = useNewsHooks();
 
   return (
     <>

@@ -2,7 +2,6 @@ import {
   Box,
   Flex,
   HStack,
-  Button,
   Text,
   Link,
   Menu,

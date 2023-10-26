@@ -1,24 +1,19 @@
 import React, { useState } from "react";
 import Navbar from "../navigation/Nav";
-import { useLocation } from "react-router-dom";
 import Waterlogo from "../../assets/img/watericon.png";
 import { Flex, Box, Image, Button, Text } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
-import SmallCentered from "../elem/Footer";
+import { useNewsSlotHooks } from "../../hooks";
 const NewsSlot = () => {
-  const router = useNavigate();
-  const location = useLocation();
-  const { state } = location;
-  const { text, img, img2 } = state;
-  const [isImageExpanded, setIsImageExpanded] = useState(false);
-  const [showDownloadButton, setShowDownloadButton] = useState(!!img2);
-
-  const handleDownload = () => {
-    const a = document.createElement("a");
-    a.href = img2;
-    a.download = "Result.jpg";
-    a.click();
-  };
+  const {
+    router,
+    text,
+    img,
+    img2,
+    isImageExpanded,
+    setIsImageExpanded,
+    showDownloadButton,
+    handleDownload,
+  } = useNewsSlotHooks();
   return (
     <>
       <Navbar />{" "}

@@ -19,7 +19,6 @@ import {
   Container,
   AccordionIcon,
 } from "@chakra-ui/react";
-import { useScrollEvent } from "../../hooks";
 import video from "../../assets/video/asd.mp4";
 import { CheckIcon } from "@chakra-ui/icons";
 import CarouselTemplate from "../elem/Carousel";
