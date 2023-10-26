@@ -12,12 +12,7 @@ import {
   StackDivider,
   Icon,
 } from "@chakra-ui/react";
-import {
-  GiBlackBelt,
-  GiTeacher,
-  GiSandsOfTime,
-  GiPunchBlast,
-} from "react-icons/gi";
+import { GiTeacher, GiSandsOfTime } from "react-icons/gi";
 import Elevator from "../elem/Elevator";
 import { InstructorsInfo } from "../../utils";
 import SmallCentered from "../elem/Footer";

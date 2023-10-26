@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Box,
   chakra,
@@ -10,16 +8,7 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
-  Button,
 } from "@chakra-ui/react";
-import {
-  FaInstagram,
-  FaPhone,
-  FaTelegram,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
-import { ReactNode } from "react";
 import Logo from "../../assets/img/LOGO.png";
 import { useNavigate } from "react-router-dom";
 import { socialButtonsData } from "../../utils";

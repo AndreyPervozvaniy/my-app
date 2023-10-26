@@ -1,18 +1,14 @@
 import React from "react";
 import Navbar from "../navigation/Nav";
-import Waterlogo from "../../assets/img/watericon.png";
 import {
   Box,
   Text,
   Flex,
   Heading,
   Container,
-  Button,
   Stack,
   Icon,
   useColorModeValue,
-  createIcon,
-  Avatar,
   SimpleGrid,
 } from "@chakra-ui/react";
 import SmallCentered from "../elem/Footer";

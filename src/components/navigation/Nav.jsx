@@ -16,12 +16,10 @@ import {
   useDisclosure,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import Logo from "../../assets/img/LOGO.png";
-import { AiOutlineClose } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
-import { RiFlashlightFill } from "react-icons/ri";
 import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -35,7 +33,6 @@ import {
 } from "@chakra-ui/react";
 
 const navLinks = [
-  //   { name: "Про нас", isMenu: true },
   { name: "Програма тренувань", path: "/programms" },
   { name: "Інструктори", path: "/instructors" },
   { name: "Розклад", path: "/schedule" },
@@ -63,8 +60,7 @@ export default function Navbar() {
   const router = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
-      // Определите, сколько пикселей нужно прокрутить, чтобы показать тень
-      const scrollThreshold = 50; // Например, 100 пикселей
+      const scrollThreshold = 50;
       if (window.scrollY > scrollThreshold) {
         setShowShadow(true);
       } else {

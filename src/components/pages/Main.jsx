@@ -65,7 +65,6 @@ const Card = ({ heading, description, icon }) => {
   );
 };
 const Main = () => {
-  const [isVisibleBottomButton] = useScrollEvent();
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
   return (
@@ -252,7 +251,12 @@ const Main = () => {
             w="100%"
           >
             <Flex justifyContent="center" textAlign={"center"}>
-              <Text letterSpacing="4px" fontSize="30px" fontWeight="bold">
+              <Text
+                letterSpacing="4px"
+                fontSize="30px"
+                fontWeight="bold"
+                textTransform="uppercase"
+              >
                 Ваші запитання – наші відповіді!
               </Text>
             </Flex>
@@ -300,7 +304,13 @@ const Main = () => {
           flexDirection="column"
           textAlign={"center"}
         >
-          <Text letterSpacing="4px" fontSize="30px" fontWeight="bold" p={8}>
+          <Text
+            letterSpacing="4px"
+            fontSize="30px"
+            fontWeight="bold"
+            p={8}
+            textTransform="uppercase"
+          >
             Наші спогади!
           </Text>
           <Flex overflow="hidden" w="100%">

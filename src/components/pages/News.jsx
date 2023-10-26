@@ -12,7 +12,7 @@ import SmallCentered from "../elem/Footer";
 function News() {
   const router = useNavigate();
   const [page, setPage] = useState(1);
-  const [isVisibleTopButton] = useScrollEvent();
+
   const pagination = useMemo(() => {
     const pagesCount = Math.ceil(newscontent.length / 5);
 

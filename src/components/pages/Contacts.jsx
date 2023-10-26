@@ -81,11 +81,9 @@ const Contacts = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const toast = useToast();
   const saveInClipBoard = (num) => {
     navigator.clipboard.writeText(num);
   };
-  const [isVisibleBottomButton] = useScrollEvent();
 
   return (
     <>

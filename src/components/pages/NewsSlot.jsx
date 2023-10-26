@@ -13,12 +13,10 @@ const NewsSlot = () => {
   const [isImageExpanded, setIsImageExpanded] = useState(false);
   const [showDownloadButton, setShowDownloadButton] = useState(!!img2);
 
-  // Функция для обработки скачивания при нажатии кнопки "Скачать"
   const handleDownload = () => {
-    // Создаем элемент-якорь для запуска скачивания
     const a = document.createElement("a");
     a.href = img2;
-    a.download = "Result.jpg"; // Вы можете настроить имя файла здесь
+    a.download = "Result.jpg";
     a.click();
   };
   return (

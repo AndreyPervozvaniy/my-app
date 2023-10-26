@@ -2,8 +2,6 @@ import React from "react";
 import Navbar from "../navigation/Nav";
 import { Box, Container, SimpleGrid, Text, Flex } from "@chakra-ui/react";
 import { statData } from "../../utils";
-import SmallCentered from "../elem/Footer";
-import { BiTimer } from "react-icons/bi";
 import CustomHeading from "../elem/HeadingTemplate";
 const Schedule = () => {
   return (

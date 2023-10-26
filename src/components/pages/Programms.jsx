@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
 import Navbar from "../navigation/Nav";
 import {
   Box,
-  chakra,
   Container,
   Stack,
   Text,
