@@ -173,7 +173,6 @@ const Main = () => {
           >
             <CustomHeading
               text={"Наші класи"}
-              textTransform="uppercase"
               headingFontWeight={"bold"}
               headingFontSize={{ base: "2xl", sm: "3xl" }}
             />

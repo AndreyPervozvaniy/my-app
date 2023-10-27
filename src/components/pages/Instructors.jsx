@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../navigation/Nav";
 import { Flex } from "@chakra-ui/react";
-
 import {
   Container,
   SimpleGrid,

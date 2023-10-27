@@ -13,16 +13,6 @@ function News() {
   return (
     <>
       <Navbar /> <Elevator />
-      <Box
-        position="fixed"
-        opacity="60%"
-        backgroundImage={`url(${Waterlogo})`}
-        backgroundSize="contain"
-        backgroundRepeat="no-repeat"
-        h="100vh"
-        w="100vw"
-        zIndex="-1"
-      />{" "}
       <Flex justifyContent="center" alignItems="center" h="100vh" w="100%">
         <Box w="full" h="calc(100vh - 70px)" marginTop="70px">
           {ourNews.map((item, index) => (
@@ -36,7 +26,8 @@ function News() {
               key={index}
             >
               <Image
-                w="60%"
+                w="50%"
+                rounded={"md"}
                 src={item.image}
                 onClick={() =>
                   router(PATHS.NEW_SLOT, {
@@ -50,7 +41,7 @@ function News() {
               ></Image>
               <Text
                 textAlign="center"
-                w="100%"
+                w="80%"
                 overflow="hidden"
                 whiteSpace="nowrap"
                 textOverflow="ellipsis"

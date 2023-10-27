@@ -2,7 +2,6 @@ import React from "react";
 import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react";
 import { useState } from "react";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-
 import Slider from "react-slick";
 import { cards } from "../../utils";
 

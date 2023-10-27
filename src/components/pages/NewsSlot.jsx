@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../navigation/Nav";
 import Waterlogo from "../../assets/img/watericon.png";
 import { Flex, Box, Image, Button, Text } from "@chakra-ui/react";
@@ -17,16 +17,6 @@ const NewsSlot = () => {
   return (
     <>
       <Navbar />{" "}
-      <Box
-        position="fixed"
-        opacity="60%"
-        backgroundImage={`url(${Waterlogo})`}
-        backgroundSize="contain"
-        backgroundRepeat="no-repeat"
-        h="100vh"
-        w="100vw"
-        zIndex="-1"
-      />
       <Flex justifyContent="center" alignItems="center" h="100vh" w="100%">
         <Box
           w="90%"

@@ -16,12 +16,7 @@ import guysnogi from "../assets/img/guysnogi.jpg";
 import river from "../assets/img/vizit.png";
 import integralseminar from "../assets/img/integralseminar.png";
 import { FaPhone, FaTelegram, FaInstagram } from "react-icons/fa";
-import {
-  GiBlackBelt,
-  GiTeacher,
-  GiSandsOfTime,
-  GiPunchBlast,
-} from "react-icons/gi";
+import { GiBlackBelt, GiPunchBlast } from "react-icons/gi";
 import {
   FcGraduationCap,
   FcBullish,

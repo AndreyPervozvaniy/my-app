@@ -1,14 +1,3 @@
-// import About from "../components/pages/About";
-
-// import Instructors from "../components/pages/Instructors";
-// import Main from "../components/pages/Main";
-// import News from "../components/pages/News";
-// import NewsSlot from "../components/pages/NewsSlot";
-// import OurAcademy from "../components/pages/OurAcademy";
-// import OurBelts from "../components/pages/OurBelts";
-// import Programms from "../components/pages/Programms";
-// import Schedule from "../components/pages/Schedule";
-// import Contacts from "../components/pages/Contacts";
 import { lazy } from "react";
 const Main = lazy(() => import("../components/pages/Main"));
 const About = lazy(() => import("../components/pages/About"));
