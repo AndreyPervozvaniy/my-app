@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../navigation/Nav";
 import {
-  Flex,
   Text,
   Button,
   Link,
@@ -24,6 +23,7 @@ import ButtonBlock from "../elem/ButtonTemplate";
 import { InstructorsPhone, SocialLinksContacts } from "../../utils";
 import SmallCentered from "../elem/Footer";
 import { useContactsHooks } from "../../hooks";
+import FlexContainer from "../elem/FlexContainer";
 function PriceWrapper({ children }) {
   return (
     <Box
@@ -50,16 +50,14 @@ const Card = ({ heading, description, icon, href }) => {
       p={5}
     >
       <Stack align={"center"} spacing={2}>
-        <Flex
+        <FlexContainer
           w={16}
           h={16}
-          align={"center"}
-          justify={"center"}
           rounded={"full"}
           bg={useColorModeValue("gray.100", "gray.700")}
         >
           {icon}
-        </Flex>
+        </FlexContainer>
         <Box mt={2} textAlign={"center"}>
           <Heading size="md">{heading}</Heading>
           <Text mt={1} fontSize={"sm"}>
@@ -81,7 +79,7 @@ const Contacts = () => {
       <Navbar />
       <Elevator />
       {/* =====================================окна с гугл картой и ютубом ================================*/}
-      <Flex alignItems="center" justifyContent="center" flexDir={"column"}>
+      <FlexContainer flexDir={"column"}>
         {ContainerData.map((container, index) => (
           <Container maxW={"7xl"} key={index} padding={2}>
             <Stack
@@ -152,13 +150,7 @@ const Contacts = () => {
                   ))}
                 </Stack>
               </Stack>
-              <Flex
-                flex={1}
-                justify={"center"}
-                align={"center"}
-                w={"full"}
-                flexDir={"column"}
-              >
+              <FlexContainer flex={1} w={"full"} flexDir={"column"}>
                 <Box
                   height={"300px"}
                   rounded={"2xl"}
@@ -176,7 +168,7 @@ const Contacts = () => {
                     allowfullscreen
                   ></iframe>
                 </Box>{" "}
-              </Flex>{" "}
+              </FlexContainer>{" "}
             </Stack>{" "}
           </Container>
         ))}
@@ -249,7 +241,7 @@ const Contacts = () => {
           </Stack>
 
           <Container maxW={"5xl"} mt={12} mb={12} p={4}>
-            <Flex flexWrap="wrap" gridGap={6} justify="center">
+            <FlexContainer flexWrap="wrap" gridGap={6}>
               {SocialLinksContacts.map((link, index) => (
                 <Link href={link.href} isExternal key={index}>
                   <Card
@@ -259,10 +251,10 @@ const Contacts = () => {
                   />
                 </Link>
               ))}
-            </Flex>
+            </FlexContainer>
           </Container>
         </Box>
-      </Flex>
+      </FlexContainer>
       <SmallCentered />
     </>
   );

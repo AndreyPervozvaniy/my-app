@@ -15,6 +15,7 @@ import { GiTeacher, GiSandsOfTime } from "react-icons/gi";
 import Elevator from "../elem/Elevator";
 import { InstructorsInfo } from "../../utils";
 import SmallCentered from "../elem/Footer";
+import FlexContainer from "../elem/FlexContainer";
 const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={"row"} align={"center"}>
@@ -36,12 +37,7 @@ const Instructors = () => {
   return (
     <>
       <Navbar /> <Elevator />
-      <Flex
-        alignItems="center"
-        justifyContent="center"
-        padding="5%"
-        flexDir="column"
-      >
+      <FlexContainer padding="5%" flexDir="column">
         <Container maxW={"5xl"} py={12}>
           {InstructorsInfo.map((instructor, index) => (
             <SimpleGrid
@@ -110,7 +106,7 @@ const Instructors = () => {
             </SimpleGrid>
           ))}
         </Container>
-      </Flex>
+      </FlexContainer>
       <SmallCentered />
     </>
   );

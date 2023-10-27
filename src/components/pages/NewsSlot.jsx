@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../navigation/Nav";
 import { Flex, Box, Image, Button, Text } from "@chakra-ui/react";
 import { useNewsSlotHooks } from "../../hooks";
+import FlexContainer from "../elem/FlexContainer";
 const NewsSlot = () => {
   const {
     router,
@@ -16,7 +17,7 @@ const NewsSlot = () => {
   return (
     <>
       <Navbar />{" "}
-      <Flex justifyContent="center" alignItems="center" h="100vh" w="100%">
+      <FlexContainer h="100vh" w="100%">
         <Box
           w="90%"
           h="calc(100vh - 70px)"
@@ -27,14 +28,12 @@ const NewsSlot = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Flex
+          <FlexContainer
             borderRadius="15px"
             p="10px"
             mb="10px"
             cursor="pointer"
             flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
           >
             <Image w="80%" h="auto" src={img}></Image>
             <Text
@@ -75,9 +74,9 @@ const NewsSlot = () => {
                 <Text padding="10px">Завантажити результат</Text>
               </Button>
             )}
-          </Flex>{" "}
+          </FlexContainer>{" "}
         </Box>
-      </Flex>
+      </FlexContainer>
     </>
   );
 };

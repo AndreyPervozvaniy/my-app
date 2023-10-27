@@ -28,6 +28,7 @@ import { Class } from "../../utils";
 import { Question } from "../../utils";
 import SmallCentered from "../elem/Footer";
 import CustomHeading from "../elem/HeadingTemplate";
+import FlexContainer from "../elem/FlexContainer";
 const Card = ({ heading, description, icon }) => {
   return (
     <Box
@@ -40,17 +41,15 @@ const Card = ({ heading, description, icon }) => {
       p={5}
     >
       <Stack align={"center"} spacing={2}>
-        <Flex
+        <FlexContainer
           w={16}
           h={16}
-          align={"center"}
-          justify={"center"}
           color={"white"}
           rounded={"full"}
           bg={useColorModeValue("gray.100", "gray.700")}
         >
           {icon}
-        </Flex>
+        </FlexContainer>
         <Box mt={2}>
           <Heading fontSize="xl" fontWeight={"bold"} textAlign={"center"}>
             {heading}
@@ -64,20 +63,12 @@ const Card = ({ heading, description, icon }) => {
   );
 };
 const Main = () => {
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "40px" });
   return (
     <>
       <Navbar />
       <Elevator />
       <Flex fontFamily="Sofia Sans Condensed " color="#000" flexDir={"column"}>
-        <Flex
-          justifyContent="center"
-          alignItems="center"
-          textAlign="center"
-          w="100%"
-          h="100vh"
-        >
+        <FlexContainer textAlign="center" w="100%" h="100vh">
           <video
             autoPlay
             loop
@@ -90,13 +81,7 @@ const Main = () => {
           >
             <source src={video} type="video/mp4" />
           </video>
-          <Flex
-            justifyContent="center"
-            alignItems="center"
-            overflow="hidden"
-            pos="absolute"
-            opacity="90%"
-          >
+          <FlexContainer overflow="hidden" pos="absolute" opacity="90%">
             <Text
               fontSize="30px"
               color="white"
@@ -106,17 +91,11 @@ const Main = () => {
               YAMASAKI ACADEMY DNIPRO <br />
               Почни свій шлях у світ Джіу-Джітсу разом з нами!
             </Text>
-          </Flex>{" "}
-        </Flex>
-        <Flex w="100%" justifyContent="center" alignItems="center">
+          </FlexContainer>{" "}
+        </FlexContainer>
+        <FlexContainer w="100%">
           <Flex overflow="hidden">
-            <Flex
-              h="100%"
-              p={12}
-              flexDirection="column"
-              justifyContent="center"
-              alignContent="center"
-            >
+            <FlexContainer h="100%" p={12} flexDirection="column">
               <Stack spacing={6} as={Container} maxW={"5xl"}>
                 <CustomHeading
                   headingFontSize={{ base: "2xl", sm: "3xl" }}
@@ -128,21 +107,9 @@ const Main = () => {
                     " Практикуючи джиу-джитсу у стінах нашої академії, ви отримаєте:"
                   }
                 />
-                {/* <Heading
-                  fontSize={{ base: "2xl", sm: "3xl" }}
-                  fontWeight={"bold"}
-                  textAlign={"center"}
-                ></Heading>
-                <Text
-                  
-                  fontSize={{ base: "lg", sm: "xl" }}
-                  textAlign={"center"}
-                >
-                  Практикуючи джиу-джитсу у стінах нашої академії, ви отримаєте:
-                </Text> */}
               </Stack>
               <Container maxW={"5xl"} mt={12}>
-                <Flex flexWrap="wrap" gridGap={6} justify="center">
+                <FlexContainer flexWrap="wrap" gridGap={6}>
                   {Advantage.map((card, index) => (
                     <Card
                       key={index}
@@ -151,17 +118,12 @@ const Main = () => {
                       description={card.description}
                     />
                   ))}
-                </Flex>
+                </FlexContainer>
               </Container>
-            </Flex>
+            </FlexContainer>
           </Flex>{" "}
-        </Flex>{" "}
-        <Flex
-          alignItems="center"
-          textAlign="center"
-          w="100%"
-          justifyContent="center"
-        >
+        </FlexContainer>{" "}
+        <FlexContainer textAlign="center" w="100%">
           <Flex
             overflow="hidden"
             fontSize="20px"
@@ -176,7 +138,7 @@ const Main = () => {
               headingFontWeight={"bold"}
               headingFontSize={{ base: "2xl", sm: "3xl" }}
             />
-            {/* <Text fontSize="30px" fontWeight="bold"></Text> */}
+
             <Center py={6} w={"100%"}>
               <Flex flexWrap="wrap" justify="center">
                 {Class.map((card, index) => (
@@ -238,13 +200,12 @@ const Main = () => {
               </Flex>
             </Center>
           </Flex>
-        </Flex>
+        </FlexContainer>
         <Flex w="100%" overflow="hidden">
-          <Flex
+          <FlexContainer
             overflow="hidden"
             fontSize="20px"
             fontWeight="500"
-            alignItems="center"
             flexDirection="column"
             w="100%"
           >
@@ -275,7 +236,6 @@ const Main = () => {
                         backgroundColor="white"
                         padding="5px"
                         justifyContent="space-between"
-                        alignItems="center"
                         flex="1"
                         borderBottom="1px solid grey"
                       >
@@ -292,11 +252,9 @@ const Main = () => {
                 </AccordionItem>
               ))}
             </Accordion>
-          </Flex>
+          </FlexContainer>
         </Flex>
-        <Flex
-          alignItems="center"
-          justifyContent="center"
+        <FlexContainer
           w="100%"
           overflow="hidden"
           flexDirection="column"
@@ -314,7 +272,7 @@ const Main = () => {
           <Flex overflow="hidden" w="100%">
             <CarouselTemplate />
           </Flex>
-        </Flex>
+        </FlexContainer>
       </Flex>
       <SmallCentered />
     </>

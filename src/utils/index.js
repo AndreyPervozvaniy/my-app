@@ -1,4 +1,3 @@
-import logo from "../../src/assets/img/watericon.png";
 import korot from "../../src/assets/img/korot.jpg";
 import red from "../../src/assets/img/red.jpg";
 import kirillKudr from "../../src/assets/img/kirillKudr.jpg";
@@ -76,9 +75,6 @@ export const cards = [
   },
   {
     img: guysnogi,
-  },
-  {
-    img: logo,
   },
   {
     img: red,

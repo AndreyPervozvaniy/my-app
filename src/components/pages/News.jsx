@@ -6,22 +6,21 @@ import { PATHS } from "../../routes";
 import Elevator from "../elem/Elevator";
 import SmallCentered from "../elem/Footer";
 import { useNewsHooks } from "../../hooks";
+import FlexContainer from "../elem/FlexContainer";
 function News() {
   const { router, page, setPage, pagination, ourNews } = useNewsHooks();
 
   return (
     <>
       <Navbar /> <Elevator />
-      <Flex justifyContent="center" alignItems="center" h="100vh" w="100%">
+      <FlexContainer h="100vh" w="100%">
         <Box w="full" h="calc(100vh - 70px)" marginTop="70px">
           {ourNews.map((item, index) => (
-            <Flex
+            <FlexContainer
               p="10px"
               mb="10px"
               cursor="pointer"
               flexDirection="column"
-              alignItems="center"
-              justifyContent="center"
               key={index}
             >
               <Image
@@ -63,9 +62,9 @@ function News() {
               >
                 <Text padding="5px">Дізнатися більше</Text> <Search2Icon />
               </Button>
-            </Flex>
+            </FlexContainer>
           ))}
-          <Flex justifyContent="center" padding="20px">
+          <FlexContainer padding="20px">
             <Flex justify="space-around" w="100%">
               {pagination.map((item, index) => (
                 <Button
@@ -84,10 +83,10 @@ function News() {
                 </Button>
               ))}
             </Flex>
-          </Flex>{" "}
+          </FlexContainer>{" "}
           <SmallCentered />
         </Box>{" "}
-      </Flex>{" "}
+      </FlexContainer>{" "}
     </>
   );
 }

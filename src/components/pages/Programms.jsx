@@ -18,12 +18,13 @@ import { ProgrammsInfo } from "../../content/ProgrammsContent";
 import Elevator from "../elem/Elevator";
 import { FcPlus } from "react-icons/fc";
 import SmallCentered from "../elem/Footer";
+import FlexContainer from "../elem/FlexContainer";
 const Programms = () => {
   return (
     <>
       <Navbar />
       <Elevator />
-      <Flex alignItems="center" justifyContent="center">
+      <FlexContainer>
         <Container maxW={"7xl"}>
           {ProgrammsInfo.map((product, index) => (
             <SimpleGrid
@@ -102,7 +103,7 @@ const Programms = () => {
             </SimpleGrid>
           ))}
         </Container>
-      </Flex>
+      </FlexContainer>
       <SmallCentered />
     </>
   );

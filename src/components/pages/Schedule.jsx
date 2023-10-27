@@ -3,11 +3,12 @@ import Navbar from "../navigation/Nav";
 import { Box, Container, SimpleGrid, Text, Flex } from "@chakra-ui/react";
 import { statData } from "../../utils";
 import CustomHeading from "../elem/HeadingTemplate";
+import FlexContainer from "../elem/FlexContainer";
 const Schedule = () => {
   return (
     <>
       <Navbar />
-      <Flex alignItems="center" justifyContent="center" padding={"10%"}>
+      <FlexContainer padding={"10%"}>
         <Container maxW="7xl" p={{ base: 5, md: 10 }} textAlign={"center"}>
           <CustomHeading text={"Розклад наших класів"} />
           <SimpleGrid
@@ -33,7 +34,7 @@ const Schedule = () => {
             ))}{" "}
           </SimpleGrid>
         </Container>
-      </Flex>{" "}
+      </FlexContainer>{" "}
     </>
   );
 };
