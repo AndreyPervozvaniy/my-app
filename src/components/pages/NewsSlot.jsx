@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../navigation/Nav";
-import Waterlogo from "../../assets/img/watericon.png";
 import { Flex, Box, Image, Button, Text } from "@chakra-ui/react";
 import { useNewsSlotHooks } from "../../hooks";
 const NewsSlot = () => {
