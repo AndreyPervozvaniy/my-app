@@ -31,22 +31,22 @@ import {
   DrawerBody,
 } from "@chakra-ui/react";
 
-const navLinks = [
-  { name: "Програма тренувань", path: "/programms" },
-  { name: "Інструктори", path: "/instructors" },
-  { name: "Розклад", path: "/schedule" },
-  { name: "Новини", path: "/news" },
-  { name: "Контакти", path: "/contacts" },
-];
-
-const dropdownLinks = [
-  { name: "Наша академия", path: "/ourAcademy" },
-  { name: "Наша команда", path: "/ourBelts" },
-];
 export default function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const navLinks = [
+    { name: "Програма тренувань", path: "/programms" },
+    { name: "Інструктори", path: "/instructors" },
+    { name: "Розклад", path: "/schedule" },
+    { name: "Новини", path: "/news" },
+    { name: "Контакти", path: "/contacts" },
+  ];
+
+  const dropdownLinks = [
+    { name: "Наша академия", path: "/ourAcademy" },
+    { name: "Наша команда", path: "/ourBelts" },
+  ];
+  const { onClose } = useDisclosure();
   const [showShadow, setShowShadow] = useState(false);
-  const btnRef = React.useRef();
+
   const [issOpen, setIsOpen] = useState(false);
 
   const onnClose = () => {
@@ -143,7 +143,18 @@ export default function Navbar() {
             alignItems="center"
           >
             {navLinks.map((link, index) => (
-              <NavLink key={index} {...link} onClose={onClose} />
+              <Box
+                key={link.name}
+                cursor={"pointer"}
+                onClick={() => router(link.path)}
+                onClose={onClose}
+                _hover={{
+                  textDecoration: "underline",
+                }}
+              >
+                {link.name}
+              </Box>
+              // <NavLink key={index} {...link} onClose={onClose} />
             ))}
 
             {/* Dropdown Menu */}
@@ -175,13 +186,27 @@ export default function Navbar() {
             >
               <Stack as="nav" spacing={2}>
                 {navLinks.map((link, index) => (
-                  <NavLink key={index} {...link} onClose={onClose} />
+                  <Box
+                    key={link.name}
+                    onClick={() => router(link.path)}
+                    onClose={onClose}
+                  >
+                    {link.name}
+                  </Box>
+                  // <NavLink key={index} {...link} onClose={onClose} />
                 ))}
                 <Text fontWeight="bold">Про нас </Text>
 
                 <Stack pl={2} spacing={1} mt={"0 !important"}>
                   {dropdownLinks.map((link, index) => (
-                    <NavLink key={index} {...link} onClose={onClose} />
+                    <Box
+                      key={link.name}
+                      onClick={() => router(link.path)}
+                      onClose={onClose}
+                    >
+                      {link.name}
+                    </Box>
+                    // <NavLink key={index} {...link}  />
                   ))}
                 </Stack>
               </Stack>
@@ -195,21 +220,21 @@ export default function Navbar() {
 
 // NavLink Component
 
-const NavLink = ({ name, path, onClose }) => {
-  return (
-    <Link
-      href={path}
-      lineHeight="inherit"
-      _hover={{
-        textDecoration: "underline",
-        color: useColorModeValue("black.500", "black.200"),
-      }}
-      onClick={() => onClose()}
-    >
-      {name}
-    </Link>
-  );
-};
+// const NavLink = ({ name, path, onClose }) => {
+//   return (
+//     <Link
+//       href={path}
+//       lineHeight="inherit"
+//       _hover={{
+//         textDecoration: "underline",
+//         color: useColorModeValue("black.500", "black.200"),
+//       }}
+//       onClick={() => onClose()}
+//     >
+//       {name}
+//     </Link>
+//   );
+// };
 // Dropdown MenuLink Component
 const MenuLink = ({ name, path, onClose }) => {
   return (

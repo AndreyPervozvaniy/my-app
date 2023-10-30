@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Text, Image, Button, Fade } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import Navbar from "../navigation/Nav";
 import { PATHS } from "../../routes";
@@ -8,7 +8,7 @@ import SmallCentered from "../elem/Footer";
 import { useNewsHooks } from "../../hooks";
 import FlexContainer from "../elem/FlexContainer";
 function News() {
-  const { router, page, setPage, pagination, ourNews } = useNewsHooks();
+  const { router, setPage, pagination, ourNews } = useNewsHooks();
 
   return (
     <>
@@ -19,12 +19,12 @@ function News() {
             <FlexContainer
               p="10px"
               mb="10px"
-              cursor="pointer"
               flexDirection="column"
               key={index}
             >
               <Image
                 w="50%"
+                cursor="pointer"
                 rounded={"md"}
                 src={item.image}
                 onClick={() =>

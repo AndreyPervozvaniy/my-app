@@ -11,7 +11,6 @@ import {
   ListItem,
   ListIcon,
   Heading,
-  useBreakpointValue,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
@@ -19,7 +18,7 @@ import {
   Container,
   AccordionIcon,
 } from "@chakra-ui/react";
-import video from "../../assets/video/asd.mp4";
+import video from "../../assets/video/mainvideo.mp4";
 import { CheckIcon } from "@chakra-ui/icons";
 import CarouselTemplate from "../elem/Carousel";
 import Elevator from "../elem/Elevator";
@@ -109,7 +108,7 @@ const Main = () => {
                 />
               </Stack>
               <Container maxW={"5xl"} mt={12}>
-                <FlexContainer flexWrap="wrap" gridGap={6}>
+                <Flex justify={"center"} flexWrap="wrap" gridGap={6}>
                   {Advantage.map((card, index) => (
                     <Card
                       key={index}
@@ -118,7 +117,7 @@ const Main = () => {
                       description={card.description}
                     />
                   ))}
-                </FlexContainer>
+                </Flex>
               </Container>
             </FlexContainer>
           </Flex>{" "}
