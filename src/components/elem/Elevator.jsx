@@ -6,7 +6,6 @@ const Elevator = () => {
     <Fade in={isVisibleBottomButton}>
       <Button
         className="fa fa-arrow-up"
-        aria-lavel="topButton"
         zIndex="12"
         position="fixed"
         right={{ base: "5px", xl: "10" }}

@@ -83,7 +83,7 @@ export function useNewsSlotHooks() {
   const { text, img, img2 } = state;
 
   const [isImageExpanded, setIsImageExpanded] = useState(false);
-  const [showDownloadButton, setShowDownloadButton] = useState(!!img2);
+  const [showDownloadButton] = useState(!!img2);
 
   const handleDownload = () => {
     const a = document.createElement("a");

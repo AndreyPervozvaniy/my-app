@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../navigation/Nav";
-import { Box, Container, SimpleGrid, Text, Flex } from "@chakra-ui/react";
+import { Box, Container, SimpleGrid, Text } from "@chakra-ui/react";
 import { statData } from "../../utils";
 import CustomHeading from "../elem/HeadingTemplate";
 import FlexContainer from "../elem/FlexContainer";

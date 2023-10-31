@@ -10,7 +10,6 @@ import {
   Icon,
   useColorModeValue,
   SimpleGrid,
-  Image,
 } from "@chakra-ui/react";
 import SmallCentered from "../elem/Footer";
 import { testimonialsData } from "../../utils";
