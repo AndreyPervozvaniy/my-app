@@ -73,6 +73,10 @@ const Card = ({ heading, description, icon, href }) => {
 };
 const Contacts = () => {
   const { handleButtonClick, saveInClipBoard } = useContactsHooks();
+  const callPhoneNumber = (phoneNumber) => {
+    const telLink = `tel:${phoneNumber}`;
+    window.location.href = telLink;
+  };
 
   return (
     <>
@@ -213,9 +217,9 @@ const Contacts = () => {
                       w="full"
                       colorScheme="blue"
                       variant="outline"
-                      onClick={() => saveInClipBoard(instructor.phone)}
+                      onClick={() => callPhoneNumber(instructor.phone)}
                     >
-                      Копіювати номер
+                      Подзвонити
                     </Button>
                   </Box>
                 </VStack>
