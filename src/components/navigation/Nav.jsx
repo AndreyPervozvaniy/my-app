@@ -187,6 +187,7 @@ export default function Navbar() {
               <Stack as="nav" spacing={2}>
                 {navLinks.map((link, index) => (
                   <Box
+                    p={2}
                     key={link.name}
                     onClick={() => router(link.path)}
                     onClose={onClose}
@@ -203,6 +204,7 @@ export default function Navbar() {
                       key={link.name}
                       onClick={() => router(link.path)}
                       onClose={onClose}
+                      p={2}
                     >
                       {link.name}
                     </Box>
