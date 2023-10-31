@@ -72,7 +72,7 @@ const Card = ({ heading, description, icon, href }) => {
   );
 };
 const Contacts = () => {
-  const { handleButtonClick, saveInClipBoard } = useContactsHooks();
+  const { handleButtonClick } = useContactsHooks();
   const callPhoneNumber = (phoneNumber) => {
     const telLink = `tel:${phoneNumber}`;
     window.location.href = telLink;
@@ -166,6 +166,7 @@ const Contacts = () => {
                     src={container.mapEmbedURL}
                     width="100%"
                     height="100%"
+                    title="Основное видео"
                     loading="lazy"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
