@@ -42,7 +42,7 @@ export default function Navbar() {
 
   const dropdownLinks = [
     { name: "Наша академия", path: "/ourAcademy" },
-    { name: "Наша команда", path: "/ourBelts" },
+    // { name: "Наша команда", path: "/ourBelts" },
   ];
   const { onClose } = useDisclosure();
   const [showShadow, setShowShadow] = useState(false);
@@ -196,7 +196,9 @@ export default function Navbar() {
                   </Box>
                   // <NavLink key={index} {...link} onClose={onClose} />
                 ))}
-                <Text fontWeight="bold">Про нас </Text>
+                {/* <Text fontWeight="bold" color={"grey"}>
+                  Про нас :{" "}
+                </Text> */}
 
                 <Stack pl={2} spacing={1} mt={"0 !important"}>
                   {dropdownLinks.map((link, index) => (
