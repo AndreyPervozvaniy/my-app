@@ -71,6 +71,7 @@ const Main = () => {
           <video
             autoPlay
             loop
+            playsInline
             muted
             style={{
               width: "100%",
