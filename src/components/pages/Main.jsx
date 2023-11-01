@@ -26,8 +26,9 @@ import { Advantage } from "../../utils";
 import { Class } from "../../utils";
 import { Question } from "../../utils";
 import SmallCentered from "../elem/Footer";
-import CustomHeading from "../elem/HeadingTemplate";
+
 import FlexContainer from "../elem/FlexContainer";
+import SmallHeading from "../elem/SmallHeadingTemplate";
 const Card = ({ heading, description, icon }) => {
   return (
     <Box
@@ -96,18 +97,12 @@ const Main = () => {
         <FlexContainer w="100%">
           <Flex overflow="hidden">
             <FlexContainer h="100%" p={12} flexDirection="column">
-              <Stack spacing={6} as={Container} maxW={"5xl"}>
-                <CustomHeading
-                  headingFontSize={{ base: "2xl", sm: "3xl" }}
-                  headingFontWeight={"bold"}
-                  text={"Чому саме Yamasaki Academy?"}
-                  textFontSize={{ base: "lg", sm: "xl" }}
-                  color={"gray.600"}
-                  text2={
-                    " Практикуючи джиу-джитсу у стінах нашої академії, ви отримаєте:"
-                  }
-                />
-              </Stack>
+              <SmallHeading
+                text={"Чому саме Yamasaki Academy?"}
+                text1={
+                  "Практикуючи джиу-джитсу у стінах нашої академії, ви отримаєте:"
+                }
+              />
               <Container maxW={"5xl"} mt={12}>
                 <Flex justify={"center"} flexWrap="wrap" gridGap={6}>
                   {Advantage.map((card, index) => (
@@ -123,7 +118,9 @@ const Main = () => {
             </FlexContainer>
           </Flex>{" "}
         </FlexContainer>{" "}
-        <FlexContainer textAlign="center" w="100%">
+        <FlexContainer textAlign="center" w="100%" flexDir="column">
+          {" "}
+          <SmallHeading text={"Наші класи"} />
           <Flex
             overflow="hidden"
             fontSize="20px"
@@ -133,12 +130,6 @@ const Main = () => {
             w="100%"
             flexDirection="column"
           >
-            <CustomHeading
-              text={"Наші класи"}
-              headingFontWeight={"bold"}
-              headingFontSize={{ base: "2xl", sm: "3xl" }}
-            />
-
             <Center py={6} w={"100%"}>
               <Flex flexWrap="wrap" justify="center">
                 {Class.map((card, index) => (
@@ -210,14 +201,7 @@ const Main = () => {
             w="100%"
           >
             <Flex justifyContent="center" textAlign={"center"}>
-              <Text
-                letterSpacing="4px"
-                fontSize="30px"
-                fontWeight="bold"
-                textTransform="uppercase"
-              >
-                Ваші запитання – наші відповіді!
-              </Text>
+              <SmallHeading text={" Ваші запитання – наші відповіді!"} />
             </Flex>
             <Accordion
               w="90%"
@@ -260,15 +244,7 @@ const Main = () => {
           flexDirection="column"
           textAlign={"center"}
         >
-          <Text
-            letterSpacing="4px"
-            fontSize="30px"
-            fontWeight="bold"
-            p={8}
-            textTransform="uppercase"
-          >
-            Наші спогади!
-          </Text>
+          <SmallHeading text={" Наші спогади!"} p={4} />
           <Flex overflow="hidden" w="100%">
             <CarouselTemplate />
           </Flex>

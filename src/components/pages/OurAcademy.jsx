@@ -106,7 +106,11 @@ const OurAcademy = () => {
           spacing={{ base: 8, md: 14 }}
           py={{ base: 20, md: 36 }}
         >
-          <CustomHeading text={"  Трохи про -"} text2={" нашу академію!"} />
+          <CustomHeading
+            text={"  Трохи про -"}
+            text2={" нашу академію!"}
+            fontWeight={600}
+          />
 
           <Text
             color={"black"}
@@ -150,6 +154,7 @@ const OurAcademy = () => {
             <CustomHeading
               text={"  Що про нас говорять -"}
               text2={"батьки, учні та гості."}
+              fontWeight={600}
             />
           </Stack>
           <Flex justify="center" align="center">

@@ -9,15 +9,17 @@ function CustomHeading({
   textFontWeight,
   headingFontWeight,
   color,
+  ...props
 }) {
   return (
     <Heading
-      fontWeight={headingFontWeight || 500}
-      fontSize={headingFontSize || { base: "2xl", sm: "4xl", md: "5xl" }}
+      fontWeight={500}
+      fontSize={{ base: "2xl", sm: "4xl", md: "5xl" }}
       lineHeight={"110%"}
       textAlign={"center"}
       textTransform="uppercase"
       p={2}
+      {...props}
     >
       {text}
       <br />

@@ -1,0 +1,20 @@
+import React from "react";
+import { Stack, Heading, Text, Container } from "@chakra-ui/react";
+function SmallHeading({ text, text1, ...props }) {
+  return (
+    <Stack spacing={4} as={Container} maxW={"5xl"} textAlign={"center"}>
+      <Heading
+        fontSize={{ base: "2xl", sm: "4xl", md: "4xl" }}
+        fontWeight={"bold"}
+        textTransform={"uppercase"}
+        {...props}
+      >
+        {text}
+      </Heading>
+      <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
+        {text1}
+      </Text>
+    </Stack>
+  );
+}
+export default SmallHeading;

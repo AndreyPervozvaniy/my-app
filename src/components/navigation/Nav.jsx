@@ -41,7 +41,7 @@ export default function Navbar() {
   ];
 
   const dropdownLinks = [
-    { name: "Наша академия", path: "/ourAcademy" },
+    { name: "Наша академія", path: "/ourAcademy" },
     // { name: "Наша команда", path: "/ourBelts" },
   ];
   const { onClose } = useDisclosure();

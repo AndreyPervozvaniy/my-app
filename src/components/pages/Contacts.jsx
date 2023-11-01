@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../navigation/Nav";
+
 import {
   Text,
   Button,
@@ -24,6 +25,8 @@ import { InstructorsPhone, SocialLinksContacts } from "../../utils";
 import SmallCentered from "../elem/Footer";
 import { useContactsHooks } from "../../hooks";
 import FlexContainer from "../elem/FlexContainer";
+import CustomHeading from "../elem/HeadingTemplate";
+import SmallHeading from "../elem/SmallHeadingTemplate";
 function PriceWrapper({ children }) {
   return (
     <Box
@@ -100,32 +103,19 @@ const Contacts = () => {
               direction={{ base: "column", md: "column", lg: "row" }}
             >
               <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-                <Heading
+                {" "}
+                <CustomHeading
+                  text={container.headingText}
+                  text2={container.headingText1}
                   lineHeight={1.1}
                   fontWeight={600}
-                  fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
-                >
-                  <Text
-                    as={"span"}
-                    position={"relative"}
-                    _after={{
-                      content: "''",
-                      width: "full",
-                      height: "30%",
-                      position: "absolute",
-                      bottom: 1,
-                      left: 0,
-                      bg: container.bgColor,
-                      zIndex: -1,
-                    }}
-                  >
-                    {container.headingText}
-                  </Text>
-                  <br />
-                  <Text as={"span"} color={container.bgColor}>
-                    {container.headingText1}
-                  </Text>
-                </Heading>
+                  textAlign={{
+                    base: "center",
+                    sm: "center",
+                    md: "center",
+                    lg: "left",
+                  }}
+                />
                 <Text color={"black"} padding={"5px"}>
                   {container.street}
                   <br />
@@ -181,9 +171,7 @@ const Contacts = () => {
         {/*============================= бокс с номерами ===================================== */}
         <Box py={12} id="InstructorContact">
           <VStack spacing={2} textAlign="center" p={4}>
-            <Heading as="h1" fontSize="4xl">
-              Контакти наших інструкторів
-            </Heading>
+            <SmallHeading text={" Контакти наших інструкторів"} />
           </VStack>
           <Stack
             direction={{ base: "column", md: "column", lg: "row" }}
@@ -230,23 +218,16 @@ const Contacts = () => {
         </Box>
         {/*======================================= бокс с соцсетями====================================== */}
         <Box p={4}>
-          <Stack spacing={4} as={Container} maxW={"5xl"} textAlign={"center"}>
-            <Heading
-              fontSize={{ base: "2xl", sm: "4xl" }}
-              fontWeight={"bold"}
-              id="Society"
-            >
-              Yamasaki у соцмережах!
-            </Heading>
-            <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
-              Слідкуйте за новинами та подіями життя нашої академії, також
-              завжди раді новим людям у наших лавах! Підписуйся, питай,
-              приєднуйся!
-            </Text>
-          </Stack>
+          <SmallHeading
+            id="Society"
+            text={"  Yamasaki у соцмережах!"}
+            text1={
+              "Слідкуйте за новинами та подіями життя нашої академії, також завжди раді новим людям у наших лавах! Підписуйся, питай, приєднуйся!"
+            }
+          />
 
           <Container maxW={"5xl"} mt={12} mb={12} p={4}>
-            <FlexContainer flexWrap="wrap" gridGap={6}>
+            <FlexContainer flexWrap="wrap" gridGap={6} p={4}>
               {SocialLinksContacts.map((link, index) => (
                 <Link href={link.href} isExternal key={index}>
                   <Card
