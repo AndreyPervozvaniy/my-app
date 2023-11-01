@@ -317,11 +317,6 @@ export const buttons = [
     label: "Соцмережі",
     id: "Society",
   },
-  // {
-  //   label: "Як нас знайти ?",
-  //   id: "videoBlock",
-  //   bgColor: "red.400",
-  // },
 ];
 export const ContainerData = [
   {

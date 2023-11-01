@@ -1,7 +1,10 @@
+import seminar from "../assets/img/integralseminar.png";
+import korotich from "../assets/img/korot.jpg";
+import nogikids from "../assets/img/no gi kids.jpg";
+import gikids from "../assets/img/gikids.jpg";
 export const ProgrammsInfo = [
   {
     title: "Формат Гі",
-    price: "$350.00 USD",
     description:
       "Тренування у форматі Гі - являють собою один із двох основних форматів тренувань у Бразилському джіу-джитсу. Особливістю цього формату є те, що практикуючі займаються в Гі (кімоно), що надає більший спектр контролю опонента, а також відрізняється у техніках, які є, наприклад, у форматі Ноу - Гі.",
     features: [
@@ -12,20 +15,10 @@ export const ProgrammsInfo = [
       "Гі підсилює важливість тиску та контролю в BJJ.",
       "Адаптація технік в Гі/Но-Гі та ключові відмінності.",
     ],
-    details: [
-      { title: "Between lugs", value: "20 mm" },
-      { title: "Bracelet", value: "leather strap" },
-      { title: "Case", value: "Steel" },
-      { title: "Case diameter", value: "42 mm" },
-      { title: "Dial color", value: "Black" },
-      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
-    ],
-    imageUrl:
-      "https://i.pinimg.com/originals/31/9c/aa/319caa1a4db56436a7b3e9a772ec7ec8.jpg",
+    imageUrl: gikids,
   },
   {
     title: "Формат Но-Гі",
-    price: "$350.00 USD",
     description:
       "Тренування бразильського джиу-джитсу без традиційного Гі може принести багато переваг. Тренування без гі стає все більш популярним серед практикуючих, і тут ми досліджуємо деякі переваги відмови від гі в обмін на рашгарди та шорти.",
     features: [
@@ -36,20 +29,10 @@ export const ProgrammsInfo = [
       "Чудовий спосіб освоїти інстинктивні реакції на незнайомі сценарії.",
       "Посилення уваги до основ сабмішн-боротьби.",
     ],
-    details: [
-      { title: "Between lugs", value: "20 mm" },
-      { title: "Bracelet", value: "leather strap" },
-      { title: "Case", value: "Steel" },
-      { title: "Case diameter", value: "42 mm" },
-      { title: "Dial color", value: "Black" },
-      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
-    ],
-    imageUrl:
-      "https://graciebotany.com.au/wp-content/uploads/2023/03/gracie-botany-no-gi-jiu-jitsu-training.jpg",
+    imageUrl: nogikids,
   },
   {
     title: "Drill сесії",
-    price: "$350.00 USD",
     description:
       "Drill сесії - особливо корисно для розвитку груп м’язів, які використовуються в BJJ, особливо для стегон. Рух стегна є вирішальним у BJJ, оскільки він дозволяє практикуючим генерувати силу та виконувати такі техніки, як підйоми та подання. Однак багатьом учням BJJ важко навчитися правильно рухати стегнами, що робить Drill сесії важливим інструментом для вдосконалення.",
     features: [
@@ -60,20 +43,11 @@ export const ProgrammsInfo = [
       "Вправи спрямовані на вдосконалення рухів і мобільності практикуючого.",
       "Допомагають практикуючому розвинути необхідні рефлекси.",
     ],
-    details: [
-      { title: "Between lugs", value: "20 mm" },
-      { title: "Bracelet", value: "leather strap" },
-      { title: "Case", value: "Steel" },
-      { title: "Case diameter", value: "42 mm" },
-      { title: "Dial color", value: "Black" },
-      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
-    ],
     imageUrl:
       "https://evolve-mma.com/wp-content/uploads/2022/03/bjj-drills.jpg",
   },
   {
     title: "День боротьби",
-    price: "$350.00 USD",
     description:
       "Практика є ключовим аспектом у тренуваннях та покращення своїх навичок, техніки та фізичної підготовки. Тому, наприкінці кожного тренування ми проводимо невеликі сесії боротьби з 5-6 раундів. Але окрім цього, щосуботи в нашій академії ми практикуємо день боротьби. Де все тренування присвячене циклічній боротьбі по колу.",
     features: [
@@ -84,20 +58,11 @@ export const ProgrammsInfo = [
       "Зміцнюєте свої сильні сторони та опрацьовуєте слабкі.",
       "Отримуєте необхідний досвід боротьби.",
     ],
-    details: [
-      { title: "Between lugs", value: "20 mm" },
-      { title: "Bracelet", value: "leather strap" },
-      { title: "Case", value: "Steel" },
-      { title: "Case diameter", value: "42 mm" },
-      { title: "Dial color", value: "Black" },
-      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
-    ],
     imageUrl:
       "https://atosjiujitsuhq.com/wp-content/uploads/2022/06/open-mat.jpeg",
   },
   {
     title: "Участь на семінарах та відкритих килимах",
-    price: "$350.00 USD",
     description:
       "Участь не є основним аспектом наших тренувань, проте наші практикуючі часто є гостями на подібних заходах. Так як це чудова можливість освоїти нові техніки, зміцнити свою, дізнатися щось нове, отримати безцінний досвід, а також стати частиною цього потужного ком'юніті.",
     features: [
@@ -107,20 +72,10 @@ export const ProgrammsInfo = [
       "Ознайомлення з філософією інших академій.",
       "Вивчення нових технік, вправ та концепцій.",
     ],
-    details: [
-      { title: "Between lugs", value: "20 mm" },
-      { title: "Bracelet", value: "leather strap" },
-      { title: "Case", value: "Steel" },
-      { title: "Case diameter", value: "42 mm" },
-      { title: "Dial color", value: "Black" },
-      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
-    ],
-    imageUrl:
-      "https://bjjcampfinder.com/app/uploads/2020/07/Seminar-BJJ-Summer-Week-1024x684.jpg",
+    imageUrl: seminar,
   },
   {
     title: "Підготовка до змагань та турнірів.",
-    price: "$350.00 USD",
     description:
       "У стінах нашої академії ви зможете отримати потрібні знання, навички та досвід, які необхідні для перемоги на змаганнях. Практикуючі нашої академії мають високі показники на змаганнях та завжди показують відмінний результат.",
     features: [
@@ -131,15 +86,6 @@ export const ProgrammsInfo = [
       "Турніри надають відмінну можливість зустрітися з однодумцями.",
       "Конкурентна складова змагань може зробити заняття джиу-джитсу більш захоплюючим.",
     ],
-    details: [
-      { title: "Between lugs", value: "20 mm" },
-      { title: "Bracelet", value: "leather strap" },
-      { title: "Case", value: "Steel" },
-      { title: "Case diameter", value: "42 mm" },
-      { title: "Dial color", value: "Black" },
-      { title: "Water resistance", value: "5 bar (50 metres / 167 feet)" },
-    ],
-    imageUrl:
-      "https://thefightersguide.com/wp-content/uploads/2022/06/first-bjj-competition.jpg",
+    imageUrl: korotich,
   },
 ];
