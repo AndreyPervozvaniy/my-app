@@ -84,7 +84,7 @@ const Main = () => {
           </video>
           <FlexContainer overflow="hidden" pos="absolute" opacity="90%">
             <Text
-              fontSize="30px"
+              fontSize={{ base: "2xl", sm: "4xl", md: "4xl" }}
               color="white"
               fontWeight="500"
               letterSpacing="4px"
