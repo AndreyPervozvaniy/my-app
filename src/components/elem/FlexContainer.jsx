@@ -3,10 +3,10 @@ import { Flex } from "@chakra-ui/react";
 
 const FlexContainer = ({ children, ...props }) => {
   return (
-    <Flex justifyContent={"center"} alignItems={"center"} {...props}>
+    <Flex {...props} justifyContent={"center"} alignItems={"center"} >
       {children}
     </Flex>
   );
 };
-
+ 
 export default FlexContainer;

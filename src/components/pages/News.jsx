@@ -7,6 +7,8 @@ import Elevator from "../elem/Elevator";
 import SmallCentered from "../elem/Footer";
 import { useNewsHooks } from "../../hooks";
 import FlexContainer from "../elem/FlexContainer";
+
+
 function News() {
   const { router, setPage, pagination, ourNews } = useNewsHooks();
 
@@ -28,7 +30,7 @@ function News() {
                 rounded={"md"}
                 src={item.image}
                 onClick={() =>
-                  router(PATHS.NEW_SLOT, {
+                  router(PATHS.NEWS_SLOT.replace(":id", `id=${item.id}`), {
                     state: {
                       text: item.text,
                       img: item.image,
@@ -65,7 +67,7 @@ function News() {
             </FlexContainer>
           ))}
           <FlexContainer padding="20px">
-            <Flex justify="space-around" w="100%">
+            <Flex justify="space-around" w="30%">
               {pagination.map((item, index) => (
                 <Button
                   justifyContent="center"

@@ -318,6 +318,19 @@ export const buttons = [
     id: "Society",
   },
 ];
+export const buttonShedule = [
+  {
+    label: "Контакти",
+    id: "InstructorContact",
+    colorScheme: "red",
+    bgColor: "blue.400",
+  },
+  {
+    label: "Записатись",
+    id: "telegram",
+  },
+];
+ 
 export const ContainerData = [
   {
     headingText: "Твій шлях",

@@ -92,7 +92,10 @@ export default function Navbar() {
         <Image
           w="200px"
           src={Logo}
-          onClick={() => router("/")}
+          onClick={(e) => {
+            e.preventDefault();  
+            router("/");
+          }}
           transition="all 0.7s"
           cursor="pointer"
           _hover={{ transform: "scale(1.2)" }}

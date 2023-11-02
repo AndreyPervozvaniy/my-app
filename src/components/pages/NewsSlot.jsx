@@ -3,6 +3,7 @@ import Navbar from "../navigation/Nav";
 import { Box, Image, Button, Text } from "@chakra-ui/react";
 import { useNewsSlotHooks } from "../../hooks";
 import FlexContainer from "../elem/FlexContainer";
+
 const NewsSlot = () => {
   const {
     router,

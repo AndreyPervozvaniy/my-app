@@ -16,6 +16,10 @@ const Elevator = () => {
         borderRadius="full"
         color={"white"}
         bgColor={"#3f48cc"}
+        _hover={{
+          backgroundColor: "#2a2f7d", // Новый цвет фона при наведении 
+          opacity: "50%"
+        }}
         onClick={() => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
