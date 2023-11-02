@@ -16,14 +16,15 @@ import Elevator from "../elem/Elevator";
  
 import { buttons } from "../../utils";
 import { ContainerData } from "../../utils";
-import ButtonBlock from "../elem/ButtonTemplate";
+ 
 import {  SocialLinksContacts } from "../../utils";
 import SmallCentered from "../elem/Footer";
-import { useContactsHooks } from "../../hooks";
+ 
 import FlexContainer from "../elem/FlexContainer";
 import CustomHeading from "../elem/HeadingTemplate";
 import SmallHeading from "../elem/SmallHeadingTemplate";
 import InstructorsNumbersTemplate from "../elem/InstructorsNumber";
+import ButtonStack from "../elem/ButtonsTemplate";
  
 const Card = ({ heading, description, icon, href }) => {
   //---------------------------------------------- кнопки соцсетей-----------------------------------
@@ -59,7 +60,7 @@ const Card = ({ heading, description, icon, href }) => {
   );
 };
 const Contacts = () => {
-  const { handleButtonClick } = useContactsHooks();
+  
   
 
   return (
@@ -104,26 +105,13 @@ const Contacts = () => {
                   {container.bus}
                   <br /> {container.trolley}
                 </Text>
-                <Stack
-                  spacing={{ base: 4, sm: 6 }}
-                  direction={{ base: "column", sm: "row" }}
-                  justifyContent={{
-                    base: "center",
-                    sm: "center",
-                    md: "center",
-                    lg: "left",
-                  }}
-                >
-                  {buttons.map((button, index) => (
-                    <ButtonBlock
-                      key={index}
-                      label={button.label}
-                      onClick={() => handleButtonClick(button.id)}
-                      colorScheme={button.colorScheme || "gray"}
-                      bgColor={button.bgColor || "gray.100"}
-                    />
-                  ))}
-                </Stack>
+                <ButtonStack buttons={buttons}   justifyContent={{
+        base: "center",
+        sm: "center",
+        md: "center",
+        lg: "left",
+      }}  />
+              
               </Stack>
               <FlexContainer flex={1} w={"full"} flexDir={"column"}>
                 <Box
@@ -162,7 +150,7 @@ const Contacts = () => {
             }
           />
 
-          <Container maxW={"5xl"} mt={12} mb={12} p={4}>
+          <Container maxW={"full"} mt={12} mb={12} p={4}>
             <FlexContainer flexWrap="wrap" gridGap={6} p={4}>
               {SocialLinksContacts.map((link, index) => (
                 <Link href={link.href} isExternal key={index}>

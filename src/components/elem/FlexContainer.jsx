@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
 
-const FlexContainer = ({ children, ...props }) => {
+function FlexContainer  ({ children, ...props }) {
   return (
     <Flex {...props} justifyContent={"center"} alignItems={"center"} >
       {children}
