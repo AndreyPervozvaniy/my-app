@@ -98,7 +98,7 @@ export default function Navbar() {
           }}
           transition="all 0.7s"
           cursor="pointer"
-          _hover={{ transform: "scale(1.2)" }}
+          // _hover={{ transform: "scale(1.2)" }}
         />
 
         <HStack
