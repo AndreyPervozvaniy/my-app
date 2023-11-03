@@ -70,6 +70,7 @@ const Main = () => {
       <Flex fontFamily="Sofia Sans Condensed " color="#000" flexDir={"column"}>
         <FlexContainer textAlign="center" w="100%" h="100vh">
           <video
+           loading="eager"
             autoPlay
             loop
             playsInline
@@ -80,7 +81,7 @@ const Main = () => {
               objectFit: "cover",
             }}
           >
-            <source src={video} type="video/mp4" />
+            <source src={video} type="video/mp4"  />
           </video>
           <FlexContainer overflow="hidden" pos="absolute" opacity="90%">
             <Text
