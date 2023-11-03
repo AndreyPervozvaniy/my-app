@@ -35,6 +35,7 @@ const Programms = () => {
             >
               <Flex paddingTop={"5%"}>
                 <Image
+                loading="eager"
                   rounded={"md"}
                   alt={"product image"}
                   src={product.imageUrl}

@@ -95,6 +95,7 @@ const Instructors = () => {
               </Stack>
               <Flex>
                 <Image
+                loading='eager'
                   rounded={"xl"}
                   alt={"feature image"}
                   src={instructor.imageSrc}
