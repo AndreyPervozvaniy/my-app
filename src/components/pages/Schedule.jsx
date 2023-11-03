@@ -16,9 +16,9 @@ const Schedule = () => {
     <>
       <Navbar />
       <Elevator/>
-      <FlexContainer  padding={"10%"} >
+      <FlexContainer   >
         <Container maxW="7xl" p={{ base: 5, md: 10 }} textAlign={"center"} flexdir={'column'}>
-          <SmallHeading text={"Розклад наших класів"}   />
+          <SmallHeading text={"Розклад наших класів"} pt={{base:'15%', sm:'10%', md:'10%',lg:'5%'} }/>
           <SimpleGrid
             columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
             spacing={5}

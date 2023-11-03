@@ -2,12 +2,12 @@ import React from "react";
 import { Stack, Heading, Text, Container } from "@chakra-ui/react";
 function SmallHeading({ text, text1, ...props }) {
   return (
-    <Stack spacing={4} as={Container} maxW={"full"} textAlign={"center"}>
+    <Stack spacing={4} as={Container} maxW={"full"} textAlign={"center"}{...props}>
       <Heading
         fontSize={{ base: "2xl", sm: "4xl", md: "4xl" }}
         fontWeight={"bold"}
         textTransform={"uppercase"}
-        {...props}
+        
       >
         {text}
       </Heading>
