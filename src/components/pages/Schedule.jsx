@@ -2,13 +2,11 @@ import React from "react";
 import Navbar from "../navigation/Nav";
 import { Box, Container, SimpleGrid, Text  } from "@chakra-ui/react";
 import { statData } from "../../utils";
- 
 import FlexContainer from "../elem/FlexContainer";
 import Elevator from "../elem/Elevator";
 import InstructorsNumbersTemplate from "../elem/InstructorsNumber";
 import SmallCentered from "../elem/Footer";
 import { buttonShedule } from "../../utils";
- 
 import SmallHeading from "../elem/SmallHeadingTemplate";
 import ButtonStack from "../elem/ButtonsTemplate";
 const Schedule = () => {  
@@ -48,11 +46,9 @@ const Schedule = () => {
         md: "center",
         lg: "center",
       }}  />
-        
      <InstructorsNumbersTemplate/>
         </Container>  
       </FlexContainer>   
-      
       <SmallCentered/>
     </>
   );

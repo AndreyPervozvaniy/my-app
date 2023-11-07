@@ -103,7 +103,7 @@ export default function SmallCentered() {
         >
           <Text textAlign={{ base: "center" }}>
             © 2023 Yamasaki Academy. All rights reserved. Made with 🧡 by
-            Andrew, Bulka, Serg.
+            Andrew, Bulka, Serg, Yamasaki team.
           </Text>
           <Stack direction={"row"} spacing={6}>
             {socialButtonsData.map((button, index) => (
