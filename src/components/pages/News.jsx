@@ -53,7 +53,7 @@ function News() {
               </Text>
               <Button
                 onClick={() =>
-                  router(PATHS.NEW_SLOT, {
+                  router(PATHS.NEWS_SLOT.replace(":id", `id=${item.id}`), {
                     state: {
                       text: item.text,
                       img: item.image,
