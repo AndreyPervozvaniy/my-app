@@ -21,7 +21,7 @@ function ButtonStack({ buttons, ...props }) { const { handleButtonClick } = useC
   
     onClick={() => {
             if (button.id === "telegram") {
-              window.open("https://t.me/YamasakiAcademyDnipro", "_blank");
+              window.open("https://t.me/YamasakiAcademyDnipro"  );
             } else {
               handleButtonClick(button.id); // Предполагается, что у вас есть функция handleButtonClick
             }
