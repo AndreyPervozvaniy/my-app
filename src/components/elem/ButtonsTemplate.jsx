@@ -23,7 +23,7 @@ function ButtonStack({ buttons, ...props }) { const { handleButtonClick } = useC
             if (button.id === "telegram") {
               window.open("https://t.me/YamasakiAcademyDnipro"  );
             } else {
-              handleButtonClick(button.id); // Предполагается, что у вас есть функция handleButtonClick
+              handleButtonClick(button.id); 
             }
           }}
    colorScheme={button.colorScheme || "gray"}

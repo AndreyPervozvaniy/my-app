@@ -5,7 +5,7 @@ import lesha from "../../src/assets/img/lesha.jpg";
 import kor from "../../src/assets/img/kor.jpg";
 import andrei from "../../src/assets/img/andrei.jpg";
 import zaika from "../../src/assets/img/zaika.jpg";
-import { Icon } from "@chakra-ui/react";
+import { Icon,Text } from "@chakra-ui/react";
 import elnikova from "../../src/assets/img/elnikova.jpg";
 import Smile from "../assets/img/try1.jpg";
 import Coach from "../assets/img/coach1.png";
@@ -16,6 +16,7 @@ import river from "../assets/img/vizit.png";
 import integralseminar from "../assets/img/integralseminar.png";
 import { FaTelegram, FaInstagram } from "react-icons/fa";
 import { GiBlackBelt, GiPunchBlast } from "react-icons/gi";
+ import localTour from '../assets/img/localtour.jpg'
 import {
   FcGraduationCap,
   FcBullish,
@@ -99,7 +100,9 @@ export const cards = [
   },
   {
     img: elnikova,
-  },
+  }, {
+    img: localTour,
+  },  
 ];
 
 export const Advantage = [
@@ -411,3 +414,38 @@ export const testimonialsData = [
     },
   },
 ];
+
+export const AboutAcdemy = <Text
+            color={"black"}
+            fontSize={{ base: "lg", sm: "lg " }}
+            textAlign={"center"}
+          >
+            Yamasaki Academy Jiu Jitsu Dnipro є представництвом міжнародної
+            школи вивчення бразильського джиу-джитсу.
+            <br />
+            <br />В даний час академія Ямасакі має кілька шкіл джиу-джитсу і
+            філій академій єдиноборств у Сполучених Штатах, Бразилії,
+            Домініканській Республіці, Іспанії, Швеції та Україні.
+            <br />
+            <br /> Yamasaki Academy є одним з провідних клубів бразильського
+            джиу-джитсу в світі. Заснована у 1981 році, Yamasaki Academy
+            виховала багато відомих чемпіонів у світі бойових мистецтв. Клуби
+            Yamasaki Academy працюють за певним підходом до тренувань, який
+            включає в себе розвиток фізичної та ментальної сили, техніки
+            бойового мистецтва, спаринги та інші елементи.
+            <br />
+            <br /> Yamasaki Academy має офіційний статус члена міжнародних
+            федерацій бразильського джиу-джитсу IBJJF, AJP та української
+            федерації UFBJJ.
+            <br />
+            <br /> Основними цілями нашої академії є розвиток та популяризація
+            бразильського джиу-джитсу в Україні, всебічне вивчення всіх аспектів
+            даного бойового мистецтва, а також популяризація здорового способу
+            життя серед молоді та дорослих.
+            <br />
+            <br /> Бразильський джиу-джитсу - це високоінтенсивний вид спорту,
+            який допомагає розвивати фізичну та ментальну витривалість,
+            впевненість та самодисципліну. Якщо ви цікавитеся бразильським
+            джиу-джитсу, то Yamasaki Academy може бути одним з варіантів для
+            початку тренувань.
+          </Text>
