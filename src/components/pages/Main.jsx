@@ -16,7 +16,7 @@ import {
   AccordionPanel,
   useColorModeValue,
   Container,
-  AccordionIcon,
+  AccordionIcon
 } from "@chakra-ui/react";
 import video from "../../assets/video/mainvideo.mp4";
 import { CheckIcon } from "@chakra-ui/icons";
@@ -26,7 +26,7 @@ import { Advantage } from "../../utils";
 import { Class } from "../../utils";
 import { Question } from "../../utils";
 import SmallCentered from "../elem/Footer";
-
+ 
 import FlexContainer from "../elem/FlexContainer";
 import SmallHeading from "../elem/SmallHeadingTemplate";
 const Card = ({ heading, description, icon }) => {
@@ -62,10 +62,13 @@ const Card = ({ heading, description, icon }) => {
     </Box>
   );
 };
-const Main = () => {
-  return (
+ 
+const Main = () => {   
+  
+     
+  return ( 
     <>
-      <Navbar />
+        <Navbar />
       <Elevator />
       <Flex fontFamily="Sofia Sans Condensed " color="#000" flexDir={"column"}>
         <FlexContainer textAlign="center" w="100%" h="100vh">
@@ -95,6 +98,7 @@ const Main = () => {
             </Text>
           </FlexContainer>{" "}
         </FlexContainer>
+
         <FlexContainer w="100%">
           <Flex overflow="hidden">
             <FlexContainer h="100%" p={12} flexDirection="column">
@@ -126,7 +130,7 @@ const Main = () => {
             overflow="hidden"
             fontSize="20px"
             fontWeight="500"
-            letterSpacing="4px"
+           
             justifyContent="space-between"
             w="100%"
             flexDirection="column"
