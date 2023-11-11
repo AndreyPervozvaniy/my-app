@@ -3,13 +3,14 @@ import Navbar from "../navigation/Nav";
 import { Box, Image, Button, Text } from "@chakra-ui/react";
 import { useNewsSlotHooks } from "../../hooks";
 import FlexContainer from "../elem/FlexContainer";
+import { Link } from "react-router-dom";
 
 const NewsSlot = () => {
   const {
     router,
     text,
     img,
-    img2,
+    img2,url,
     isImageExpanded,
     setIsImageExpanded,
     showDownloadButton,
@@ -74,6 +75,19 @@ const NewsSlot = () => {
               >
                 <Text padding="10px">Завантажити результат</Text>
               </Button>
+            )}
+            {showDownloadButton && (
+              <Link to={url}> <Button
+                background="white"
+                border="1px solid grey"
+                borderRadius="20px"
+                padding="10px"
+                marginBottom="20px"
+                 
+              >
+                <Text padding="10px">Відвідати подію</Text>
+              </Button></Link>
+             
             )}
           </FlexContainer>{" "}
         </Box>

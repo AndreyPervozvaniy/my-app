@@ -35,6 +35,7 @@ function News() {
                       text: item.text,
                       img: item.image,
                       img2: item.image2,
+                      url:item.url
                     },
                   })
                 }

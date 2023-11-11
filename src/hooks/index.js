@@ -80,7 +80,7 @@ export function useNewsSlotHooks() {
   const router = useNavigate();
   const location = useLocation();
   const { state } = location;
-  const { text, img, img2 } = state;
+  const { text, img, img2, url } = state;
 
   const [isImageExpanded, setIsImageExpanded] = useState(false);
   const [showDownloadButton] = useState(!!img2);
@@ -96,7 +96,7 @@ export function useNewsSlotHooks() {
     router,
     text,
     img,
-    img2,
+    img2, url,
     isImageExpanded,
     setIsImageExpanded,
     showDownloadButton,
