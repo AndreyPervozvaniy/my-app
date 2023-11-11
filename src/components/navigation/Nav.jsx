@@ -165,7 +165,7 @@ export default function Navbar() {
         </HStack>
 
         <IconButton
-          size="md"
+          size="sm"
           icon={<GiHamburgerMenu />}
           aria-label="Open Menu"
           display={{ base: "inherit", lg: "none" }}
