@@ -90,7 +90,7 @@ export default function Navbar() {
     >
       <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto"   px={{base:5, md:2, lg:0}} >
         <Image
-          w="200px"
+          w={{base:'150px',md:'170px',lg:"200px"}}
           src={Logo}
           onClick={(e) => {
             e.preventDefault();  
