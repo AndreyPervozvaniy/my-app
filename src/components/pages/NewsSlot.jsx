@@ -10,7 +10,8 @@ const NewsSlot = () => {
     router,
     text,
     img,
-    img2,url,
+    img2,
+    url,
     isImageExpanded,
     setIsImageExpanded,
     showDownloadButton,
@@ -77,17 +78,17 @@ const NewsSlot = () => {
               </Button>
             )}
             {showDownloadButton && (
-              <Link to={url}> <Button
-                background="white"
-                border="1px solid grey"
-                borderRadius="20px"
-                padding="10px"
-                marginBottom="20px"
-                 
-              >
-                <Text padding="10px">Відвідати подію</Text>
-              </Button></Link>
-             
+              <Link to={url} target="blank">
+                <Button
+                  background="white"
+                  border="1px solid grey"
+                  borderRadius="20px"
+                  padding="10px"
+                  marginBottom="20px"
+                >
+                  <Text padding="10px">Відвідати подію</Text>
+                </Button>
+              </Link>
             )}
           </FlexContainer>{" "}
         </Box>
