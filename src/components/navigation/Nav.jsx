@@ -88,7 +88,7 @@ export default function Navbar() {
       zIndex="11"
       boxShadow={showShadow ? "0 2px 4px rgba(0, 0, 0, 0.2)" : "none"}
     >
-      <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto"   px={{base:5, md:2, lg:0}} >
+      <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto"   px={{base:6, md:2, lg:0}} >
         <Image
           w={{base:'150px',md:'170px',lg:"200px"}}
           src={Logo}
