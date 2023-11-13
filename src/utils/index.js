@@ -7,7 +7,7 @@ import andrei from "../../src/assets/img/andrei.jpg";
 import zaika from "../../src/assets/img/zaika.jpg";
 import { Icon,Text } from "@chakra-ui/react";
 import elnikova from "../../src/assets/img/elnikova.jpg";
-import Smile from "../assets/img/try1.jpg";
+import Smile from "../assets/img/Kolya.jpg";
 import Coach from "../assets/img/coach1.png";
 import vlad from "../assets/img/vlados.jpg";
 import kids from "../assets/img/kids.jpg";
