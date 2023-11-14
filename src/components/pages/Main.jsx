@@ -18,7 +18,7 @@ import {
   Container,
   AccordionIcon
 } from "@chakra-ui/react";
-import video from "../../assets/video/mainvideo.mp4";
+ 
 import { CheckIcon } from "@chakra-ui/icons";
 import CarouselTemplate from "../elem/Carousel";
 import Elevator from "../elem/Elevator";
