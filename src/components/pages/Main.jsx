@@ -18,7 +18,7 @@ import {
   Container,
   AccordionIcon
 } from "@chakra-ui/react";
- 
+import video from "../../assets/video/mainvideo.mp4";
 import { CheckIcon } from "@chakra-ui/icons";
 import CarouselTemplate from "../elem/Carousel";
 import Elevator from "../elem/Elevator";
@@ -72,8 +72,7 @@ const Main = () => {
       <Elevator />
       <Flex fontFamily="Sofia Sans Condensed " color="#000" flexDir={"column"}>
         <FlexContainer textAlign="center" w="100%" h="100vh">
-        <CarouselTemplate />
-          {/* <video
+          <video
            loading="eager"
             autoPlay
             loop
@@ -86,7 +85,7 @@ const Main = () => {
             }}
           >
             <source src={video} type="video/mp4"  />
-          </video> */}
+          </video>
           <FlexContainer overflow="hidden" pos="absolute" opacity="90%">
             <Text
               fontSize={{ base: "2xl", sm: "4xl", md: "4xl" }}
