@@ -16,6 +16,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   swipe: true,
+  pauseOnHover: false, 
 };
 
 export default function CarouselTemplate() {

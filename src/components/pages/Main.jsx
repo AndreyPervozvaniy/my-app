@@ -72,7 +72,8 @@ const Main = () => {
       <Elevator />
       <Flex fontFamily="Sofia Sans Condensed " color="#000" flexDir={"column"}>
         <FlexContainer textAlign="center" w="100%" h="100vh">
-          <video
+        <CarouselTemplate />
+          {/* <video
            loading="eager"
             autoPlay
             loop
@@ -85,7 +86,7 @@ const Main = () => {
             }}
           >
             <source src={video} type="video/mp4"  />
-          </video>
+          </video> */}
           <FlexContainer overflow="hidden" pos="absolute" opacity="90%">
             <Text
               fontSize={{ base: "2xl", sm: "4xl", md: "4xl" }}
