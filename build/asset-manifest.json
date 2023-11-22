@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.cd649cf6.css",
-    "main.js": "/static/js/main.7b03714a.js",
-    "static/js/113.c1b93939.chunk.js": "/static/js/113.c1b93939.chunk.js",
+    "main.js": "/static/js/main.8881f6fc.js",
+    "static/js/190.3f7705a1.chunk.js": "/static/js/190.3f7705a1.chunk.js",
     "static/js/557.3f585c95.chunk.js": "/static/js/557.3f585c95.chunk.js",
     "static/js/923.c524ddd6.chunk.js": "/static/js/923.c524ddd6.chunk.js",
     "static/js/571.6f316d07.chunk.js": "/static/js/571.6f316d07.chunk.js",
@@ -17,7 +17,6 @@
     "static/js/865.3fd5b266.chunk.js": "/static/js/865.3fd5b266.chunk.js",
     "static/js/340.cdc2703e.chunk.js": "/static/js/340.cdc2703e.chunk.js",
     "static/js/471.e3929702.chunk.js": "/static/js/471.e3929702.chunk.js",
-    "static/media/mainvideo.mp4": "/static/media/mainvideo.ae4b12f3c7de03800842.mp4",
     "static/media/integralseminar.png": "/static/media/integralseminar.2f7f925b843b85f1400c.png",
     "static/media/vizit.png": "/static/media/vizit.ea2c7cbc6fec040313b3.png",
     "static/media/coach1.png": "/static/media/coach1.cac5635d62b51c7330bf.png",
@@ -32,6 +31,7 @@
     "static/media/kirillKudr.jpg": "/static/media/kirillKudr.615bd3ee84b85c68aa67.jpg",
     "static/media/RESULT 4.png": "/static/media/RESULT 4.db6ec0632ac235967444.png",
     "static/media/elnikova.jpg": "/static/media/elnikova.7deab1d8353d8db079ae.jpg",
+    "static/media/doc.mp4": "/static/media/doc.a7e5bdbd98de7515c726.mp4",
     "static/media/krivbas-challenge-open-cup-2023.png": "/static/media/krivbas-challenge-open-cup-2023.da8c3a81cda26b470f0d.png",
     "static/media/src5.png": "/static/media/src5.4a3b59a31756cce85f1f.png",
     "static/media/src3.png": "/static/media/src3.4a9c644520e9ec731839.png",
@@ -52,8 +52,8 @@
     "static/media/news2.jpg": "/static/media/news2.a2bea1150eede6ff6149.jpg",
     "index.html": "/index.html",
     "main.cd649cf6.css.map": "/static/css/main.cd649cf6.css.map",
-    "main.7b03714a.js.map": "/static/js/main.7b03714a.js.map",
-    "113.c1b93939.chunk.js.map": "/static/js/113.c1b93939.chunk.js.map",
+    "main.8881f6fc.js.map": "/static/js/main.8881f6fc.js.map",
+    "190.3f7705a1.chunk.js.map": "/static/js/190.3f7705a1.chunk.js.map",
     "557.3f585c95.chunk.js.map": "/static/js/557.3f585c95.chunk.js.map",
     "923.c524ddd6.chunk.js.map": "/static/js/923.c524ddd6.chunk.js.map",
     "571.6f316d07.chunk.js.map": "/static/js/571.6f316d07.chunk.js.map",
@@ -71,6 +71,6 @@
   },
   "entrypoints": [
     "static/css/main.cd649cf6.css",
-    "static/js/main.7b03714a.js"
+    "static/js/main.8881f6fc.js"
   ]
 }
