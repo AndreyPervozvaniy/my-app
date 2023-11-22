@@ -73,7 +73,6 @@ const Main = () => {
           <video
             loading="eager"
             autoPlay
-            loop
             playsInline
             muted
             style={{
