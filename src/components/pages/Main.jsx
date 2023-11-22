@@ -84,7 +84,7 @@ const Main = () => {
           >
             <source src={video} type="video/mp4" />
           </video>
-          <FlexContainer overflow="hidden" pos="absolute" opacity="90%">
+          {/* <FlexContainer overflow="hidden" pos="absolute" opacity="90%">
             <Text
               fontSize={{ base: "2xl", sm: "4xl", md: "4xl" }}
               color="white"
@@ -94,7 +94,7 @@ const Main = () => {
               YAMASAKI ACADEMY DNIPRO <br />
               Почни свій шлях у світ Джіу-Джітсу разом з нами!
             </Text>
-          </FlexContainer>{" "}
+          </FlexContainer>{" "} */}
         </FlexContainer>
         <FlexContainer w="100%">
           <Flex overflow="hidden">
