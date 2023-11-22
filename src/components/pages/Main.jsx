@@ -16,9 +16,9 @@ import {
   AccordionPanel,
   useColorModeValue,
   Container,
-  AccordionIcon
+  AccordionIcon,
 } from "@chakra-ui/react";
-import video from "../../assets/video/mainvideo.mp4";
+import video from "../../assets/video/background.mp4";
 import { CheckIcon } from "@chakra-ui/icons";
 import CarouselTemplate from "../elem/Carousel";
 import Elevator from "../elem/Elevator";
@@ -26,7 +26,7 @@ import { Advantage } from "../../utils";
 import { Class } from "../../utils";
 import { Question } from "../../utils";
 import SmallCentered from "../elem/Footer";
- 
+
 import FlexContainer from "../elem/FlexContainer";
 import SmallHeading from "../elem/SmallHeadingTemplate";
 const Card = ({ heading, description, icon }) => {
@@ -62,32 +62,30 @@ const Card = ({ heading, description, icon }) => {
     </Box>
   );
 };
- 
-const Main = () => {   
-  
-     
-  return ( 
+
+const Main = () => {
+  return (
     <>
-        <Navbar />
+      <Navbar />
       <Elevator />
       <Flex fontFamily="Sofia Sans Condensed " color="#000" flexDir={"column"}>
         <FlexContainer textAlign="center" w="100%" h="100vh">
           <video
-           loading="eager"
+            loading="eager"
             autoPlay
             loop
             playsInline
             muted
             style={{
-              width: "100%",
-              height: "100%",
+              width: "100%", // Use percentage width
+              height: "auto", // Maintain aspect ratio
               objectFit: "cover",
             }}
           >
-            <source src={video} type="video/mp4"  />
+            <source src={video} type="video/mp4" />
           </video>
           <FlexContainer overflow="hidden" pos="absolute" opacity="90%">
-            <Text
+            {/* <Text
               fontSize={{ base: "2xl", sm: "4xl", md: "4xl" }}
               color="white"
               fontWeight="500"
@@ -95,10 +93,9 @@ const Main = () => {
             >
               YAMASAKI ACADEMY DNIPRO <br />
               Почни свій шлях у світ Джіу-Джітсу разом з нами!
-            </Text>
+            </Text> */}
           </FlexContainer>{" "}
         </FlexContainer>
-
         <FlexContainer w="100%">
           <Flex overflow="hidden">
             <FlexContainer h="100%" p={12} flexDirection="column">
@@ -130,7 +127,6 @@ const Main = () => {
             overflow="hidden"
             fontSize="20px"
             fontWeight="500"
-           
             justifyContent="space-between"
             w="100%"
             flexDirection="column"
