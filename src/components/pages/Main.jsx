@@ -18,7 +18,7 @@ import {
   Container,
   AccordionIcon,
 } from "@chakra-ui/react";
-import video from "../../assets/video/doc.mp4";
+import video from "../../assets/video/titlevideo.mp4";
 import { CheckIcon } from "@chakra-ui/icons";
 import CarouselTemplate from "../elem/Carousel";
 import Elevator from "../elem/Elevator";
@@ -73,27 +73,17 @@ const Main = () => {
           <video
             loading="eager"
             autoPlay
+            title="title video"
             playsInline
             muted
             style={{
-              width: "100%", // Use percentage width
-              height: "auto", // Maintain aspect ratio
+              width: "100%",
+              height: "auto",
               objectFit: "cover",
             }}
           >
             <source src={video} type="video/mp4" />
           </video>
-          {/* <FlexContainer overflow="hidden" pos="absolute" opacity="90%">
-            <Text
-              fontSize={{ base: "2xl", sm: "4xl", md: "4xl" }}
-              color="white"
-              fontWeight="500"
-              letterSpacing="4px"
-            >
-              YAMASAKI ACADEMY DNIPRO <br />
-              Почни свій шлях у світ Джіу-Джітсу разом з нами!
-            </Text>
-          </FlexContainer>{" "} */}
         </FlexContainer>
         <FlexContainer w="100%">
           <Flex overflow="hidden">

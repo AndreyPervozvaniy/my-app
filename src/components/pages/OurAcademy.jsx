@@ -17,6 +17,7 @@ import Elevator from "../elem/Elevator";
 import CustomHeading from "../elem/HeadingTemplate";
 import { FcApproval } from "react-icons/fc";
 import { AboutAcdemy } from "../../utils";
+import FlexContainer from "../elem/FlexContainer";
 const OurAcademy = () => {
   const Testimonial = (props) => {
     const { children } = props;
@@ -112,9 +113,27 @@ const OurAcademy = () => {
             text2={" нашу академію!"}
             fontWeight={600}
           />
-
-           {AboutAcdemy}
-        </Stack>
+          {AboutAcdemy}
+        </Stack>{" "}
+        <FlexContainer maxW={"7xl"}>
+          <Box
+            height={"300px"}
+            rounded={"2xl"}
+            boxShadow={"2xl"}
+            overflow={"hidden"}
+            w={"2xl"}
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/y8Ktmo8tAJk?si=b3RKGUoks8h89Sog"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </Box>{" "}
+        </FlexContainer>{" "}
       </Container>
       <Box bg={useColorModeValue("white", "gray.700")} p={4}>
         <Container maxW={"full"} py={16} as={Stack} spacing={12}>

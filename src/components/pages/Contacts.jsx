@@ -10,22 +10,21 @@ import {
   Box,
   Heading,
   useColorModeValue,
-  
 } from "@chakra-ui/react";
 import Elevator from "../elem/Elevator";
- 
+
 import { buttons } from "../../utils";
 import { ContainerData } from "../../utils";
- 
-import {  SocialLinksContacts } from "../../utils";
+
+import { SocialLinksContacts } from "../../utils";
 import SmallCentered from "../elem/Footer";
- 
+
 import FlexContainer from "../elem/FlexContainer";
 import CustomHeading from "../elem/HeadingTemplate";
 import SmallHeading from "../elem/SmallHeadingTemplate";
 import InstructorsNumbersTemplate from "../elem/InstructorsNumber";
 import ButtonStack from "../elem/ButtonsTemplate";
- 
+
 const Card = ({ heading, description, icon, href }) => {
   //---------------------------------------------- кнопки соцсетей-----------------------------------
   return (
@@ -60,9 +59,6 @@ const Card = ({ heading, description, icon, href }) => {
   );
 };
 const Contacts = () => {
-  
-  
-
   return (
     <>
       <Navbar />
@@ -105,13 +101,15 @@ const Contacts = () => {
                   {container.bus}
                   <br /> {container.trolley}
                 </Text>
-                <ButtonStack buttons={buttons}   justifyContent={{
-        base: "center",
-        sm: "center",
-        md: "center",
-        lg: "left",
-      }}  />
-              
+                <ButtonStack
+                  buttons={buttons}
+                  justifyContent={{
+                    base: "center",
+                    sm: "center",
+                    md: "center",
+                    lg: "left",
+                  }}
+                />
               </Stack>
               <FlexContainer flex={1} w={"full"} flexDir={"column"}>
                 <Box
@@ -125,7 +123,7 @@ const Contacts = () => {
                     src={container.mapEmbedURL}
                     width="100%"
                     height="100%"
-                    title="Основное видео"
+                    title="YouTube video player"
                     loading="lazy"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -138,8 +136,8 @@ const Contacts = () => {
         ))}
 
         {/*============================= бокс с номерами ===================================== */}
-        <InstructorsNumbersTemplate/>
-       
+        <InstructorsNumbersTemplate />
+
         {/*======================================= бокс с соцсетями====================================== */}
         <Box p={4}>
           <SmallHeading
