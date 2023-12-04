@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
-import Logo from "../../assets/img/LOGO.png";
+import Logo from "../../assets/img/Logo.png";
 import { BiChevronDown } from "react-icons/bi";
 import React from "react";
 import { useEffect, useState } from "react";

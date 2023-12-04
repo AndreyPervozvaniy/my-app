@@ -12,8 +12,16 @@ import vova from "../assets/img/newsContentImage/vova.jpg";
 import fernandoseminar from "../assets/img/newsContentImage/6786450_orig.jpg";
 import autumnCup from "../assets/img/newsContentImage/ukraine-bjj-pro-autumn-cup-2023.jpg";
 import result4 from "../assets/img/newsContentImage/RESULT 4.png";
+import promotionbelts from '../assets/img/newsContentImage/promotion.png'
+import adultbelt from '../assets/img/newsContentImage/adultbelt.png'
 import { v4 as uuidv4 } from "uuid";
-export const newscontent = [
+export const newscontent = [{
+  id: uuidv4(),
+  text: `13 листопада 2023 - Друзі, у стінах нашої академії пройшла традиційна та урочиста подія, присвячена врученню нових пасків. Наша академія рада вітати нові кольорові паски у наших лавах! Від щирого серця, наша академія вітає спортсменів, а також бажає успіхів, нових перемог, завзятості у тренуваннях і лише високих результатів! Вручення поясів проводилося під керівництвом професора нашої академії – Косенко Валентина Михайловича.`,
+  image: promotionbelts,
+  image2: adultbelt,
+  url: "/news",
+},
   {
     id: uuidv4(),
     text: `11.11.2023 - Дорогі друзі, сьогодні пройшов турнір у місті Кропивницький Ukraine BJJ Pro Autumn Cup 2023. У якому взяли участь велика кількість клубів із різних міст. Хочемо подякувати організаторам за якісно проведений захід, а також привітати учасників, їхніх тренерів та батьків. Також хочемо привітати наших спортсменів із відмінним виступом та заняттям великої кількості призових місць. Незважаючи на велику кількість учасників та сутичок, наші учні змогли показати високий рівень боротьби та гідно представити нашу академію! Вітаємо спортсменів!`,

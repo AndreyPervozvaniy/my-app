@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react";
-import Logo from "../../assets/img/LOGO.png";
+import Logo from "../../assets/img/Logo.png";
 import { useNavigate } from "react-router-dom";
 import { socialButtonsData } from "../../utils";
 const SocialButton = ({ children, label, href }) => {
