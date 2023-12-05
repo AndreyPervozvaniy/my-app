@@ -18,7 +18,7 @@ import {
   Container,
   AccordionIcon,
 } from "@chakra-ui/react";
-import video from "../../assets/video/titlevideo.mp4";
+import video from "../../assets/video/newtitlelogo.MOV";
 import { CheckIcon } from "@chakra-ui/icons";
 import CarouselTemplate from "../elem/Carousel";
 import Elevator from "../elem/Elevator";
@@ -69,7 +69,7 @@ const Main = () => {
       <Navbar />
       <Elevator />
       <Flex fontFamily="Sofia Sans Condensed " color="#000" flexDir={"column"}>
-        <FlexContainer textAlign="center" w="100%" h="100vh">
+        <FlexContainer textAlign="center" w="100%" h="100%">
           <video
             loading="eager"
             autoPlay
@@ -79,7 +79,7 @@ const Main = () => {
             style={{
               width: "100%",
               height: "auto",
-              objectFit: "cover",
+              
             }}
           >
             <source src={video} type="video/mp4" />
