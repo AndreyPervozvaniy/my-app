@@ -69,7 +69,7 @@ const Main = () => {
       <Navbar />
       <Elevator />
       <Flex fontFamily="Sofia Sans Condensed " color="#000" flexDir={"column"}>
-        <FlexContainer textAlign="center" w="100%" h="100%">
+        <FlexContainer textAlign="center" w="100%" h="100vh">
           <video
             loading="eager"
             autoPlay
