@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.cd649cf6.css",
-    "main.js": "/static/js/main.0a1b5630.js",
-    "static/js/248.f1b696f5.chunk.js": "/static/js/248.f1b696f5.chunk.js",
+    "main.js": "/static/js/main.be1e32b9.js",
+    "static/js/718.329e9e95.chunk.js": "/static/js/718.329e9e95.chunk.js",
     "static/js/557.7762c942.chunk.js": "/static/js/557.7762c942.chunk.js",
     "static/js/923.63fac088.chunk.js": "/static/js/923.63fac088.chunk.js",
     "static/js/571.a787149f.chunk.js": "/static/js/571.a787149f.chunk.js",
@@ -15,7 +15,7 @@
     "static/js/639.186e79a2.chunk.js": "/static/js/639.186e79a2.chunk.js",
     "static/js/458.3fa0b9e1.chunk.js": "/static/js/458.3fa0b9e1.chunk.js",
     "static/js/865.3fd5b266.chunk.js": "/static/js/865.3fd5b266.chunk.js",
-    "static/js/688.787623c1.chunk.js": "/static/js/688.787623c1.chunk.js",
+    "static/js/688.b2e31181.chunk.js": "/static/js/688.b2e31181.chunk.js",
     "static/js/471.6718b63e.chunk.js": "/static/js/471.6718b63e.chunk.js",
     "static/media/integralseminar.png": "/static/media/integralseminar.2f7f925b843b85f1400c.png",
     "static/media/vizit.png": "/static/media/vizit.ea2c7cbc6fec040313b3.png",
@@ -36,7 +36,7 @@
     "static/media/src3.png": "/static/media/src3.4a9c644520e9ec731839.png",
     "static/media/src4.png": "/static/media/src4.8f7fac3f73e52fe3c351.png",
     "static/media/asgard-jiu-jitsu-cup-3-2023.png": "/static/media/asgard-jiu-jitsu-cup-3-2023.85d25ac4692eb8470b8e.png",
-    "static/media/titlevideo.mp4": "/static/media/titlevideo.018defa7e94d9deb847a.mp4",
+    "static/media/asd.mp4": "/static/media/asd.fe1974e7ac129eadfee1.mp4",
     "static/media/guysnogi.jpg": "/static/media/guysnogi.0c86d56b831465f4ef7e.jpg",
     "static/media/kids.jpg": "/static/media/kids.296a3e500bb3f2ed2a71.jpg",
     "static/media/shahoikoDR.jpg": "/static/media/shahoikoDR.e4f8e3300dcb07301eb9.jpg",
@@ -50,12 +50,12 @@
     "static/media/vova.jpg": "/static/media/vova.cc9a4d484b818c191bba.jpg",
     "static/media/ukraine-bjj-pro-autumn-cup-2023.jpg": "/static/media/ukraine-bjj-pro-autumn-cup-2023.86320218f71c56594f51.jpg",
     "static/media/news2.jpg": "/static/media/news2.a2bea1150eede6ff6149.jpg",
-    "static/media/adultbelt.png": "/static/media/adultbelt.baba9f84c21de5171a47.png",
+    "static/media/adultbelt.png": "/static/media/adultbelt.e148e014e9c3993bd7bd.png",
     "static/media/promotion.png": "/static/media/promotion.b32de3d5f86d91c61426.png",
     "index.html": "/index.html",
     "main.cd649cf6.css.map": "/static/css/main.cd649cf6.css.map",
-    "main.0a1b5630.js.map": "/static/js/main.0a1b5630.js.map",
-    "248.f1b696f5.chunk.js.map": "/static/js/248.f1b696f5.chunk.js.map",
+    "main.be1e32b9.js.map": "/static/js/main.be1e32b9.js.map",
+    "718.329e9e95.chunk.js.map": "/static/js/718.329e9e95.chunk.js.map",
     "557.7762c942.chunk.js.map": "/static/js/557.7762c942.chunk.js.map",
     "923.63fac088.chunk.js.map": "/static/js/923.63fac088.chunk.js.map",
     "571.a787149f.chunk.js.map": "/static/js/571.a787149f.chunk.js.map",
@@ -68,11 +68,11 @@
     "639.186e79a2.chunk.js.map": "/static/js/639.186e79a2.chunk.js.map",
     "458.3fa0b9e1.chunk.js.map": "/static/js/458.3fa0b9e1.chunk.js.map",
     "865.3fd5b266.chunk.js.map": "/static/js/865.3fd5b266.chunk.js.map",
-    "688.787623c1.chunk.js.map": "/static/js/688.787623c1.chunk.js.map",
+    "688.b2e31181.chunk.js.map": "/static/js/688.b2e31181.chunk.js.map",
     "471.6718b63e.chunk.js.map": "/static/js/471.6718b63e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd649cf6.css",
-    "static/js/main.0a1b5630.js"
+    "static/js/main.be1e32b9.js"
   ]
 }
