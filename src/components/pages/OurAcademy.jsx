@@ -115,13 +115,14 @@ const OurAcademy = () => {
           />
           {AboutAcdemy}
         </Stack>{" "}
-        <FlexContainer maxW={"7xl"}>
+        <FlexContainer  >
           <Box
             height={"300px"}
             rounded={"2xl"}
             boxShadow={"2xl"}
             overflow={"hidden"}
             w={"2xl"}
+            justifyContent={'center'}
           >
             <iframe
               width="100%"
@@ -169,6 +170,7 @@ const OurAcademy = () => {
             </SimpleGrid>
           </Flex>
         </Container>
+        
       </Box>{" "}
       <SmallCentered />
     </>
