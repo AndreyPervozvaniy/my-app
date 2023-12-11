@@ -8,9 +8,8 @@ import SmallCentered from "../elem/Footer";
 import { useNewsHooks } from "../../hooks";
 import FlexContainer from "../elem/FlexContainer";
 
-
 function News() {
-  const { router, setPage, pagination, ourNews } = useNewsHooks();
+  const { router, setPage, pagination, ourNews, page } = useNewsHooks();
 
   return (
     <>
@@ -35,7 +34,7 @@ function News() {
                       text: item.text,
                       img: item.image,
                       img2: item.image2,
-                      url:item.url
+                      url: item.url,
                     },
                   })
                 }
@@ -53,6 +52,7 @@ function News() {
                 {item.text}
               </Text>
               <Button
+                background={"white"}
                 onClick={() =>
                   router(PATHS.NEWS_SLOT.replace(":id", `id=${item.id}`), {
                     state: {
@@ -74,13 +74,18 @@ function News() {
                   justifyContent="center"
                   alignItems="center"
                   key={index}
+                  border={"none"}
+                  background={"white"}
                   borderRadius="50%"
                   h="40px"
                   transition="all 0.5s ease"
                   w="40px"
                   cursor="pointer"
+                  style={{
+                    color: page === item ? "gold" : "black",
+                  }}
                   onClick={() => setPage(item)}
-                  _hover={{ bg: "rgb(63, 72, 204)", transform: "scale(1.2)" }}
+                  _hover={{ bg: "rgb(63, 72, 204)" }}
                 >
                   {item}
                 </Button>
