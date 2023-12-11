@@ -67,9 +67,7 @@ export default function SmallCentered() {
           w="200px"
           src={Logo}
           onClick={() => router("/")}
-          transition="all 0.7s"
           cursor="pointer"
-          _hover={{ transform: "scale(1.2)" }}
         />
         <Stack
           direction={"row"}
