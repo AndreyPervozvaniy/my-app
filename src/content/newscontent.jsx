@@ -12,10 +12,12 @@ import vova from "../assets/img/newsContentImage/vova.jpg";
 import fernandoseminar from "../assets/img/newsContentImage/6786450_orig.jpg";
 import autumnCup from "../assets/img/newsContentImage/ukraine-bjj-pro-autumn-cup-2023.jpg";
 import result4 from "../assets/img/newsContentImage/RESULT 4.png";
-import promotionbelts from "../assets/img/newsContentImage/promotion.png";
 import adultbelt from "../assets/img/newsContentImage/adultbelt.png";
 import topguncup from "../assets/img/newsContentImage/topgun-open-cup-2023.png";
 import topgunresult from "../assets/img/newsContentImage/topgunresult.png";
+import promoadult from "../assets/img/newsContentImage/titleadult.png";
+import promokids from "../assets/img/newsContentImage/titlekids.png";
+import newbeltkids from "../assets/img/newsContentImage/bjjnewbeltkids.png";
 import { v4 as uuidv4 } from "uuid";
 export const newscontent = [
   {
@@ -27,8 +29,15 @@ export const newscontent = [
   },
   {
     id: uuidv4(),
-    text: `13 листопада 2023 - Друзі, у стінах нашої академії пройшла традиційна та урочиста подія, присвячена врученню нових пасків. Наша академія рада вітати нові кольорові паски у наших лавах! Від щирого серця, наша академія вітає спортсменів, а також бажає успіхів, нових перемог, завзятості у тренуваннях і лише високих результатів! Вручення поясів проводилося під керівництвом професора нашої академії – Косенко Валентина Михайловича.`,
-    image: promotionbelts,
+    text: `2 грудня 2023 року - Друзі, у стінах нашої академії пройшла чергова традиційна та грандіонзна подія, присвячена врученню нових пасків, але серед молодшої групи. Наша академія від щирого серця вітає нові кольорові паски в лавах нашої академії. Молодша група багата на перспективних спорстменів, які щоразу на кожному турнірі гідно представляють нашу академію та наших інструкторів. Ми бажаємо їм успіхів, завзятості у тренуваннях, нових яскравих перемог на татамі, більше яскравих сутичок, а також більших можливостей проявити себе!  Вручення пасків проводилося під керівництвом професора нашої академії – Косенко Валентина Михайловича.`,
+    image: promokids,
+    image2: newbeltkids,
+    url: "/news",
+  },
+  {
+    id: uuidv4(),
+    text: `13 листопада 2023 - Друзі, у стінах нашої академії пройшла традиційна та урочиста подія, присвячена врученню нових пасків. Наша академія рада вітати нові кольорові паски у наших лавах! Від щирого серця, наша академія вітає спортсменів, а також бажає успіхів, нових перемог, завзятості у тренуваннях і лише високих результатів! Вручення пасків проводилося під керівництвом професора нашої академії – Косенко Валентина Михайловича.`,
+    image: promoadult,
     image2: adultbelt,
     url: "/news",
   },
