@@ -18,6 +18,7 @@ import { FaTelegram, FaInstagram } from "react-icons/fa";
 import { GiBlackBelt, GiPunchBlast } from "react-icons/gi";
 import localTour from "../assets/img/localtour.jpg";
 import newbeltskids from "../assets/img/newbeltskids.jpg";
+import newyear from "../assets/img/newyear.jpg";
 import {
   FcGraduationCap,
   FcBullish,
@@ -74,6 +75,9 @@ export const cards = [
   },
   {
     img: kids,
+  },
+  {
+    img: newyear,
   },
   {
     img: guysnogi,

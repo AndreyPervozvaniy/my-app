@@ -18,8 +18,15 @@ import topgunresult from "../assets/img/newsContentImage/topgunresult.png";
 import promoadult from "../assets/img/newsContentImage/titleadult.png";
 import promokids from "../assets/img/newsContentImage/titlekids.png";
 import newbeltkids from "../assets/img/newsContentImage/bjjnewbeltkids.png";
+import newyear from "../assets/img/newsContentImage/newyear.png";
 import { v4 as uuidv4 } from "uuid";
 export const newscontent = [
+  {
+    id: uuidv4(),
+    text: `1 січня 2024 - Друзі, наша академія щиро вітає Вас з Новим 2024 роком!!! Цього року бажаємо Вам: нових перемог, високих досягнень, конкурентних сутичок, більше досвіду та можливості проявити себе, стати найкращою версією себе з минулого року, здобути нові навички, а також подолати ті труднощі з якими зіткнулися у минулому. Також міцного здоров'я, щастя та взаєморозуміння у ваших сім'ях, мирного неба та спокою! До зустрічі на татамі!`,
+    image: newyear,
+    url: "/news",
+  },
   {
     id: uuidv4(),
     text: `9 грудня 2023 року - Друзі, наша академія взяла участь у турнірі TOPGUN: OPEN CUP від ​​академії TopGun у місті Дніпро. Наші учні виступили гідно та показали гарний рівень боротьби, також у цьому турнірі разом із нашими учнями розділив татами інструктор молодшої та підліткової групи – Шерстюк Микола. Наша команда зайняла чимало призових місць та гідно представила нашу академію. Вітаємо наших спортсменів та дякуємо організаторам за проведений захід!`,
